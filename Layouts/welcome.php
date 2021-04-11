@@ -10,10 +10,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     
     <!--Fontawesome-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <!--Stylesheet--> 
     <link rel="stylesheet" href="../css/welcome.css">
 
@@ -352,6 +354,109 @@
       </div>
     </section>
       
+     <!-- CONTACT -->
+     <section id="contact">
+        <div id="content">
+             <div class="row">
+                  <div class="col-md-6 col-sm-12">
+                       <form id="contact-form" action="#" method="post">
+                            <div class="section-title">
+                                 <h2>Contact us <br> <small>we love conversations. let us talk!</small></h2>
+                            </div>
+
+                            <div class="col-md-12 col-sm-12">
+                                 <input type="text" class="form-control" placeholder="Enter full name" name="name" required>
+                  
+                                 <input type="email" class="form-control" placeholder="Enter email address" name="email" required>
+
+                                 <textarea class="form-control" rows="6" placeholder="Enter your message" name="message" required></textarea>
+                            </div>
+
+                            <div class="col-md-4 col-sm-12">
+                                 <input type="submit" class="form-control" name="send message" value="Send Message">
+                            </div>
+
+                       </form>
+                  </div>
+
+                  <div class="col-md-6 col-sm-12">
+                       <div class="contact-image">
+                            <img src="#" class="img-responsive" alt="suitable image">
+                       </div>
+                  </div>
+
+             </div>
+        </div>
+   </section>    
+
+       <!-- FOOTER -->
+       <footer id="footer">
+          <div id="content">
+               <div class="row">
+                    <div class="col-md-4 col-sm-6">
+                         <div class="footer-info">
+                              <div class="section-title">
+                                   <h2>Headquarter</h2>
+                              </div>
+                              <address>
+                                   <p>111/C, <br> Alwis Road, <br>Colombo 7, <br>Sri Lanka.</p>
+                              </address>
+
+                              <ul class="social-icon">
+                                   <li><a href="#" class="fa fa-facebook-square"></a></li>
+                                   <li><a href="#" class="fa fa-twitter"></a></li>
+                                   <li><a href="#" class="fa fa-instagram"></a></li>
+                              </ul>
+
+                              <div class="copyright-text"> 
+                                   <p>Copyright &copy; 2020 Company Name</p>
+                              </div>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                         <div class="footer-info">
+                              <div class="section-title">
+                                   <h2>Contact Info</h2>
+                              </div>
+                              <address>
+                                   <p>+94 111 400 566</p>
+                                   <p><a href="#">contact@company.com</a></p>
+                              </address>
+
+                              <div class="footer_menu">
+                                   <h2>Quick Links</h2>
+                                   <ul>
+                                        <li><a href="#">Home</a></li>
+                                        <li><a href="#">About Us</a></li>
+                                        <li><a href="#">Terms & Conditions</a></li>
+                                        <li><a href="#">Contact Us</a></li>
+                                   </ul>
+                              </div>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-12">
+                         <div class="footer-info newsletter-form">
+                              <div class="section-title">
+                                   <h2>Newsletter Signup</h2>
+                              </div>
+                              <div>
+                                   <div class="form-group">
+                                        <form action="#" method="get">
+                                             <input type="email" class="form-control" placeholder="Enter your email" name="email" id="email" required>
+                                             <input type="submit" class="form-control" name="submit" id="form-submit" value="Send">
+                                        </form>
+                                        <span><sup>*</sup> Please note - we do not spam your email.</span>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+                    
+               </div>
+          </div>
+     </footer>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <!-- JavaScript Bundle with Popper -->
