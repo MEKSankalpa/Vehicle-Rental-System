@@ -1,3 +1,62 @@
+
+/******************** navigation,heading,about,cover stying ********************/
+
+/*jumbotron*/
+
+.jumbotron{
+	padding: 70px 30px 70px 30px;
+	margin: 0px auto;
+	background-color:#AF7AC5;
+	color: floralwhite;
+}
+
+
+
+/*jumbotron header row*/
+.row-header{
+	margin: 0px auto;
+	padding: 0px auto;
+}
+
+
+
+.row-show{
+	height: 400px;
+}
+
+
+/*page middle content rows*/
+.row-content{
+	margin: 0px auto;
+	padding: 50px 0px 50px 0px;
+	border-bottom:1px ridge;
+	min-height: 400px; 
+}
+
+/* body */
+body{
+	padding:50px 0px 0px 0px;
+	z-index:0;  
+}
+
+/*navigation link*/
+.navilink li a{
+  color:#7E57C2; 
+}
+
+/*navigation link:hover*/
+.navilink li a:hover{
+  font-weight:bold;
+  color:floralwhite; 
+  
+}
+
+
+
+
+
+
+
 /******************** testimonials section stying ********************/
 .testimonials {
     background-color: #F5F5F5;
