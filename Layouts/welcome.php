@@ -43,6 +43,7 @@
          <li class="nav-item">
              <a class="nav-link" href="#"><i class="bi bi-person-badge-fill"></i> Contact us</a>
         </li>
+
         <?php 
 
 
@@ -111,21 +112,21 @@
                 </div>
                 <div class="carousel-inner">
                    <div class="carousel-item active">
-                        <img src="images\pexels-photo-1571783.jpeg" height="400px"  width="100%" alt="slide1">
+                        <img src="../images/pexels-photo-1571783.jpeg" height="400px"  width="100%" alt="slide1">
                    <!--<div class="carousel-caption d-none d-md-block">
                        <h5>First slide label</h5>
                       <p>Some representative placeholder content for the first slide.</p>
                     </div>-->
                  </div>
                   <div class="carousel-item">
-                      <img src="images\pexels-jae-park-3770875.jpg" height="400px"  width="100%"  alt="slide2">
+                      <img src="../images/pexels-jae-park-3770875.jpg" height="400px"  width="100%"  alt="slide2">
                    <!--<div class="carousel-caption d-none d-md-block">
                         <h5>Second slide label</h5>
                         <p>Some representative placeholder content for the second slide.</p>
                    </div>-->
                   </div>
                   <div class="carousel-item">
-                   <img src="images\cars-buildings-new-york-urban-trees-usa-street-wallpx.com.jpg" height="400px" width="100%" alt="slide3">
+                   <img src="../images/cars-buildings-new-york-urban-trees-usa-street-wallpx.com.jpg" height="400px" width="100%" alt="slide3">
                <!--<div class="carousel-caption d-none d-md-block">
                    <h5>Third slide label</h5>
                    <p>Some representative placeholder content for the third slide.</p>
@@ -148,7 +149,7 @@
            <div class="row row-content">
              <div class="col-sm-12 col-12 order-sm-first">
                  <h3 class="text-center">About us</h3>
-                 <p class="text-middle">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, 
+                 <p class="text-justify">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, 
                     by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of
                     Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum
                     generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.
