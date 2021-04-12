@@ -350,3 +350,323 @@ p , span {
 
 
 
+/*--------------------------------------0ffers--------------------------------*/
+
+
+.right-sec .header h1{
+  text-align: center;
+  font-size: 2.5em;
+}
+.right-sec h3{
+  color: #d2d3d6;
+  text-align: center;
+
+ }
+.right-sec{
+  height: 650px;
+  padding-top: 100px;
+  background-image: url('../images/z.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.right-sec img{
+
+  width: 250px;
+  height: 350px;
+  margin:auto;
+  float: right;
+  width: 50%;
+}
+
+
+.right-sec .textt{
+  height: 350px;
+  width: 450px;
+  float: left;
+  margin-top: 50px;
+  background-color: white;
+  box-shadow: inset -5px -5px rgba(0,0,0,0.5);
+  margin-left: 15%;
+  box-shadow: -2px -2px 8px rgba(255,255,255,1),
+          -2px -2px 8px rgba(255,255,255,1),
+                -2px -2px 12px rgba(255,255,255,0.5),
+           inset 2px 2px 4px rgba(255,255,255,0.15),
+                 2px 2px 8px rgba(0,0,0,8.15);
+
+
+
+       }
+
+.right-sec .textt h2{
+  color: black;
+  text-align: center;
+  font-size: 2em;
+}
+.right-sec .textt h3{
+  color:#bdb9b9; 
+  font-size: 1.5em;
+
+  text-align: center;
+
+}
+
+.right-sec .textt span{
+  color: #d4082a;
+}
+.right-sec .textt p{
+  text-align: center;
+
+}
+
+
+.slick-next, .slick-prev{
+  top: 110% !important;
+  z-index: 999;
+}
+
+.slick-prev{
+  position: absolute;
+  left: 950px !important;
+}
+.slick-next{
+    position: absolute;
+  right: 178px !important;
+
+}
+.slick-next:before, .slick-prev:before{
+  font-size: 45px !important ;
+}
+
+.slick-dots{
+  padding-left: 450px !important;
+  margin-bottom: -50px !important;
+}
+.slick-dots li{
+margin-right: 15px !important;
+
+}
+.slick-dots li.slick-active:after{
+  position: absolute;
+  content: '.';
+  bottom: -15px;
+  left: 6px;
+  opacity: 1;
+  color: red;
+  font-size: 36px;
+}
+
+
+.textt a{
+    width: 200px;
+    height: 20px;
+    color: #d4082a;
+    position: relative;
+    display: inline-block;
+    padding: 20px 60px;
+    margin-left: 60px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 40px;
+    box-shadow: -2px -2px 8px rgba(255,255,255,1),
+                -2px -2px 12px rgba(255,255,255,0.5),
+       inset 2px 2px 4px rgba(255,255,255,0.1),
+         2px 2px 8px rgba(0,0,0,8.25);
+
+
+}
+
+.textt a:hover{
+
+    background-color: #d4082a;
+    transition: 1s;
+
+}
+
+.textt a:hover span{
+  display: inline-block;
+  transform: scale(0.98);
+  color:white;
+
+}
+
+
+
+/*post slider*/
+.page-wrapper{
+  height: 650px;
+  background-color:#f9f9f9;
+  padding-top: 50px;
+  margin-top: 10px;
+}
+.post-slider .title{
+  height: 200px;
+}
+.post-slider .title h3{
+  text-align: center;
+  color: gray;
+
+}
+
+.post-slider .post-wrapper{
+   width: 84%;
+   height: 350px;
+   margin: 0px auto;
+   overflow: hidden;
+   padding: 10px 0px 10px 0px;
+}
+.post-slider .post-wrapper .post {
+ 
+  position: relative;
+  width: 900px;
+  height: 350px;
+  margin: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: white;
+    border-radius: 5px;
+    box-shadow: 1rem 1rem 1rem -1rem black;
+
+}
+
+.post-slider .post-wrapper .post .slider-image{
+ 
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 300px;
+  width: 300px;
+  transition: 2s;
+}
+
+.post-slider .post-wrapper .post .slider-image:hover{
+  left: 105%;
+  height: 400px;
+  width: 400px;
+    position: absolute;
+
+
+}
+.post .content{
+  position: relative;
+  width: 50%;
+  left: 20%;
+  padding:20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s;
+
+}
+.post:hover .content{
+  opacity: 1;
+  visibility: visible;
+  left: 0%;
+
+}
+.post .content h2{
+  text-transform: uppercase;
+  font-size: 1.8em;
+  line-height: 0.9em;
+}
+.post .content p{
+  font-size: 1.2em;
+}
+
+.content a{
+  width: 100px;
+  height: 40px;
+  float: left;
+  color: #d4082a;
+  display: inline-block;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-decoration: none;
+  font-size: 18px;
+  box-shadow: -2px -2px 8px rgba(255,255,255,1),
+        -2px -2px 12px rgba(255,255,255,0.5),
+        inset 2px 2px 4px rgba(255,255,255,0.1),
+        2px 2px 8px rgba(0,0,0,8.25);
+
+
+}
+
+.content a:hover{
+
+  background-color: #d4082a;
+    color: white;
+
+}
+
+.textt a:hover span{
+  display: inline-block;
+  transform: scale(0.98);
+}
+
+.post-slider .slider-title{
+  text-align: center;
+  margin: 30px auto;
+  font-size: 2.5em;
+} 
+
+.post-slider .slider-title h3{
+  
+  color:#bdb9b9; 
+  font-size: 1.5em;
+}
+.post-slider .next{
+    position: absolute;
+    font-size: 2em;
+    cursor: pointer;
+    color: black;
+    margin-left: 80px;
+}
+
+
+.post-slider .prev{
+   position: absolute;
+   font-size: 2em;
+   cursor: pointer;
+   color: black;
+   margin-right: 80px;
+
+
+}
+
+
+.post-slider .post-wrapper .post .post-info {
+   position: absolute;
+   top: 8px;
+   left: 16px;
+   color: #4e4f52;
+
+
+}
+.post-slider .post-wrapper .post .post-info a{
+  text-decoration: none;
+  color: black;
+
+}
+
+
+.post-slider .post-wrapper .post .post-info a:hover{
+  color: red;
+}
+.post-slider .post-wrapper .post .price{
+  margin-right: 10px;
+  margin-top: 5px;
+  float: right;
+}
+
+
+

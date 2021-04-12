@@ -19,6 +19,16 @@
     <!--Stylesheet--> 
     <link rel="stylesheet" href="../css/welcome.css">
 
+<!----------------offer style--------------------------------->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+   <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@600&display=swap" rel="stylesheet">
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+<!------------------------------------------------------------->
+
+
   </head>
   <body>
       <!--navigation start-->      
@@ -457,6 +467,220 @@
           </div>
      </footer>
 
+
+
+
+
+<!-----------------------offers  ---------------------------------->
+
+<div class="right-sec">
+    <div class="header">
+        <h1 class="slider-title">OFFERS</h1>
+        <h3>Lorem ipsum dolor sit amet</h3>
+      </div>
+
+  <div class="my-car">
+    <div class="1">
+      <div class="textt">
+      <h2>Family Cars</h2>
+      <h3>from <span>$120</span> per Weekend</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim ven.     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim ven</p>
+</p>
+      <a href="car.html" class="custom-btn"><span>View Offer</span></a>
+                                   
+      </div>
+      <img src="../images/1.png">
+      </div>
+
+      <div class="2">
+      <div class="textt">
+
+      <h2>Family Cars</h2>
+      <h3>from <span>$120</span> per Weekend</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim ven.     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim ven</p>
+      </p>
+      <a href="car.html" class="custom-btn"><span>View Offer</span></a>
+                                   
+      </div>
+
+      <img src="../images/1.png">
+
+    </div>
+
+    <div class="3">
+      <div class="textt">
+
+      <h2>Family Cars</h2>
+      <h3>from <span>$120</span> per Weekend</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim ven.     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim ven</p>
+      </p>
+      <a href="car.html" class="custom-btn"><span>View Offer</span></a>
+                                   
+      </div>
+
+      <img src="../images/1.png">
+
+    </div>
+
+    <div class="4">
+      <div class="textt">
+
+      <h2>Family Cars</h2>
+      <h3>from <span>$120</span> per Weekend</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim ven.     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim ven</p>
+      </p>
+      <a href="car.html" class="custom-btn"><span>View Offer</span></a>
+                                   
+      </div>
+
+      <img src="../images/1.png">
+
+    </div>
+
+    <div class="5">
+      <div class="textt">
+
+      <h2>Family Cars</h2>
+      <h3>from <span>$120</span> per Weekend</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim ven.     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim ven</p>
+      </p>
+      <a href="car.html" class="custom-btn"><span>View Offer</span></a>
+                                   
+      </div>
+
+      <img src="../images/1.png">
+
+    </div>
+
+    <div class="6">
+      <div class="textt">
+
+      <h2>Family Cars</h2>
+      <h3>from <span>$120</span> per Weekend</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim ven.     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim ven</p>
+      </p>
+      <a href="car.html" class="custom-btn"><span>View Offer</span></a>
+                                   
+      </div>
+
+      <img src="../images/1.png">
+
+    </div>
+
+    
+  </div>  
+  
+</div>
+<br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+<div class="page-wrapper">
+      <div class="post-slider">
+        <div class="title">
+        <h1 class="slider-title">Lasted Blog Posts</h1>
+        <h3>Lorem ipsum dolor sit amet</h3>
+        </div>
+        <i class="fa fa-angle-left prev"></i>
+        <i class="fa fa-angle-right next"></i>
+
+
+        <div class="post-wrapper">
+          <div class="post">
+
+            <div class="content" href="index.html">
+              <h2>Family Cars</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+            <a href="index.html" class="custom-btn"><span>Read more</span></a>    
+          </div>
+            <img src="../images/1.png" alt="" class="slider-image">
+            <div class="post-info">
+              <a href=""><i class="fa fa-user"> Janani Nadeesha</i></a>
+              &nbsp;<br>
+              <a href=""><i class="fa fa-calendar"> jan 28,2019</i></a><br>
+              <a href=""><i class="fa fa-eye"> 114</i></a>
+
+            </div>
+
+        </div>
+          
+
+          <div class="post">
+
+            <div class="content">
+              <h2>Family Cars</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+            <a href="index.html" class="custom-btn"><span>Read more</span></a>    
+          </div>
+            <img src="../images/1.png" alt="" class="slider-image">
+            <div class="post-info">
+              <a href=""><i class="fa fa-user"> Janani Nadeesha</i></a>
+              &nbsp;<br>
+              <a href=""><i class="fa fa-calendar"> jan 28,2019</i></a><br>
+              <a href=""><i class="fa fa-eye"> 114</i></a>
+
+            </div>
+            <div class="price"><h1>$120</h1></div>
+
+
+        </div>
+          
+
+          <div class="post">
+
+            <div class="content">
+              <h2>Family Cars</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+            <a href="index.html" class="custom-btn"><span>Read more</span></a>    
+          </div>
+            <img src="../images/1.png" alt="" class="slider-image">
+            <div class="post-info">
+              <a href=""><i class="fa fa-user"> Janani Nadeesha</i></a>
+              &nbsp;<br>
+              <a href=""><i class="fa fa-calendar"> jan 28,2019</i></a><br>
+              <a href=""><i class="fa fa-eye"> 114</i></a>
+
+            </div>
+
+        </div>
+          
+
+          <div class="post">
+
+            <div class="content">
+              <h2>Family Cars</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+            <a href="index.html" class="custom-btn"><span>Read more</span></a>    
+          </div>
+            <img src="../images/1.png" alt="" class="slider-image">
+            <div class="post-info">
+              <a href=""><i class="fa fa-user"> Janani Nadeesha</i></a>
+              &nbsp;<br>
+              <a href=""><i class="fa fa-calendar"> jan 28,2019</i></a><br>
+              <a href=""><i class="fa fa-eye"> 114</i></a>
+
+            </div>
+
+        </div>
+          
+        </div>
+
+        
+      </div>
+    </div>
+
+
+
+
+
+
+<!-----------------------end offers---------------------------------->
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <!-- JavaScript Bundle with Popper -->
@@ -464,5 +688,32 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+
+    <!------------------offers-------------------------------------------------->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<!--slick carousel-->
+    <script src="../js/custom.js"></script>
+  <script type="text/javascript">
+  $(document).ready(function(){
+    $(".my-car").slick({
+      autoplay:true,
+      dots:true,
+      speed:1000,
+      customPaging:function(slider,i){
+        var thumb =$(slider.$slides[i]).data();
+        return '<a>'+(i+1)+'</a>';
+      },
+
+    })
+
+  });
+</script>
+
+
+<!-------------------------------------------------------------------->
   </body>
 </html>
