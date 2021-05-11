@@ -1,468 +1,383 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Title</title>
+    <title>Vehical Rental</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    
-    <!--Fontawesome-->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <!--Stylesheet--> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">  </head>
     <link rel="stylesheet" href="../css/welcome.css">
 
-  </head>
-  <body>
-      <!--navigation start-->      
- <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
-  <div class="container-fluid">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#Navbar" aria-controls="Navbar" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <a class="navbar-brand" href="#"><img src="#" alt="logo" class="img-fluid rounded-circle"></a>
-    <div class="collapse navbar-collapse" id="Navbar">
-      <ul class="navbar-nav navilink ml-1">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#"><i class="bi bi-house-fill"></i> Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#"><i class="bi bi-info-square-fill"></i> About us</a></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#"><i class="bi bi-cart-fill"></i> Fleet</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#"><i class="bi bi-truck"></i> Offers</a>
-        </li>
-         <li class="nav-item">
-             <a class="nav-link" href="#"><i class="bi bi-person-badge-fill"></i> Contact us</a>
-        </li>
-        <?php 
+    <!-- font-awesome -->
+    <script src="https://use.fontawesome.com/50ae888db0.js"></script>
 
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-        if (isset($user_email) && is_null($user_email)==false) {
-             echo '<li class="nav-item"><a class="nav-link d-block d-sm-none" href="./signup.php"><i class="fa fa-user-circle fa-lg"></i>Profile</a></li>';
-             echo '<li class="nav-item"><a class="nav-link d-block d-sm-none" href="./login.php"><i class="fa fa-user-circle-o fa-lg"></i> Log Out</a></li>';
-                      }
-        else{
-           echo '<li class="nav-item"><a class="nav-link d-block d-sm-none" href="./profile.php"><i class="bi bi-person-lines-fill"></i> Signup</a></li>';
-           echo '<li class="nav-item"><a class="nav-link d-block d-sm-none" href="./logout.php"><i class="bi bi-person-circle"></i> Login</a></li>';
-                    
-                      }
-
-        ?>        
-      </ul>
-       </div>
-       <?php 
-     
-          #after login -user
-        if (isset($user_email) && is_null($user_email)==false) {
-
-          echo '<div class="dropdown d-none d-sm-block">
-                  <button type="button" class="btn btn-rounded btn-outline-light dropdown-toggle" data-bs-toggle="dropdown"><b>'.$user_email.'</b></button>
-                  <div class="dropdown-menu">
-                      <a class="dropdown-item" href="profile.php">Profile</a>
-                      <a class="dropdown-item" href="logout.php">Logout</a>
-                  </div>
-            </div>';
-        }
-        else{
-
-            #without login - guest user
-
-           echo '<div class="btn-group d-none d-sm-block"><a href="signup.php" type="button" role="button" id="signup" class="btn btn-rounded btn-md  btn-outline-light"><b>Sign up</b></a><a href="login.php" type="button" role="button" id="login" class="btn btn-rounded btn-md btn-outline-light "><b>Login</b></a></div>';
-
-          }
-
-         ?>
-         
+    <!-- Owl carsuel  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"> 
     
-  </div>
-</nav>
-<!--navigation end-->
+    <body>
+       
+       <header id="header" class="fixed-top d-flex  align-items-center header-transparent ">
+            
+            <nav class="nav-menu d-none d-lg-block ">
+              <ul>
+                <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#resume">Offers</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+        
+              </ul>
 
+             
+            </nav>
+            
+            <nav class="nav-menu ml-auto d-none d-lg-block">
+              <ul>
+                <li class=""><a href="#" data-toggle="modal" data-target="#login_modal">Login</a></li>
+                <li><a href="#about" data-toggle="modal" data-target="#signup_modal">Signup</a></li>
+              </ul>
+            </nav>
 
-      <!--header start-->
-       <header class="jumbotron">
-           <div class="container">
-       	       <div class="row row-header">
-       	            <div class="col-12 col-sm-12">
-                        <h1 class="header">Vehical Rental System</h1>    
-                    </div>
-               </div>
+       </header> 
+
+       <section class="cover fixed" id="cover_img">
+           <div class="cover-content">
                
+               <h1 class="">Lorem ipsum </h1>
+               <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. </h2>
+                
            </div>
-       </header>
-       <!--header end-->
+       </section>
 
-
-        <!--slide show start-->
-        <section id="carouselExampleCaptions" class="carousel slide d-none d-sm-block" data-bs-ride="carousel">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                </div>
-                <div class="carousel-inner">
-                   <div class="carousel-item active">
-                        <img src="images\pexels-photo-1571783.jpeg" height="400px"  width="100%" alt="slide1">
-                   <!--<div class="carousel-caption d-none d-md-block">
-                       <h5>First slide label</h5>
-                      <p>Some representative placeholder content for the first slide.</p>
-                    </div>-->
-                 </div>
-                  <div class="carousel-item">
-                      <img src="images\pexels-jae-park-3770875.jpg" height="400px"  width="100%"  alt="slide2">
-                   <!--<div class="carousel-caption d-none d-md-block">
-                        <h5>Second slide label</h5>
-                        <p>Some representative placeholder content for the second slide.</p>
-                   </div>-->
-                  </div>
-                  <div class="carousel-item">
-                   <img src="images\cars-buildings-new-york-urban-trees-usa-street-wallpx.com.jpg" height="400px" width="100%" alt="slide3">
-               <!--<div class="carousel-caption d-none d-md-block">
-                   <h5>Third slide label</h5>
-                   <p>Some representative placeholder content for the third slide.</p>
-               </div>-->
-                </div>
-               </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-         </section>
-        <!--slide show end-->
-
-        <!--home page content start-->
-       <div class="container">
-           <div class="row row-content">
-             <div class="col-sm-12 col-12 order-sm-first">
-                 <h3 class="text-center">About us</h3>
-                 <p class="text-middle">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, 
-                    by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of
-                    Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum
-                    generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.
-                    It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem
-                    Ipsum which looks reasonable.The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p>
-           </div>
-           <!--other content rows-->
-       </div>
-       <!--home page content end-->
-
-    <section class="testimonials">
-      <div class="container">
-          <div class="row">
-              <div class="col-sm-12 "> 
-
-                  <div class="header text-center" >
-                      <h2>Testimonials</h2>
-                      <p id="subheading">Lorem ipsum dolor sit amet consect.</p>
-                  </div>
-              
-                  <div id="carouselIndicators" class="carousel slide" data-ride="carousel">
-
-                      <ol class="carousel-indicators">
-                          <li button data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
-                          <li data-target="#carouselIndicators" data-slide-to="1"></li>
-                          <!-- <li data-target="#carouselIndicators" data-slide-to="2"></li> -->
-                      </ol>
-          
-                      <div class="carousel-inner">
-                          
-                          <div class="carousel-item active">
-                              <div class="row">
-
-                                  <div class="col-sm-4">
-                                      <div class="card border-light">
-                                          <div class="user">
-                                              <div class="tst-image">
-                                                  <img src="../images/keshan.jpeg" class="img-responsive" alt="">
-                                              </div>
-                                              <div class="tst-author">
-                                                  <h5>Keshan</h5>
-                                                  <span>Web Developer</span>
-                                              </div>
-                                          </div>
-                                          <div class="review">
-                                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore natus culpa laudantium sit dolores quidem at nulla, 
-                                              iure atque laborum! Odit tempora, enim aliquid at modi illum ducimus explicabo soluta.</p>
-                                              <div class="tst-rating">
-                                                  <i id="rating" class="fa fa-star"></i>
-                                                  <i id="rating" class="fa fa-star"></i>
-                                                  <i id="rating" class="fa fa-star"></i>
-                                                  <i id="rating" class="fa fa-star"></i>
-                                                  <i id="rating" class="fa fa-star"></i>
-                                              </div>
-                                          </div>
-                                      </div>
-                                  </div> 
-
-                                  <div class="col-sm-4">
-                                      <div class="card border-light">
-                                          <div class="user">
-                                              <div class="tst-image">
-                                                  <img src="../images/noImage.png" class="img-responsive" alt="">
-                                              </div>
-                                              <div class="tst-author">
-                                                  <h5>Prabath</h5>
-                                                  <span>Web Developer</span>
-                                              </div>
-                                          </div>
-                                          <div class="review">
-                                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore natus culpa laudantium sit dolores quidem at nulla, 
-                                              iure atque laborum! Odit tempora.</p>
-                                              <div class="tst-rating">
-                                                  <i id="rating" class="fa fa-star"></i>
-                                                  <i id="rating" class="fa fa-star"></i>
-                                                  <i id="rating" class="fa fa-star"></i>
-                                              </div>
-                                          </div>
-                                      </div>
-                                  </div> 
-
-                                  <div class="col-sm-4">
-                                      <div class="card border-light">
-                                          <div class="user">
-                                              <div class="tst-image">
-                                                  <img src="../images/noImage.png" class="img-responsive" alt="">
-                                              </div>
-                                              <div class="tst-author">
-                                                  <h5>Pasindi</h5>
-                                                  <span>Web Developer</span>
-                                              </div>
-                                          </div>
-                                          <div class="review">
-                                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore natus culpa laudantium sit dolores quidem at nulla, 
-                                              iure atque laborum! Odit tempora, enim aliquid at modi illum ducimus explicabo soluta.enim aliquid at modi illum ducimus explicabo soluta.</p>
-                                              <div class="tst-rating">
-                                                  <i id="rating" class="fa fa-star"></i>
-                                                  <i id="rating" class="fa fa-star"></i>
-                                                  <i id="rating" class="fa fa-star"></i>
-                                                  <i id="rating" class="fa fa-star"></i>
-                                              </div>
-                                          </div>
-                                      </div>
-                                  </div> 
-
-                              </div>
-                          </div>
-                          
-                          <div class="carousel-item ">
-                              <div class="row">
-
-                                  <div class="col-sm-4">
-                                      <div class="card border-light">
-                                          <div class="user">
-                                              <div class="tst-image">
-                                                  <img src="../images/thilini.jpeg" class="img-responsive" alt="">
-                                              </div>
-                                              <div class="tst-author">
-                                                  <h5>Thilini</h5>
-                                                  <span>Web Developer</span>
-                                              </div>
-                                          </div>
-                                          <div class="review">
-                                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore natus culpa laudantium sit dolores quidem at nulla,
-                                                  Dolore natus culpa laudantium sit dolores quidem at nulla, iure atque laborum!</p>
-                                              <div class="tst-rating">
-                                                  <i id="rating" class="fa fa-star"></i>
-                                                  <i id="rating" class="fa fa-star"></i>
-                                                  <i id="rating" class="fa fa-star"></i>
-                                                  <i id="rating" class="fa fa-star"></i>
-                                              </div>
-                                          </div>
-                                      </div>
-                                  </div> 
-
-                                  <div class="col-sm-4">
-                                      <div class="card border-light">
-                                          <div class="user">
-                                              <div class="tst-image">
-                                                  <img src="../images/noImage.png" class="img-responsive" alt="">
-                                              </div>
-                                              <div class="tst-author">
-                                                  <h5>Janani</h5>
-                                                  <span>Web Developer</span>
-                                              </div>
-                                          </div>
-                                          <div class="review">
-                                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore natus culpa laudantium sit dolores quidem at nulla, 
-                                              iure atque laborum! Odit tempora, enim aliquid at modi illum ducimus explicabo soluta. Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-                                              <div class="tst-rating">
-                                                  <i id="rating" class="fa fa-star"></i>
-                                                  <i id="rating" class="fa fa-star"></i>
-                                                  <i id="rating" class="fa fa-star"></i>
-                                              </div>
-                                          </div>
-                                      </div>
-                                  </div> 
-
-                                  <div class="col-sm-4">
-                                      <div class="card border-light">
-                                          <div class="user">
-                                              <div class="tst-image">
-                                                  <img src="../images/noImage.png" class="img-responsive" alt="">
-                                              </div>
-                                              <div class="tst-author">
-                                                  <h5>Nirodha</h5>
-                                                  <span>Web Developer</span>
-                                              </div>
-                                          </div>
-                                          <div class="review">
-                                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore natus culpa laudantium sit dolores quidem at nulla, 
-                                              iure atque laborum! Odit tempora, enim aliquid at modi illum ducimus explicabo soluta.</p> 
-                                              <div class="tst-rating">
-                                                  <i id="rating" class="fa fa-star"></i>
-                                                  <i id="rating" class="fa fa-star"></i>
-                                                  <i id="rating" class="fa fa-star"></i>
-                                                  <i id="rating" class="fa fa-star"></i>
-                                                  <i id="rating" class="fa fa-star"></i>
-                                              </div>
-                                          </div>
-                                      </div>
-                                  </div> 
-
-                              </div>
-                          </div>
-
-                      </div>
-                          
-                      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                          <span class="sr-only">Previous</span>
-                      </a>
-                      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                          <span class="sr-only">Next</span>
-                      </a>
-
-                  </div>
-              </div>
+      <main class="main-content">
+         
+          <div class="about container p-5">
+            <h1 class="text-center">ABOUT US</h1>
+            <p class=" text-justify pt-4 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa et, pariatur, vitae optio placeat quos vel sunt tempore ad cupiditate, nostrum neque obcaecati amet. Quia quaerat expedita repudiandae magni unde?Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquam necessitatibus fuga atque! Tenetur esse similique odio! Quasi qui aliquam dignissimos doloremque facilis ipsa obcaecati dolorum, facere eos minima! Tempore.</p>
           </div>
-      </div>
-    </section>
-      
-     <!-- CONTACT -->
-     <section id="contact">
-        <div id="content">
-             <div class="row">
-                  <div class="col-md-6 col-sm-12">
-                       <form id="contact-form" action="#" method="post">
-                            <div class="section-title">
-                                 <h2>Contact us <br> <small>we love conversations. let us talk!</small></h2>
-                            </div>
 
-                            <div class="col-md-12 col-sm-12">
-                                 <input type="text" class="form-control" placeholder="Enter full name" name="name" required>
+          <section class="offers">
+
+             <h1>OFFERS</h1>
+             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            
+             <div class="offer-content row d-flex justify-content-center">
+             
+                  <div class="card col-3 m-4 px-0" style="width: 18rem;">
+                    <img class="card-img-top" src="../images/offer1.jpeg" alt="Card image cap" height="250px">
+                    <div class="card-body">
+                      <h4 class="text-left">FAMILY CARS</h4>
+                      <h6 class="text-left">From <span class="price">$120</span>  per weekend</h6>
+                      <p class="card-text text-justify mt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum dicta voluptas quia dolor fuga odit.</p>
+
+                       <hr>
+                      <a href="" class="btn offer-btn btn-outline-success">View Offer </a> 
+                    </div>
+                  </div>
+
+                  <div class="card col-3 m-4 px-0" style="width: 18rem;">
+                    <img class="card-img-top" src="../images/offer2.jpeg" alt="Card image cap" height="250px">
+                    <div class="card-body">
+                      <h4 class="text-left">LUXURY & PRESTIGE CARS</h4>
+                      <h6 class="text-left">From <span class="price">$120</span>  per weekend</h6>
+                      <p class="card-text text-justify mt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum dicta voluptas quia dolor fuga odit.</p>
+                      <hr>
+                      <a href="" class="btn offer-btn btn-outline-success">View Offer </a> 
+
+                    </div>
+                  </div>
+
+                  <div class="card col-3 m-4 px-0" style="width: 18rem;">
+                   
+                    <img class="card-img-top" src="../images/offer4.jpeg" alt="Card image cap" height="250px">
+                    <div class="card-body">
+                      <h4 class="text-left">TOP SELLERS</h4>
+                      <h6 class="text-left">From <span class="price">$120</span>  per weekend</h6>
+                      <p class="card-text text-justify mt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum dicta voluptas quia dolor fuga odit.</p>
+                      <hr>
+                      <a href="" class="btn offer-btn btn-outline-success">View Offer </a> 
+                    </div>
+                  </div>
                   
-                                 <input type="email" class="form-control" placeholder="Enter email address" name="email" required>
-
-                                 <textarea class="form-control" rows="6" placeholder="Enter your message" name="message" required></textarea>
-                            </div>
-
-                            <div class="col-md-4 col-sm-12">
-                                 <input type="submit" class="form-control" name="send message" value="Send Message">
-                            </div>
-
-                       </form>
-                  </div>
-
-                  <div class="col-md-6 col-sm-12">
-                       <div class="contact-image">
-                            <img src="#" class="img-responsive" alt="suitable image">
-                       </div>
-                  </div>
 
              </div>
-        </div>
-   </section>    
+ 
+          </section>
 
-       <!-- FOOTER -->
-       <footer id="footer">
-          <div id="content">
-               <div class="row">
-                    <div class="col-md-4 col-sm-6">
-                         <div class="footer-info">
-                              <div class="section-title">
-                                   <h2>Headquarter</h2>
-                              </div>
-                              <address>
-                                   <p>111/C, <br> Alwis Road, <br>Colombo 7, <br>Sri Lanka.</p>
-                              </address>
+          <section class="service">
 
-                              <ul class="social-icon">
-                                   <li><a href="#" class="fa fa-facebook-square"></a></li>
-                                   <li><a href="#" class="fa fa-twitter"></a></li>
-                                   <li><a href="#" class="fa fa-instagram"></a></li>
-                              </ul>
+             <h1>SERVICES</h1>
+             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
 
-                              <div class="copyright-text"> 
-                                   <p>Copyright &copy; 2020 Company Name</p>
-                              </div>
-                         </div>
+             <div class="offer-content row d-flex justify-content-center">
+                  
+                <div class="card col-md-2 m-3 pb-2 service-card" style="width: 18rem;">
+                  <div class="card-body">
+                    <div class="icon mx-auto mb-3 d-flex align-items-center justify-content-center">
+                       <i class="fa fa-globe" aria-hidden="true"></i>
                     </div>
-
-                    <div class="col-md-4 col-sm-6">
-                         <div class="footer-info">
-                              <div class="section-title">
-                                   <h2>Contact Info</h2>
-                              </div>
-                              <address>
-                                   <p>+94 111 400 566</p>
-                                   <p><a href="#">contact@company.com</a></p>
-                              </address>
-
-                              <div class="footer_menu">
-                                   <h2>Quick Links</h2>
-                                   <ul>
-                                        <li><a href="#">Home</a></li>
-                                        <li><a href="#">About Us</a></li>
-                                        <li><a href="#">Terms & Conditions</a></li>
-                                        <li><a href="#">Contact Us</a></li>
-                                   </ul>
-                              </div>
-                         </div>
-                    </div>
-
-                    <div class="col-md-4 col-sm-12">
-                         <div class="footer-info newsletter-form">
-                              <div class="section-title">
-                                   <h2>Newsletter Signup</h2>
-                              </div>
-                              <div>
-                                   <div class="form-group">
-                                        <form action="#" method="get">
-                                             <input type="email" class="form-control" placeholder="Enter your email" name="email" id="email" required>
-                                             <input type="submit" class="form-control" name="submit" id="form-submit" value="Send">
-                                        </form>
-                                        <span><sup>*</sup> Please note - we do not spam your email.</span>
-                                   </div>
-                              </div>
-                         </div>
-                    </div>
+                    <h5 class="card-title mb-2 ">Card subtitle</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     
-               </div>
-          </div>
-     </footer>
+                  </div>
+                </div>
 
+                <div class="card col-md-2 m-3 pb-2 service-card" style="width: 18rem;">
+                  <div class="card-body">
+                   
+                    <div class="icon mx-auto mb-3 d-flex align-items-center justify-content-center">
+                      <i class="fa fa-car" aria-hidden="true"></i>
+                    </div>
+                    <h5 class="card-title mb-2 ">Card subtitle</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    
+                  </div>
+                </div>
+
+                <div class="card col-md-2 m-3 pb-2 service-card" style="width: 18rem;">
+                  <div class="card-body">
+                    <div class="icon mx-auto mb-3 d-flex align-items-center justify-content-center">
+                      <i class="fa fa-flag" aria-hidden="true"></i>
+
+                    </div>
+                    <h5 class="card-title mb-2 ">Card subtitle</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    
+                  </div>
+                </div>
+
+                <div class="card col-md-2 m-3 pb-2 service-card" style="width: 18rem;">
+                  <div class="card-body">
+                    <div class="icon mx-auto mb-3 d-flex align-items-center justify-content-center">
+                      <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                    </div>
+                    <h5 class="card-title mb-2 ">Card subtitle</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    
+                  </div>
+                </div>
+             
+             </div>
+
+          </section>
+
+          <section class="testimonials">
+                <div class="container testimonials-contain">
+
+                  <div class="owl-carousel testimonials-carousel ">
+
+                      <div class="testimonial-item text-center ">
+                          
+                        <img src="../images/testimonials-1.jpg" class="testimonial-img " alt="">
+                        <h3>Saul Goodman</h3>
+                        <h4>Ceo &amp; Founder</h4>
+                        <p>
+                          <i class=""></i>
+                          Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                          <i class=""></i>
+                        </p>
+                      </div>
+
+                      <div class="testimonial-item text-center ">
+                          
+                        <img src="../images/testimonials-2.jpg" class="testimonial-img " alt="">
+                        <h3>Saul Goodman</h3>
+                        <h4>Ceo &amp; Founder</h4>
+                        <p>
+                          <i class=""></i>
+                          Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                          <i class=""></i>
+                        </p>
+                      </div>
+
+                      <div class="testimonial-item text-center ">
+                          
+                        <img src="../images/testimonials-3.jpg" class="testimonial-img " alt="">
+                        <h3>Saul Goodman</h3>
+                        <h4>Ceo &amp; Founder</h4>
+                        <p>
+                          <i class=""></i>
+                          Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                          <i class=""></i>
+                        </p>
+                      </div>
+
+                      <div class="testimonial-item text-center ">
+                          
+                        <img src="../images/testimonials-4.jpg" class="testimonial-img " alt="">
+                        <h3>Saul Goodman</h3>
+                        <h4>Ceo &amp; Founder</h4>
+                        <p>
+                          <i class=""></i>
+                          Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                          <i class=""></i>
+                        </p>
+                      </div>
+
+                      <div class="testimonial-item text-center ">
+                          
+                        <img src="../images/testimonials-5.jpg" class="testimonial-img " alt="">
+                        <h3>Saul Goodman</h3>
+                        <h4>Ceo &amp; Founder</h4>
+                        <p>
+                          <i class=""></i>
+                          Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                          <i class=""></i>
+                        </p>
+                      </div>
+
+                    
+          
+                   </div> 
+                </div>
+          </section>
+
+          <section class="contact">
+  
+            <h1>Contact Us</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>  
+
+            <div class="row justify-content-center">
+                <div class="col-md-5 mx-2  contact-social ">
+
+                    <div class=" social-icon pt-4">
+                        
+                        <div class="share mx-auto d-flex justify-content-center align-items-center">
+                          <i class="fa fa-share-alt" aria-hidden="true"></i>
+                        </div>
+
+                        <h4 class="my-3">Social Profiles</h4>
+
+                        <div class="d-flex justify-content-center align-items-center pb-5">
+                            <div class="share-icons mx-2 d-flex justify-content-center align-items-center">
+                              <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                          
+                            </div>
+                            <div class="share-icons mx-2 d-flex justify-content-center align-items-center">
+                              <i class="fa fa-twitter" aria-hidden="true"></i>
+                          
+                            </div>
+                            <div class="share-icons mx-2 d-flex justify-content-center align-items-center">
+                              <i class="fa fa-instagram" aria-hidden="true"></i>
+                          
+                            </div>
+                            <div class="share-icons mx-2 d-flex justify-content-center align-items-center">
+                              <i class="fa fa-skype" aria-hidden="true"></i>
+                          
+                            </div>
+                            <div class="share-icons mx-2 d-flex justify-content-center align-items-center">
+                              <i class="fa fa-linkedin" aria-hidden="true"></i>
+                          
+                            </div>
+                        </div>
+                        
+                    </div> 
+
+                    <div class=" row pt-4  justify-content-center">
+                       
+                      <div class="col-md-5 mx-2 pt-4 email-box">
+  
+                        <div class="share mx-auto d-flex justify-content-center align-items-center">
+                          <i class="fa fa-envelope" aria-hidden="true"></i>
+                        </div>
+
+                        <h4 class="my-3">Email Us</h4>
+                        <email>example@gmail.com</email>
+  
+                      </div>
+                       <div class="col-md-5 mx-2 pt-4  call-box">
+  
+                        <div class="share mx-auto d-flex justify-content-center align-items-center">
+                          <i class="fa fa-phone" aria-hidden="true"></i>
+                        </div>
+
+                        <h4 class="my-3">Call Us</h4>
+                        <h6>047785694</h6> 
+  
+                      </div>
+  
+                   </div>
+  
+
+                   
+                     
+                </div>
+                <div class="col-md-5 mx-2 p-4 contact-form">
+                  
+                  <div class="form-row  form-group">
+                    <div class="col">
+                      <input type="text" class="form-control" placeholder="Your Name">
+                    </div>
+                    <div class="col">
+                      <input type="text" class="form-control" placeholder="Your Email">
+                    </div>
+                  </div>
+
+                  <div class="form-group ">
+                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Subject">
+                  </div>
+
+                  <div class="form-group">
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="9"  placeholder="Your Message"></textarea>
+                  </div>
+
+                  <button class="btn btn-outline-success">Send Message</button>
+
+                </div>
+            </div>
+
+          </section>
+
+          <footer class="footer">
+
+            <div class="container">
+              <h3>Laura Thomson</h3>
+              <p>Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.</p>
+              <div class="social-links">
+                <a href="#" class="twitter"> <i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+                <a href="#" class="facebook"> <i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a href="#" class="instagram">  <i class="fa fa-instagram" aria-hidden="true"></i></a>
+                <a href="#" class="google-plus">  <i class="fa fa-skype" aria-hidden="true"></i></i></a>
+                <a href="#" class="linkedin">  <i class="fa fa-linkedin" aria-hidden="true"></i></a>
+              </div>
+              <div class="copyright">
+                &copy; Copyright <strong><span>Laura</span></strong>. All Rights Reserved
+              </div>
+              <div class="credits">
+                <!-- All the links in the footer should remain intact. -->
+                <!-- You can delete the links only if you purchased the pro version. -->
+                <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/laura-free-creative-bootstrap-theme/ -->
+                Designed by <a href="https://bootstrapmade.com/">web technologies group</a>
+              </div>
+            </div>
+
+          </footer>
+         
+      </main>
+
+      <?php
+         
+         include '../forms/login.form.php'; 
+
+         include '../forms/signup.form.php'; 
+      
+      ?>
+     
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <!-- JavaScript Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+  
+
+<script src="../js/welcome.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   </body>
 </html>
