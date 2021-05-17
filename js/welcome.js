@@ -1,3 +1,4 @@
+
 // Toggle .header-scrolled class to #header when page is scrolled
 $(window).scroll(function() {
     if ($(this).scrollTop() > 100) {
@@ -15,3 +16,8 @@ $(window).scroll(function() {
     items: 1,
     autoplayHoverPause:true,
   });
+
+
+
+
+ 

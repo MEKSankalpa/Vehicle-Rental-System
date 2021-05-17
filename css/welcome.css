@@ -432,3 +432,22 @@ background: rgba(25, 28, 31, 0.8);
     border:1px solid #f3a200;
  }
 
+ .has-success .form-control {
+  border: 1px solid #168b3f;
+}
+
+.has-danger .form-control {
+  border: 1px solid #dc1d34;
+}
+
+.form-group .text-help {
+  color: #dc1d34;
+}
+
+.inline-label label{
+  display: inline;
+}
+
+.pristine-error {
+  display: table;
+}

@@ -40,8 +40,8 @@
             
             <nav class="nav-menu ml-auto d-none d-lg-block">
               <ul>
-                <li class=""><a href="#" data-toggle="modal" data-target="#login_modal">Login</a></li>
-                <li><a href="#about" data-toggle="modal" data-target="#signup_modal">Signup</a></li>
+                <li class=""><a href="#" data-toggle="modal" data-target="#login_modal" id="login_navi">Login</a></li>
+                <li><a href="#about" data-toggle="modal" data-target="#signup_modal" id="signup_navi">Signup</a></li>
               </ul>
             </nav>
 
@@ -375,9 +375,10 @@
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 
   
-
+<script src="../js/pristine.js"></script>
 <script src="../js/welcome.js"></script>
-
+<script src="../js/validation.js"></script>
+<script src="../js/modal.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   </body>
 </html>
