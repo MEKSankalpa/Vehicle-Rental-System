@@ -3,34 +3,32 @@
 $email = $_POST['email'];
 $password = $_POST['password'];
 
-include_once("../helpers/db.php");
+include_once "../helpers/db.php";
 
-if(empty($email) || empty($password)){
-   echo "System Error!";
-}else{
+if (empty($email) || empty($password)) {
+    echo "System Error!";
+} else {
     $query = "SELECT * FROM users WHERE email='$email' ";
     $results = mysqli_query($conn, $query);
     $count = mysqli_num_rows($results);
 
-    if($count == 1){
-        $row  = mysqli_fetch_assoc( $results);
+    if ($count == 1) {
+        $row = mysqli_fetch_assoc($results);
         $saved_pass = $row['password'];
-        if(password_verify($password, $saved_pass)){
-            
+        if (password_verify($password, $saved_pass)) {
+
             $user = $row['user_name'];
             echo "Logged in as '$user'";
             header("Location: ../layouts/welcome.php?login=success");
             exit();
 
-        } else{
-             header("Location: ../layouts/welcome.php?login=faild");
-             exit(); 
-        } 
-        
-    }else{
+        } else {
+            header("Location: ../layouts/welcome.php?login=faild");
+            exit();
+        }
+
+    } else {
         header("Location: ../layouts/welcome.php?login=faild");
         exit();
     }
 }
-
-?>
