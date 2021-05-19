@@ -1,0 +1,181 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #e5e7e9;
+}
+
+/******************** Navbar ********************/
+
+.navbar {
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    background-color: #fdfefe;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #e8e9ed;
+    position: fixed;
+}
+
+.container-fluid {
+    margin-right: 150px;
+    padding-left: 5px;
+    
+}
+
+.top-left {
+    padding-right: 40px;
+    display: inline;
+}
+
+#logo{
+    color: #6c757d !important;
+    letter-spacing: 3px;
+    font-style: italic;
+    width: 150px; 
+    height: 56px;
+    display: inline;
+}
+
+#toggle-btn {
+    color: #6c757d;
+    border: none;
+    background-color: transparent;
+    display: inline;
+    position: absolute;
+    padding-left: 110px;
+    padding-top: 20px;
+}
+
+#toggle-btn:hover, #toggle-btn:focus {
+    color: #ffc85a;
+}
+
+.top-right {
+    position: relative;
+    margin-left: 1090px;
+    display: inline;
+}
+
+.nav-link {
+    color: #6c757d !important;
+    margin-right: 30px;
+}
+
+.nav-link:hover, .nav-link:focus {
+    color: #ffc85a !important;
+}
+
+.dropdown-item {
+    color:rgb(165, 157, 157);
+}
+
+/******************** Sidebar ********************/
+
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    min-height: 100vh;
+    background-color: #fdfefe;
+    transition: all 1s ;
+    height:0100%;
+    width: 160px;
+    z-index: 1;
+    top: 68px;
+    left: 0;
+    overflow-x: hidden;
+    padding-top: 0px;
+    position: fixed;
+}
+
+.sidebar-a, .sidebar-a:hover, .sidebar-a:focus {
+    color: #6c757d;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+#sidebar ul li .sidebar-a {
+    padding: 15px;
+    font-size: 1.1em;
+    display: block;
+}
+
+#sidebar ul li .sidebar-a:hover {
+    color: #fff;
+    background: #ffc85a;
+}
+
+#sidebar ul li.active > .sidebar-a, .sidebar-a[aria-expanded="true"] {
+    color: #fff;
+    background: #ffc85a;
+}
+
+ul ul .sidebar-a {
+    font-size: 0.9em !important;
+    padding-left: 15px !important ;
+    background: #ffc85a;
+}
+
+.wrapper {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+}
+
+.mini-sidebar {
+    min-width: 100px !important;
+    max-width: 100px !important;
+    text-align: justify;
+}
+
+.mini-sidebar .nav-icon{
+    display: block;
+    font-size: 24px;
+    text-align: justify;
+}
+
+.mini-sidebar .sidebar-a{
+    text-align: center;
+}
+.mini-sidebar span{
+    font-size: 10px;
+}
+
+.mini-sidebar #sidebar{
+  margin-top: 60px;
+}
+
+.sidebar-a[data-toggle="collapse"] {
+    position: relative;
+}
+
+#vehicleSubmenu .sidebar-a, #reportSubmenu .sidebar-a {
+    color: #fff;
+}
+
+.dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+.nav-icon {
+    padding-right: 5px;
+}
+
+@media (max-width: 768px) {
+    #sidebar {
+        margin-left: -250px;
+    }
+    #sidebar.active {
+        margin-left: 0;
+    }
+}
+
+/******************** footer ********************/
+.page-footer {
+    color:#6c757d;
+    background:#fdfefe;
+    margin-top: 922px;
+    left: 100px;
+    right: 200px;
+}
