@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 $email = $_POST['email'];
 $password = $_POST['password'];
 
@@ -18,8 +20,9 @@ if (empty($email) || empty($password)) {
         if (password_verify($password, $saved_pass)) {
 
             $user = $row['user_name'];
-            echo "Logged in as '$user'";
-            header("Location: ../layouts/welcome.php?login=success");
+            $_SESSION["user_name"] = $user;  
+
+            header("Location: ../Pages/dashboard.php?login=success");
             exit();
 
         } else {

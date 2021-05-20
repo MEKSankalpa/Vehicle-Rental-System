@@ -1,3 +1,9 @@
+<?php
+
+session_start();
+?>
+
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -39,10 +45,24 @@
             </nav>
             
             <nav class="nav-menu ml-auto d-none d-lg-block">
-              <ul>
-                <li class=""><a href="#" data-toggle="modal" data-target="#login_modal" id="login_navi">Login</a></li>
-                <li><a href="#about" data-toggle="modal" data-target="#signup_modal" id="signup_navi">Signup</a></li>
-              </ul>
+              
+              <?php   if(isset($_SESSION['user_name'])){  ?>
+                    
+                <ul>
+                    <li><a href="../Pages/dashboard.php">Dashboard</a></li>
+               </ul>  
+              
+              <?php }else{  ?>
+               
+                <ul>
+                  <li class=""><a href="#" data-toggle="modal" data-target="#login_modal" id="login_navi">Login</a></li>
+                  <li><a href="#about" data-toggle="modal" data-target="#signup_modal" id="signup_navi">Signup</a></li>
+               </ul>  
+              
+               <?php }  ?>
+
+
+
             </nav>
 
        </header> 
