@@ -1,3 +1,10 @@
+<?php
+session_start();
+
+if(isset($_SESSION['user_name'])){
+
+?>
+
 <!doctype html>
 <html lang="en">
     <head>
@@ -103,3 +110,11 @@
     </body>
 
 </html>
+
+<?php }else{
+
+include_once("./unauthorized.php");
+
+}
+
+?>

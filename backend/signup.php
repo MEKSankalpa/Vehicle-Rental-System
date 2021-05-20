@@ -1,4 +1,5 @@
 <?php
+session_start();
 
     //getting form data
     $first_name = $_POST['first_name'];
@@ -46,13 +47,16 @@
                             mysqli_stmt_bind_param($stmt,"sssisss",$first_name,$last_name,$user_name,$contact_number,$email,$address,$hashed_password);
                             mysqli_stmt_execute($stmt);
 
-                            header("Location: ../layouts/welcome.php?signup=done");
+                            $_SESSION['user_name'] = $user_name;   
+                        
+                            header("Location: ../Pages/dashboard.php?signup=done");
                             exit();
                         }
 
                     }
                 }
             }
+            
         }
     }   
 
