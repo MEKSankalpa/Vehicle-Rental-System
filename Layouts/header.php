@@ -1,7 +1,7 @@
-<?php
+<!-- <?php
 session_start();
 
-?>
+?> -->
 
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg w-100">
@@ -24,9 +24,9 @@ session_start();
                 <li class="nav-item ">
                     <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                     <?php
-                      if( isset($_SESSION['user_name'])){
-                      echo  $_SESSION['user_name'];
-                      }
+                    if (isset($_SESSION['user_name'])) {
+                        echo  $_SESSION['user_name'];
+                    }
 
                     ?>
                     

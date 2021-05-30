@@ -1,0 +1,41 @@
+/***** index page *****/
+
+.card {
+    width: 950px;
+    margin: 0 auto;
+    padding-top: 0px;
+    margin-top: 150px;
+    left: 130px;
+    padding: 16px;
+    margin-top: 130px;
+}
+
+.card-body {
+    padding-left: 75px;
+    padding-bottom: 75px;
+    padding-right: 75px;
+}
+
+.table {
+    width: 800px;
+}
+
+table tr td:last-child {
+    width: 180px;
+}
+
+.create-btn {
+    background-color: #f7b32c;
+    color: #fff;
+    border: #f7b32c;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.btn:hover {
+    border: #6c757d;
+    background-color: #6c757d;
+    color: #fff;
+}
+  

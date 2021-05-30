@@ -6,22 +6,14 @@
 
             <ul class="list-unstyled components">
                 <li>
-                    <a class="sidebar-a" href="#">
+                    <a class="sidebar-a" href="../Pages/dashboard.php">
                         <i class="fa fa-tv fa-fw px-4 nav-icon" aria-hidden="true"></i><span>Dashboard</span>
                     </a>
                 </li>
                 <li>
-                    <a class="sidebar-a" href="#vehicleSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                        <i class="fa fa-taxi fa-fw px-4 nav-icon" aria-hidden="true"></i><span>Vehicles</span>
+                    <a class="sidebar-a" href="../Category/index.php">
+                        <i class="fa fa-taxi fa-fw px-4 nav-icon" aria-hidden="true"></i><span>Categories</span>
                     </a>
-                    <ul class="collapse list-unstyled" id="vehicleSubmenu">
-                        <li>
-                            <a class="sidebar-a" href="#"><span>Car</span></a>
-                        </li>
-                        <li>
-                            <a class="sidebar-a" href="#"><span>Motor Bike</span></a>
-                        </li>
-                    </ul>
                 </li>
                 <li>
                     <a class="sidebar-a" href="#"><i class="fa fa-user fa-fw px-4 nav-icon" aria-hidden="true">
