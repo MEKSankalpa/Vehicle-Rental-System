@@ -13,7 +13,7 @@ session_start();
     
    
     //including database connection
-    include_once("../helpers/db.php");
+    include_once "../helpers/db.php";
 
     //validations for testing api calls(POSTMAN) 
     if(empty($first_name) || empty($last_name) || empty($user_name) ||empty($email) || empty($contact_number) || empty($address) || empty($password) || empty($confirm_password)  ){
@@ -46,7 +46,7 @@ session_start();
                             $hashed_password = password_hash($confirm_password, PASSWORD_DEFAULT);
                             mysqli_stmt_bind_param($stmt,"sssisss",$first_name,$last_name,$user_name,$contact_number,$email,$address,$hashed_password);
                             mysqli_stmt_execute($stmt);
-
+                           
                             $_SESSION['user_name'] = $user_name;   
                         
                             header("Location: ../Pages/dashboard.php?signup=done");

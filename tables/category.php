@@ -1,5 +1,8 @@
 <?php
 // Attempt select query execution
+
+include_once "../helpers/db.php"; 
+
 $sql = "SELECT * FROM categories";
 if ($result = mysqli_query($conn, $sql)) {
     if (mysqli_num_rows($result) > 0) {
@@ -18,11 +21,11 @@ if ($result = mysqli_query($conn, $sql)) {
                     echo "<td>" . 'C/' .$row['Id'] . "</td>";
                     echo "<td>" . $row['Category_name'] . "</td>";
                     echo "<td>";
-                        echo '<a href="#" class="mr-3" title="View Record" data-toggle="tooltip">
+                        echo '<a href="#" class="mr-3" title="View Record" >
                                                             <span class="fa fa-eye"></span></a>';
-                        echo '<a href="#" class="mr-3" title="Update Record" data-toggle="tooltip">
+                        echo '<a href="#" class="mr-3" title="Update Record" >
                                                             <span class="fa fa-pencil"></span></a>';
-                        echo '<a href="#" title="Delete Record" data-toggle="tooltip"> 
+                        echo '<a href="#" title="Delete Record" > 
                                                             <span class="fa fa-trash"></span></a>';
                     echo "</td>";
                 echo "</tr>";
@@ -36,8 +39,9 @@ if ($result = mysqli_query($conn, $sql)) {
         echo '<div class="alert alert-danger"><em>No records were found.</em></div>';
     }
 } else {
+    
     echo "Oops! Something went wrong. Please try again later.";
+  
 }
 
-// Close connection
-mysqli_close($conn);
+

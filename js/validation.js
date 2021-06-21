@@ -35,6 +35,9 @@ window.onload = function () {
 
     };
 
+   
+
+   
     
     
     if(window.location.href.indexOf('?signup=unique') > 0){
@@ -50,3 +53,20 @@ window.onload = function () {
 
 };
 
+
+var form2 = document.getElementById("category_create_form");
+var category_create_button = document.getElementById("category_submit"); 
+// create the pristine instance
+var pristine2 = new Pristine(form2);
+
+category_create_button.onclick =  function (e) {
+  e.preventDefault();
+  
+  // check if the form is valid
+  var valid = pristine2.validate(); 
+  console.log(valid);// returns true or false
+      if(valid){
+          form2.submit();
+      }
+
+};
