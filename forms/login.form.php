@@ -35,7 +35,7 @@
 
               <div class="text-center mt-4">
                   
-                    <button id="login_submit" class="btn btn-primary login-button">SIGNUP</button>
+                    <button id="login_submit" class="btn btn-primary login-button">SIGN IN</button>
                     <p>Do not have an account?</p>
                     <a type="button" style="color:blue; cursor:pointer"  class="" id="jump_signup">Signup</a> 
 

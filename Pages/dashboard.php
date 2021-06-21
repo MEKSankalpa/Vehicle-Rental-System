@@ -1,9 +1,8 @@
 <?php
 session_start();
 
-if(isset($_SESSION['user_name'])){
-
-?>
+if (isset($_SESSION['user_name'])) {
+    ?>
 
 <!doctype html>
 <html lang="en">
@@ -18,19 +17,22 @@ if(isset($_SESSION['user_name'])){
 
         <!-- Custom CSS -->
         <link rel="stylesheet" href="../css/custom.css">
+        <link rel="stylesheet" href="../css/category.css">
 
         <!-- jquery -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
         <!-- Our Custom JS -->
         <script src="../js/custom.js"></script>
+        <script src="../js/category.js"></script>
+        
         <!-- font-awesome -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
 
     <!-- Navbar -->
-        <?php @include '../layouts/header.php';?>
+        <?php include '../layouts/header.php';?>
 
         <!----- Dashboard Sidebar ----->
 
@@ -40,22 +42,14 @@ if(isset($_SESSION['user_name'])){
 
             <ul class="list-unstyled components">
                 <li>
-                    <a class="sidebar-a" href="#">
+                    <a class="sidebar-a" href="dashboard.php">
                         <i class="fa fa-tv fa-fw px-4 nav-icon" aria-hidden="true"></i><span>Dashboard</span>
                     </a>
                 </li>
                 <li>
-                    <a class="sidebar-a" href="#vehicleSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                        <i class="fa fa-taxi fa-fw px-4 nav-icon" aria-hidden="true"></i><span>Vehicles</span>
+                    <a class="sidebar-a" href="../Category/index.php">
+                        <i class="fa fa-taxi fa-fw px-4 nav-icon" aria-hidden="true"></i><span>Categories</span>
                     </a>
-                    <ul class="collapse list-unstyled" id="vehicleSubmenu">
-                        <li>
-                            <a class="sidebar-a" href="#"><span>Car</span></a>
-                        </li>
-                        <li>
-                            <a class="sidebar-a" href="#"><span>Motor Bike</span></a>
-                        </li>
-                    </ul>
                 </li>
                 <li>
                     <a class="sidebar-a" href="#"><i class="fa fa-user fa-fw px-4 nav-icon" aria-hidden="true">
@@ -99,6 +93,7 @@ if(isset($_SESSION['user_name'])){
         </div>
 
         <!---------- Page Contents ---------->
+        
 
         <!-----footer----->
         <?php @include '../layouts/footer.php'?>
@@ -111,9 +106,9 @@ if(isset($_SESSION['user_name'])){
 
 </html>
 
-<?php }else{
+<?php } else {
 
-include_once("./unauthorized.php");
+    include_once "./unauthorized.php";
 
 }
 
