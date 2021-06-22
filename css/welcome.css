@@ -441,7 +441,7 @@ background: rgba(25, 28, 31, 0.8);
 }
 
 .form-group .text-help {
-  color: #dc1d34;
+  color: #dc1d34 !important;
 }
 
 .inline-label label{
@@ -451,3 +451,4 @@ background: rgba(25, 28, 31, 0.8);
 .pristine-error {
   display: table;
 }
+

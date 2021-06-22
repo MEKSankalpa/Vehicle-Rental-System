@@ -5,29 +5,23 @@ if (isset($_SESSION['user_name'])) {
     ?>
 
 
-
-    <!-- Navbar -->
-        <?php include '../layouts/header.php';?>
-
-        <!----- Dashboard Sidebar ----->
+        <!-- Navbar -->
+        <?php include '../layouts/header.php'; ?>
 
         <!-- Navbar -->
         <?php include '../layouts/sidebar.php'; ?>
 
-        <!---------- Page Contents ---------->
+         <!-- Content -->
+         <?php include '../forms/category_create_form.php'; ?>
 
-        
-        
 
         <!-----footer----->
         <?php include '../layouts/footer.php'?>
 
-    
+       
 
 <?php } else {
-
-    include_once "./unauthorized.php";
-
+    include_once "./Pages/unauthorized.php";
 }
 
 ?>

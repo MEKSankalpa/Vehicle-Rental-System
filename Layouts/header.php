@@ -3,8 +3,36 @@ session_start();
 
 ?> -->
 
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>SafeRunneR</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+        <!-- styles -->
+        <link rel="stylesheet" href="../css/custom.css">
+        <link rel="stylesheet" href="../css/category.css">
+
+        <!-- jquery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+       
+
+        <!-- custom JS -->
+      
+        <script src="../js/category.js"></script>
+
+        <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg w-100">
+<nav class="navbar navbar-expand-lg w-100 mb-0">
     <div class="container-fluid">
 
         <div class="top-left text-align-left">
