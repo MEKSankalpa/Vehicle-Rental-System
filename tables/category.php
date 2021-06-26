@@ -1,9 +1,8 @@
 <?php
-// Attempt select query execution
 
-include_once "../helpers/db.php"; 
+include "../helpers/db.php"; 
 
-$sql = "SELECT * FROM categories";
+$sql = "SELECT * FROM vehicle_category";
 if ($result = mysqli_query($conn, $sql)) {
     if (mysqli_num_rows($result) > 0) {
         echo '<table class="table table-bordered table-striped">';
@@ -18,8 +17,8 @@ if ($result = mysqli_query($conn, $sql)) {
             echo "<tbody>";
         while ($row = mysqli_fetch_array($result)) {
                 echo "<tr>";
-                    echo "<td>" . 'C/' .$row['Id'] . "</td>";
-                    echo "<td>" . $row['Category_name'] . "</td>";
+                    echo "<td>" . 'C/' .$row['category_id'] . "</td>";
+                    echo "<td>" . $row['category_name'] . "</td>";
                     echo "<td>";
                         echo '<a href="#" class="mr-3" title="View Record" >
                                                             <span class="fa fa-eye"></span></a>';
@@ -39,9 +38,5 @@ if ($result = mysqli_query($conn, $sql)) {
         echo '<div class="alert alert-danger"><em>No records were found.</em></div>';
     }
 } else {
-    
     echo "Oops! Something went wrong. Please try again later.";
-  
 }
-
-
