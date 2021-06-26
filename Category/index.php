@@ -4,7 +4,6 @@ session_start();
 if (isset($_SESSION['user_name'])) {
     ?>
 
-
         <!-- Navbar -->
         <?php include '../layouts/header.php'; ?>
 
@@ -22,14 +21,9 @@ if (isset($_SESSION['user_name'])) {
                             <i class="fa fa-plus"></i> Add New Category</a>
                         </div>
 
-                        <?php
-                       
-                      
+                        <!-- category table -->
+                        <?php include '../tables/category.php'; ?>
 
-                        //Include category table
-                        include_once "../tables/category.php";
-                    
-                        ?>
                     </div>
                 </div>        
             </div>
