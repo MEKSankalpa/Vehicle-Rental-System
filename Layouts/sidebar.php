@@ -16,6 +16,11 @@
                     </a>
                 </li>
                 <li>
+                    <a class="sidebar-a" href="../backend/create_post/post_vehicals.php">
+                        </i class="fa fa-tv fa-fw px-4 nav-icon" aria-hidden="true"><span>Create Posts</span>
+                    </a>
+                </li>
+                <li>
                     <a class="sidebar-a" href="#"><i class="fa fa-user fa-fw px-4 nav-icon" aria-hidden="true">
                         </i><span>Clients</span>
                     </a>
