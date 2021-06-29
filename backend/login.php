@@ -21,17 +21,19 @@ if (empty($email) || empty($password)) {
 
             $user = $row['user_name'];
             $_SESSION["user_name"] = $user;  
-
+            
             header("Location: ../Pages/dashboard.php?login=success");
-            exit();
+           exit();
 
         } else {
+            
             header("Location: ../layouts/welcome.php?login=faild");
             exit();
         }
 
     } else {
+        
         header("Location: ../layouts/welcome.php?login=faild");
-        exit();
+       exit();
     }
 }

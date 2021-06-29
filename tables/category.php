@@ -20,11 +20,10 @@ if ($result = mysqli_query($conn, $sql)) {
                     echo "<td>" . 'C/' .$row['category_id'] . "</td>";
                     echo "<td>" . $row['category_name'] . "</td>";
                     echo "<td>";
-                        echo '<a href="#" class="mr-3" title="View Record" >
-                                                            <span class="fa fa-eye"></span></a>';
-                        echo '<a href="#" class="mr-3" title="Update Record" >
+                       
+                        echo '<a href="../category/edit_category.php?id='.$row['category_id'].'" class="mr-3 btn btn-outline-primary action-icon" title="Update Record" >
                                                             <span class="fa fa-pencil"></span></a>';
-                        echo '<a href="#" title="Delete Record" > 
+                        echo '<a href="#" title="Delete Record" id="delete_category" class="btn btn-outline-danger action-icon" data-id='.$row['category_id'].'> 
                                                             <span class="fa fa-trash"></span></a>';
                     echo "</td>";
                 echo "</tr>";
