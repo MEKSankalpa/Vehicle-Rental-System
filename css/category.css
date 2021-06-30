@@ -38,4 +38,20 @@ table tr td:last-child {
     background-color: #6c757d;
     color: #fff;
 }
-  
+
+.action-icon{
+    font-size: 20px;
+    text-decoration: none;
+    
+}
+
+.action-icon:hover{
+    color:#f7b32c ;
+    background-color: white;
+    outline: 1px solid #f7b32c;
+   
+}
+
+.card-header{
+    background-color: #00838F !important;
+}

@@ -1,13 +1,13 @@
 body {
     font-family: 'Poppins', sans-serif;
-    background: #e5e7e9; 
+    background: #EEEEEE; 
 }
 
 /******************** Navbar ********************/
 
 .navbar {
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
-    background-color: #fdfefe;
+    background-color: #00838F;
     padding-top: 5px;
     padding-bottom: 5px;
     padding-right: 0%;
@@ -35,7 +35,7 @@ body {
 }
 
 #toggle-btn {
-    color: #6c757d;
+    color: #424242;
     border: none;
     background-color: transparent;
     display: inline;
@@ -55,7 +55,7 @@ body {
 }
 
 .nav-link {
-    color: #6c757d !important;
+    color: #424242 !important;
     margin-right: 30px;
 }
 

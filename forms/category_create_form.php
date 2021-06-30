@@ -1,5 +1,5 @@
 <div class="card  p-0" >
-  <div class="card-header">
+  <div class="card-header ">
    <h5>Category Create</h5>
   </div>
   <div class="card-body pb-5">
