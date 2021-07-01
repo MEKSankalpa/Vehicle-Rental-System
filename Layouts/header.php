@@ -17,6 +17,8 @@ session_start();
         <!-- styles -->
         <link rel="stylesheet" href="../css/custom.css">
         <link rel="stylesheet" href="../css/category.css">
+        <link rel="stylesheet" href="../css/style.css">
+
 
         <!-- jquery -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
