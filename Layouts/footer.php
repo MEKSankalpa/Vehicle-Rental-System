@@ -3,7 +3,7 @@
 <footer class="page-footer font-small">
 
     <!-- Copyright -->
-    <div class="footer-copyright text-center py-3 mx-5">© 2021 Copyright: SafeRunneR.com </div>
+    <div class="footer-copyright text-center py-2 mx-5">© 2021 Copyright SafeRunner. All Rights Reserved </div>
     <!-- Copyright -->
 
 </footer>

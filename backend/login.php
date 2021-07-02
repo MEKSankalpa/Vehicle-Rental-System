@@ -20,20 +20,20 @@ if (empty($email) || empty($password)) {
         if (password_verify($password, $saved_pass)) {
 
             $user = $row['user_name'];
-            $_SESSION["user_name"] = $user;  
-            
+            $_SESSION["user_name"] = $user;
+
             header("Location: ../Pages/dashboard.php?login=success");
-           exit();
+            exit();
 
         } else {
-            
-            header("Location: ../layouts/welcome.php?login=faild");
+
+            header("Location: ../layouts/welcome.php?login=failed");
             exit();
         }
 
     } else {
-        
-        header("Location: ../layouts/welcome.php?login=faild");
-       exit();
+
+        header("Location: ../layouts/welcome.php?login=failed");
+        exit();
     }
 }

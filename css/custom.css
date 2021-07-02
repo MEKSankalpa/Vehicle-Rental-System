@@ -7,7 +7,7 @@ body {
 
 .navbar {
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
-    background-color: #00838F;
+    background-color: #063d42;
     padding-top: 5px;
     padding-bottom: 5px;
     padding-right: 0%;
@@ -35,7 +35,7 @@ body {
 }
 
 #toggle-btn {
-    color: #424242;
+    color: #fdfefe;
     border: none;
     background-color: transparent;
     display: inline;
@@ -55,7 +55,7 @@ body {
 }
 
 .nav-link {
-    color: #424242 !important;
+    color: #fdfefe !important;
     margin-right: 30px;
 }
 
@@ -72,13 +72,12 @@ body {
 #sidebar {
     min-width: 250px;
     max-width: 250px;
-    min-height: 100vh;
     background-color: #fdfefe;
     transition: all 1s ;
-    height:0100%;
+    height:100%;
     width: 160px;
     z-index: 1;
-    top: 68px;
+    top: 66px;
     left: 0;
     overflow-x: hidden;
     padding-top: 0px;
@@ -117,6 +116,7 @@ ul ul .sidebar-a {
     display: flex;
     width: 100%;
     align-items: stretch;
+    height:calc(100vh-8vh);
 }
 
 .mini-sidebar {
@@ -173,13 +173,19 @@ ul ul .sidebar-a {
 
 /******************** footer ********************/
 .page-footer {
-    color:#6c757d;
-    background:#fdfefe;
-    margin-top: 922px;
-    left: 100px;
-    right: 200px;
+    color:#f3a200 !important;
+    background:#063d42;
+    margin-top: 10vh;
+    width: 100%;
+    padding: 5px;
+    z-index: 1;
+    position: relative;
+    bottom: 0px;
+    /* left: 0vh;
+    right: 0vh; */
 }
 
+.page-footer-expanded { height: 100%; }
 
 .create-button:hover{
   background-color:#f3a200 !important;

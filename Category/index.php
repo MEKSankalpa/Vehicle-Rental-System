@@ -13,7 +13,7 @@ if (isset($_SESSION['user_name'])) {
         <!--Page Content-->
         <div class="card p-0 mx-auto"> 
             <div class="card-header">
-               <h5>Categories</h5>
+               <h5 id="header-name">Vehicle Categories</h5>
             </div>
             <div class="card-body table-responsive text-center pb-5">
 
