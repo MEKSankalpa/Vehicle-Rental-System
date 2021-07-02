@@ -70,7 +70,7 @@ session_start();
        <section class="cover fixed" id="cover_img">
            <div class="cover-content">
                
-               <h1 class="">Safe Adventure </h1>
+               <h1 class=""> <strong>SAFE ADVENTURE</strong> </h1>
                <h2>Rent a car with SafeRunner and enjoy your destination </h2>
                 
            </div>

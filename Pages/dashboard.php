@@ -15,7 +15,9 @@ if (isset($_SESSION['user_name'])) {
         <?php include '../layouts/sidebar.php'; ?>
 
         <!---------- Page Contents ---------->
+        <div class="main-content">
 
+        </div> 
         
         
 

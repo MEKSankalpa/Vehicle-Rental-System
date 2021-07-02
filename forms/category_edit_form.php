@@ -19,7 +19,7 @@ if($count > 0){
 
 <div class="card  p-0" >
   <div class="card-header">
-   <h5>Edit Category</h5>
+   <h5 id="header-name">Edit Category</h5>
   </div>
   <div class="card-body pb-5">
     
