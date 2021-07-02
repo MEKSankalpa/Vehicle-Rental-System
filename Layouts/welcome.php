@@ -70,8 +70,8 @@ session_start();
        <section class="cover fixed" id="cover_img">
            <div class="cover-content">
                
-               <h1 class="">Lorem ipsum </h1>
-               <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. </h2>
+               <h1 class="">Safe Adventure </h1>
+               <h2>Rent a car with SafeRunner and enjoy your destination </h2>
                 
            </div>
        </section>
@@ -80,13 +80,13 @@ session_start();
          
           <div class="about container p-5">
             <h1 class="text-center">ABOUT US</h1>
-            <p class=" text-justify pt-4 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa et, pariatur, vitae optio placeat quos vel sunt tempore ad cupiditate, nostrum neque obcaecati amet. Quia quaerat expedita repudiandae magni unde?Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquam necessitatibus fuga atque! Tenetur esse similique odio! Quasi qui aliquam dignissimos doloremque facilis ipsa obcaecati dolorum, facere eos minima! Tempore.</p>
+            <p class=" text-justify pt-4 ">We endeavor to provide the finest standards of customer care and highly personalized service to all of our customers looking for Sri Lanka vehicle rental opportunities, with over 30 years of expertise in the sector. Our service is backed by a networked front office, fully-fledged mechanical servicing, and valet service, and our fleet is one of the largest, most contemporary, most diverse in Sri Lanka.</p>
           </div>
 
           <section class="offers">
 
              <h1>OFFERS</h1>
-             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+             <p>Some of the offers that are being introduced these days</p>
             
              <div class="offer-content row d-flex justify-content-center">
              
@@ -95,7 +95,7 @@ session_start();
                     <div class="card-body">
                       <h4 class="text-left">FAMILY CARS</h4>
                       <h6 class="text-left">From <span class="price">$120</span>  per weekend</h6>
-                      <p class="card-text text-justify mt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum dicta voluptas quia dolor fuga odit.</p>
+                      <p class="card-text text-justify mt-3">Premium family vehicles like SUVs seating four to seven people and minivans seating seven. No matter if your family is renting a car for a day trip or for a week-long road trip, you have more space to stretch out.</p>
 
                        <hr>
                       <a href="" class="btn offer-btn btn-outline-success">View Offer </a> 
@@ -106,8 +106,8 @@ session_start();
                     <img class="card-img-top" src="../images/offer2.jpeg" alt="Card image cap" height="250px">
                     <div class="card-body">
                       <h4 class="text-left">LUXURY & PRESTIGE CARS</h4>
-                      <h6 class="text-left">From <span class="price">$120</span>  per weekend</h6>
-                      <p class="card-text text-justify mt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum dicta voluptas quia dolor fuga odit.</p>
+                      <h6 class="text-left">From <span class="price">$150</span>  per weekend</h6>
+                      <p class="card-text text-justify mt-3">Rental cars include the Mercedes-Benz S Class, BMW 6 Series, and Jaguar F-Type just to name a few. Choose a high-performance luxury car to make the journey as enjoyable as the destination.</p>
                       <hr>
                       <a href="" class="btn offer-btn btn-outline-success">View Offer </a> 
 
@@ -119,8 +119,8 @@ session_start();
                     <img class="card-img-top" src="../images/offer4.jpeg" alt="Card image cap" height="250px">
                     <div class="card-body">
                       <h4 class="text-left">TOP SELLERS</h4>
-                      <h6 class="text-left">From <span class="price">$120</span>  per weekend</h6>
-                      <p class="card-text text-justify mt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum dicta voluptas quia dolor fuga odit.</p>
+                      <h6 class="text-left">From <span class="price">$100</span>  per weekend</h6>
+                      <p class="card-text text-justify mt-3">Many of the best-selling models saw sales increases compared with this time last year. We will continue to update this ranking quarterly as the top demands are changing throughout the year.</p>
                       <hr>
                       <a href="" class="btn offer-btn btn-outline-success">View Offer </a> 
                     </div>
@@ -134,7 +134,7 @@ session_start();
           <section class="service">
 
              <h1>SERVICES</h1>
-             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+             <p>Our services can be customized to fit your specific transportation needs.</p>
 
              <div class="offer-content row d-flex justify-content-center">
                   
@@ -143,8 +143,8 @@ session_start();
                     <div class="icon mx-auto mb-3 d-flex align-items-center justify-content-center">
                        <i class="fa fa-globe" aria-hidden="true"></i>
                     </div>
-                    <h5 class="card-title mb-2 ">Card subtitle</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <h5 class="card-title mb-2 ">World Wide</h5>
+                    <p class="card-text">24 hrs world wide backup services with affiliated Garages and Mobile units.</p>
                     
                   </div>
                 </div>
@@ -155,8 +155,8 @@ session_start();
                     <div class="icon mx-auto mb-3 d-flex align-items-center justify-content-center">
                       <i class="fa fa-car" aria-hidden="true"></i>
                     </div>
-                    <h5 class="card-title mb-2 ">Card subtitle</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <h5 class="card-title mb-2 ">Over 1000 Vehicles</h5>
+                    <p class="card-text">Over 100 4WD Jeeps, 150 Vans, 500 Cars, Double Cabs, Luxury Coaches, Lorries etc.</p>
                     
                   </div>
                 </div>
@@ -167,8 +167,8 @@ session_start();
                       <i class="fa fa-flag" aria-hidden="true"></i>
 
                     </div>
-                    <h5 class="card-title mb-2 ">Card subtitle</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <h5 class="card-title mb-2 ">Insurance</h5>
+                    <p class="card-text">Comprehensive Insurance available for all our vehicles including Passengers</p>
                     
                   </div>
                 </div>
@@ -176,10 +176,10 @@ session_start();
                 <div class="card col-md-2 m-3 pb-2 service-card" style="width: 18rem;">
                   <div class="card-body">
                     <div class="icon mx-auto mb-3 d-flex align-items-center justify-content-center">
-                      <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                      <i class="fa fa-user" aria-hidden="true"></i>
                     </div>
-                    <h5 class="card-title mb-2 ">Card subtitle</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <h5 class="card-title mb-2 ">Our Strength</h5>
+                    <p class="card-text">100 In-house Operational Staff, 70 Automobile Technicians and 300 permanent Drivers from every branch of the Island.</p>
                     
                   </div>
                 </div>
@@ -197,10 +197,10 @@ session_start();
                           
                         <img src="../images/testimonials-1.jpg" class="testimonial-img " alt="">
                         <h3>Saul Goodman</h3>
-                        <h4>Ceo &amp; Founder</h4>
+                        <h4>Entrepreneur</h4>
                         <p>
                           <i class=""></i>
-                          Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                          We chose saferunner as a rental software solutions company because of its flexibility, depth of features and most importantly customer-centric support model.
                           <i class=""></i>
                         </p>
                       </div>
@@ -208,11 +208,11 @@ session_start();
                       <div class="testimonial-item text-center ">
                           
                         <img src="../images/testimonials-2.jpg" class="testimonial-img " alt="">
-                        <h3>Saul Goodman</h3>
-                        <h4>Ceo &amp; Founder</h4>
+                        <h3>Susan zhen</h3>
+                        <h4>Public Services Manager</h4>
                         <p>
                           <i class=""></i>
-                          Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                          This website tells you immediately which vehicles are available and which aren’t. It saves you time and helps you stay organized.
                           <i class=""></i>
                         </p>
                       </div>
@@ -220,11 +220,11 @@ session_start();
                       <div class="testimonial-item text-center ">
                           
                         <img src="../images/testimonials-3.jpg" class="testimonial-img " alt="">
-                        <h3>Saul Goodman</h3>
-                        <h4>Ceo &amp; Founder</h4>
+                        <h3>Kathi Peterson</h3>
+                        <h4>Quality Engineer</h4>
                         <p>
                           <i class=""></i>
-                          Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                          By far the most complete renting software, with many features (fleet management, contract automatization, damages overview, payment integration, etc) and great customer support.
                           <i class=""></i>
                         </p>
                       </div>
@@ -232,11 +232,11 @@ session_start();
                       <div class="testimonial-item text-center ">
                           
                         <img src="../images/testimonials-4.jpg" class="testimonial-img " alt="">
-                        <h3>Saul Goodman</h3>
-                        <h4>Ceo &amp; Founder</h4>
+                        <h3>James Potter</h3>
+                        <h4>Developer</h4>
                         <p>
                           <i class=""></i>
-                          Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                          Saferunner Rental Software is ideal for any type of vehicle rental.
                           <i class=""></i>
                         </p>
                       </div>
@@ -244,11 +244,11 @@ session_start();
                       <div class="testimonial-item text-center ">
                           
                         <img src="../images/testimonials-5.jpg" class="testimonial-img " alt="">
-                        <h3>Saul Goodman</h3>
-                        <h4>Ceo &amp; Founder</h4>
+                        <h3>Jakson Hamilton</h3>
+                        <h4>Businessman</h4>
                         <p>
                           <i class=""></i>
-                          Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                          The software is user friendly, fast, and easy to use.
                           <i class=""></i>
                         </p>
                       </div>
@@ -262,7 +262,7 @@ session_start();
           <section class="contact">
   
             <h1>Contact Us</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>  
+            <p>We would love to hear from you. Get in touch with us.</p>  
 
             <div class="row justify-content-center">
                 <div class="col-md-5 mx-2  contact-social ">
@@ -309,7 +309,7 @@ session_start();
                         </div>
 
                         <h4 class="my-3">Email Us</h4>
-                        <email>example@gmail.com</email>
+                        <email>safeRunner@gmail.com</email>
   
                       </div>
                        <div class="col-md-5 mx-2 pt-4  call-box">
@@ -358,8 +358,8 @@ session_start();
           <footer class="footer">
 
             <div class="container">
-              <h3>Laura Thomson</h3>
-              <p>Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.</p>
+              <h3>Faster Safer Rider</h3>
+              <p>Enjoy the efficient and specialized services of SafeRunnR Rent a Car; Sri Lanka's leading rent-a-car company.</p>
               <div class="social-links">
                 <a href="#" class="twitter"> <i class="fa fa-facebook-official" aria-hidden="true"></i></a>
                 <a href="#" class="facebook"> <i class="fa fa-twitter" aria-hidden="true"></i></a>
@@ -368,7 +368,7 @@ session_start();
                 <a href="#" class="linkedin">  <i class="fa fa-linkedin" aria-hidden="true"></i></a>
               </div>
               <div class="copyright">
-                &copy; Copyright <strong><span>Laura</span></strong>. All Rights Reserved
+                &copy; 2021 Copyright <strong><span>SafeRunner</span></strong>. All Rights Reserved
               </div>
               <div class="credits">
                 <!-- All the links in the footer should remain intact. -->
@@ -402,3 +402,5 @@ session_start();
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   </body>
 </html>
+
+<!-- content updated -->

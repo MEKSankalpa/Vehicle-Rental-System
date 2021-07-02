@@ -22,6 +22,7 @@
 
 table tr td:last-child {
     width: 180px;
+    /* height: 20px; */
 }
 
 .create-btn {
@@ -46,12 +47,18 @@ table tr td:last-child {
 }
 
 .action-icon:hover{
-    color:#f7b32c ;
+    color:#6c757d ;
     background-color: white;
-    outline: 1px solid #f7b32c;
+    outline: 1px solid #6c757d;
    
 }
 
 .card-header{
-    background-color: #00838F !important;
+    background-color: #063d42 !important;
+}
+
+#header-name {
+    color: #fff;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
 }

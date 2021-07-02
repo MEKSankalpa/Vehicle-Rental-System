@@ -36,7 +36,7 @@ session_start();
     <div class="container-fluid">
 
         <div class="top-left text-align-left">
-            <img src="../images/logo.png" alt="logo" id="logo">
+            <img src="../images/logo1.png" alt="logo" id="logo">
             <a class="menu-icon" id="sidebarCollapse" href="">
                 <i id="toggle-btn" class="fa fa-bars" aria-hidden="true"></i>
             </a>
