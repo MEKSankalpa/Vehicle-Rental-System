@@ -12,8 +12,9 @@ if (isset($_SESSION['user_name'])) {
         <?php include '../layouts/sidebar.php'; ?>
 
          <!-- Content -->
+         <div class="main-content">
          <?php include '../forms/category_edit_form.php'; ?>
-
+         </div>
 
         <!-----footer----->
         <?php include '../layouts/footer.php'?>

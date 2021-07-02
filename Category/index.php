@@ -11,6 +11,7 @@ if (isset($_SESSION['user_name'])) {
         <?php include '../layouts/sidebar.php'; ?>
 
         <!--Page Content-->
+        <div class="main-content">
         <div class="card p-0 mx-auto"> 
             <div class="card-header">
                <h5 id="header-name">Vehicle Categories</h5>
@@ -49,7 +50,7 @@ if (isset($_SESSION['user_name'])) {
 
             </div>
         </div>
-
+       </div>
 
         <!-----footer----->
         <?php include '../layouts/footer.php'?>

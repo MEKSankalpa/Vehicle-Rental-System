@@ -208,3 +208,7 @@ ul ul .sidebar-a {
     color: #dc1d34 !important;
   }
   
+  .main-content{
+      width: 100%;
+      min-height: 100vh;
+  }
