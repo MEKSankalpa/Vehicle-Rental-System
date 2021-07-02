@@ -190,3 +190,21 @@ ul ul .sidebar-a {
 .create-button:hover{
   background-color:#f3a200 !important;
 }
+
+.vehicle-create-button{
+    background-color: #f3a200;
+    margin: 1px solid #f3a200;
+}
+
+.has-success .form-control {
+    border: 1px solid #168b3f;
+  }
+  
+  .has-danger .form-control {
+    border: 1px solid #dc1d34;
+  }
+  
+  .form-group .text-help {
+    color: #dc1d34 !important;
+  }
+  
