@@ -34,6 +34,6 @@ if (empty($email) || empty($password)) {
     } else {
         
         header("Location: ../layouts/welcome.php?login=faild");
-       exit();
+        exit();
     }
 }

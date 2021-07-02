@@ -70,3 +70,4 @@ category_create_button.onclick =  function (e) {
       }
 
 };
+
