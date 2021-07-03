@@ -16,6 +16,7 @@ session_start();
 
         <!-- styles -->
         <link rel="stylesheet" href="../css/custom.css">
+        <link rel="stylesheet" href="../css/vehicle.css">
         <link rel="stylesheet" href="../css/category.css">
 
         <!-- jquery -->
@@ -28,6 +29,9 @@ session_start();
 
         <!-- font-awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+ <!-- font-awesome -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     </head>
     <body>
 
