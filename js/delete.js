@@ -1,13 +1,15 @@
 $(document).ready(function(){
 
+
+   //Category Delete...... 
   $(document).on('click', '#delete_category', function(e){
    e.preventDefault();
 
    var id = $(this).data('id');
    
    bootbox.confirm({
-    title: "<h4 style='color:red'>Are You Sure?</h4>",
-    message: "<p>This category will be deleted permanently!</p>",
+    title: "<strong><h4 style='color:red'>Are You Sure?</h4></strong>",
+    message: "<p><strong>This category will be deleted permanently!</strong></p><p>All products also will be deleted under this category...</p>",
     buttons: {
         confirm: {
             label: 'Yes',
@@ -38,6 +40,49 @@ $(document).ready(function(){
  
 
   })
+
+
+
+    //Vehicle Delete...... 
+    $(document).on('click', '#delete_vehicle', function(e){
+        e.preventDefault();
+     
+        var id = $(this).data('id');
+        
+        bootbox.confirm({
+         title: "<strong><h4 style='color:red'>Are You Sure?</h4></strong>",
+         message: "<p><strong>This record will be deleted permanently!</strong></p>",
+         buttons: {
+             confirm: {
+                 label: 'Yes',
+                 className: 'btn-outline-success'
+             },
+             cancel: {
+                 label: 'No',
+                 className: 'btn-outline-danger'
+             }
+         },
+         callback: function (result) {
+            if(result == true){
+             
+             $.ajax({
+                 url:"../backend/vehicle_delete.php",
+                 type:"POST",
+                 data:"delete="+id,
+                 dataType:"json",
+             })
+             .done(function(res){
+                if(res == "success"){
+                    window.open("../vehicle/vehicle_list.php?delete_vehicle=success","_self")
+                }
+             })
+            }
+         }
+     });
+      
+     
+       })
+     
 
 
 })
