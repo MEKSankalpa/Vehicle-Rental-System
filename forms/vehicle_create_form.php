@@ -1,6 +1,7 @@
 <div class="card  p-0" >
-  <div class="card-header ">
-   <h5 id="header-name">Vehicle Create Form</h5>
+  <div class="card-header row">
+   <h5 id="header-name" class=" col-sm-10 col-sm-offset">Vehicle Create Form</h5>
+   <a href="../vehicle/vehicle_list.php" class="btn btn-outline-light btn-md b-5 col-sm-1">Back</a>
   </div>
   <div class="card-body pb-5">
     
