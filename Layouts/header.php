@@ -16,7 +16,7 @@ session_start();
 
         <!-- styles -->
         <link rel="stylesheet" href="../css/custom.css">
-        <link rel="stylesheet" href="../css/vehicle.css">
+        <!-- <link rel="stylesheet" href="../css/vehicle.css"> -->
         <link rel="stylesheet" href="../css/category.css">
 
         <!-- jquery -->

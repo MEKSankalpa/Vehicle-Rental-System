@@ -58,7 +58,7 @@ if(empty($vehicle_title) || empty($vehicle_category) || empty($price_per_day) ||
     }
 
    mysqli_query($conn, $sql) or die(mysqli_error($conn));              
-   header("Location: ../vehicle/edit_vehicle.php?update=done&id=$vehicle_id");
+   header("Location: ../vehicle/vehicle_list.php?update=done&id=$vehicle_id");
    exit();
    
 

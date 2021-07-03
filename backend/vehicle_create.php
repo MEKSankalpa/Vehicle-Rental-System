@@ -52,7 +52,7 @@ if(empty($vehicle_title) || empty($vehicle_category) || empty($price_per_day) ||
   
    mysqli_query($conn, $sql) or die(mysqli_error($conn));
                     
-   header("Location: ../vehicle/vehicle_create.php?vehicle=done");
+   header("Location: ../vehicle/vehicle_list.php?vehicle=done");
    exit();
    
 
