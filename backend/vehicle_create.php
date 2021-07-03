@@ -23,7 +23,7 @@ $central_locking =isset($_POST['centrallocking']) ? 1 : 0 ;
 $crashcensor =isset($_POST['crashcensor']) ? 1 : 0 ; 
 $leather_seats =isset($_POST['leatherseats']) ? 1 : 0 ; 
 
-echo $image_name;
+
 
 //including database connection
 include_once "../helpers/db.php";

@@ -6,8 +6,8 @@ $(document).ready(function(){
    var id = $(this).data('id');
    
    bootbox.confirm({
-    title: "<h4 style='color:red'>Are You Sure?</h4>",
-    message: "<p>This category will be deleted permanently!</p>",
+    title: "<strong><h4 style='color:red'>Are You Sure?</h4></strong>",
+    message: "<p><strong>This category will be deleted permanently!</strong></p><p>All products also will be deleted under this category...</p>",
     buttons: {
         confirm: {
             label: 'Yes',
