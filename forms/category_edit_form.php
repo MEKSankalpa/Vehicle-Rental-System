@@ -28,7 +28,7 @@ if($count > 0){
             <div class="form-group row">
                 <label for="category_id" class="col-sm-3 col-form-label" >Category Id</label>
                 <div class="col-sm-9 form-group">
-                    <input type="text"  class="form-control" id="category_id" name="category_id"  
+                    <input type="text"  class="form-control" id="category_id" name="category_id" readonly 
                        value="C/<?php echo $row['category_id'] ?>"
                     
                     >
