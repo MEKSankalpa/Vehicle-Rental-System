@@ -1,5 +1,8 @@
+
 <?php
 session_start();
+
+include_once '../helpers/db.php';
 
 if (isset($_SESSION['user_name'])) {
     ?>
@@ -11,11 +14,10 @@ if (isset($_SESSION['user_name'])) {
         <!-- Navbar -->
         <?php include '../layouts/sidebar.php'; ?>
 
-         <!-- Content -->
-         <div class="main-content">
-         <?php include '../forms/vehicle_edit_form.php'; ?>
-         </div>
-
+        <!-- Content -->
+        <div class="main-content">
+         <?php  include '../forms/vehicle_view_card.php' ?>      
+        </div>
         <!-----footer----->
         <?php include '../layouts/footer.php'?>
 
