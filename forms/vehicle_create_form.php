@@ -81,7 +81,7 @@
 
                     <div class="form-group col-md-6">
                         <label for="seatingcapacity">Seating Capacity<span style="color:red">*</span></label>
-                        <input type="number"  name="seatingcapacity" class="form-control" id="seatingcapacity" placeholder="Enter Seating Capacity" required data-pristine-required-message="This field is required" data-pristine-type="number">
+                        <input type="text"  name="seatingcapacity" class="form-control" id="seatingcapacity" placeholder="Enter Seating Capacity" required data-pristine-required-message="This field is required" data-pristine-type="number">
                     </div>
 
                 </div>
@@ -175,7 +175,7 @@
                         <label class="form-check-label" for="leatherseats">Leather Seats</label>
                     </div>
                 </div>
-                <button id="vehicle_submit" class="btn btn-primary vehicle-create-button">CREAT PRODUCCT</button>
+                <button id="vehicle_submit" class="btn btn-primary vehicle-create-button">CREAT VEHICLE</button>
                 <div class="text-center mt-4">
                    
                    

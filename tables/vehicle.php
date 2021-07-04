@@ -18,9 +18,9 @@ if ($result->num_rows > 0) {
 			<td><?php echo $row["fluel_type"]?></td>
 			<td>
 				<div class="btn-group btn-group-sm">
-					<a href="#" class="btn btn-outline-primary mr-2" id="view-btn"><i class="bi bi-eye-fill"></i><br/>View</a>
-					<a href="../vehicle/edit_vehicle.php?vehicle_id=<?php echo $row['id'] ?>" class="btn btn-outline-success mr-2" id="edit-btn"><i class="bi bi-pencil-square"></i><br/>Edit</a>
-					<a href="#" class="btn btn-outline-danger" id="delete_vehicle" data-id="<?php echo $row['id'] ?>"><i class="bi bi-trash"></i><br/>Delete</a>
+					<a href="#" class="btn btn-outline-primary mr-2" id="view-btn"><i class="bi bi-eye-fill"></i><br/></a>
+					<a href="../vehicle/edit_vehicle.php?vehicle_id=<?php echo $row['id'] ?>" class="btn btn-outline-success mr-2" id="edit-btn"><i class="bi bi-pencil-square"></i><br/></a>
+					<a href="#" class="btn btn-outline-danger" id="delete_vehicle" data-id="<?php echo $row['id'] ?>"><i class="bi bi-trash"></i><br/></a>
 				</div>
 			</td>
 		</tr> 

@@ -16,8 +16,8 @@
                     </a>
                 </li>
                 <li>
-                    <a class="sidebar-a" href="../vehicle/vehicle_list.php"><i class="fa fa-user fa-fw px-4 nav-icon" aria-hidden="true">
-                        </i><span>Vehicles List</span>
+                    <a class="sidebar-a" href="../vehicle/vehicle_list.php"><i class="fa fa-car fa-fw px-4 nav-icon" aria-hidden="true">
+                        </i><span>Vehicles </span>
                     </a>
                 </li>
                 <li>
