@@ -25,6 +25,8 @@ session_start();
     <!-- Owl carsuel  -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"> 
+
+    <script src="https://unpkg.com/sweet-scroll/sweet-scroll.min.js"></script>
     
     <body>
        
@@ -33,11 +35,11 @@ session_start();
             <nav class="nav-menu d-none d-lg-block ">
               <ul>
                 <li class="active"><a href="index.html">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#resume">Offers</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#portfolio">Testimonials</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about"  data-scroll>About</a></li>
+                <li><a href="#offers" data-scroll>Offers</a></li>
+                <li><a href="#services" data-scroll>Services</a></li>
+                <li><a href="#portfolio" data-scroll>Testimonials</a></li>
+                <li><a href="#contact" data-scroll>Contact</a></li>
         
               </ul>
 
@@ -76,14 +78,14 @@ session_start();
            </div>
        </section>
 
-      <main class="main-content">
+      <main class="main-content" id="about">
          
-          <div class="about container p-5">
+          <div class="about container p-5" >
             <h1 class="text-center">ABOUT US</h1>
             <p class=" text-justify pt-4 ">We endeavor to provide the finest standards of customer care and highly personalized service to all of our customers looking for Sri Lanka vehicle rental opportunities, with over 30 years of expertise in the sector. Our service is backed by a networked front office, fully-fledged mechanical servicing, and valet service, and our fleet is one of the largest, most contemporary, most diverse in Sri Lanka.</p>
           </div>
 
-          <section class="offers">
+          <section class="offers" id="offers">
 
              <h1>OFFERS</h1>
              <p>Some of the offers that are being introduced these days</p>
@@ -131,7 +133,7 @@ session_start();
  
           </section>
 
-          <section class="service">
+          <section class="service" id="services">
 
              <h1>SERVICES</h1>
              <p>Our services can be customized to fit your specific transportation needs.</p>
@@ -188,7 +190,7 @@ session_start();
 
           </section>
 
-          <section class="testimonials">
+          <section class="testimonials" id="portfolio">
                 <div class="container testimonials-contain">
 
                   <div class="owl-carousel testimonials-carousel ">
@@ -259,7 +261,7 @@ session_start();
                 </div>
           </section>
 
-          <section class="contact">
+          <section class="contact" id="contact">
   
             <h1>Contact Us</h1>
             <p>We would love to hear from you. Get in touch with us.</p>  
@@ -393,12 +395,11 @@ session_start();
      
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-
-  
 <script src="../js/pristine.js"></script>
 <script src="../js/welcome.js"></script>
 <script src="../js/validation.js"></script>
 <script src="../js/modal.js"></script>
+<script src="../js/scroll.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   </body>
 </html>

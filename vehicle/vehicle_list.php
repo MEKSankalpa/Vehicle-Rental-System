@@ -24,7 +24,7 @@ if (isset($_SESSION['user_name'])) {
 				<div class="card-body text-center pb-5">
 
 					<a href="./vehicle_create.php" class="create-btn btn mb-4">
-								<i class="fa fa-plus"></i> Add New Vehicle</a>
+								<i class="fa fa-plus"></i> Add New Product</a>
 
 				<!-- Create Alert -->
 				<?php  if(isset($_GET['vehicle'])) { if($_GET['vehicle'] == 'done'){ ?>  
