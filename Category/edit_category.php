@@ -22,7 +22,7 @@ if (isset($_SESSION['user_name'])) {
        
 
 <?php } else {
-    include_once "./Pages/unauthorized.php";
+    include_once "../Pages/unauthorized.php";
 }
 
 ?>
