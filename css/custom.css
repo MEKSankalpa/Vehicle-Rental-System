@@ -244,9 +244,30 @@ ul ul .sidebar-a {
     text-shadow: 1px 1px 1px #ccc;
 }
 
-#fleet-card-header{
-    background-color: #ffc85a !important;
-    color: #fdfefe;
+/**** fleet container ***/
+
+.more-btn {
+    margin-left: 1300px !important;
 }
 
-/**** fleet container ***/
+.more-btn:hover {
+    border: #168b3f !important;
+    background-color: #168b3f !important;
+    color: #fff;
+}
+
+.container {
+    margin-left: 310px !important;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.header {
+    font-size: 24px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+
+.header:hover {
+    color: #168b3f!important;
+}

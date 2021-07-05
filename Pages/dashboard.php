@@ -1,8 +1,21 @@
 <?php
+
+// include_once "../helpers/db.php";
+
+// vehicle_categry("db", $con);
+
+// $result = $sql("select count(1) FROM table");
+// $row = mysql_fetch_array($result);
+
+// $total = $row[0];
+// echo "Total rows: " . $total;
+
+// mysql_close($con);
+
 session_start();
 
 if (isset($_SESSION['user_name'])) {
-    ?>
+?>
 
     <!-- Navbar -->
         <?php include '../layouts/header.php';?>
@@ -70,106 +83,8 @@ if (isset($_SESSION['user_name'])) {
             </div>
 
 <!---------------------- Fleet Container ------------------------>
-            <!-- <div class="col w-75 mx-auto">
-                <div class="row">
-                    <div class="card col-12 bg-secondary pr-3 pb-20 mb-0" id="fleet-card">
-                        <div id="fleet-card-header">Cat 1</div>
-                        <div class="card-body row">
-                            <div class="col-lg-4 col-xs-12">
-                                d1
-                            </div>
-                            <div class="col-lg-4 col-xs-12">
-                                d2
-                            </div>
-                            <div class="col-lg-4 col-xs-12">
-                                d2
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="card col-12 bg-secondary pr-3" id="fleet-card">
-                        <div id="fleet-card-header">Cat 1</div>
-                        <div class="card-body row">
-                            <div class="col-lg-4 col-xs-12">
-                                d1
-                            </div>
-                            <div class="col-lg-4 col-xs-12">
-                                d2
-                            </div>
-                            <div class="col-lg-4 col-xs-12">
-                                d2
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="card col-12 bg-secondary pr-3" id="fleet-card">
-                        <div id="fleet-card-header">Cat 1</div>
-                        <div class="card-body row">
-                            <div class="col-lg-4 col-xs-12">
-                                d1
-                            </div>
-                            <div class="col-lg-4 col-xs-12">
-                                d2
-                            </div>
-                            <div class="col-lg-4 col-xs-12">
-                                d2
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
-
-            <section class="offers">
-            
-             <div class="offer-content row d-flex justify-content-center">
-                  <div class="card col-3 m-4 px-1" style="width: 7rem;">
-                    <img class="card-img-top" src="../images/offer1.jpeg" alt="Card image cap" height="200px">
-                    <div class="card-title">
-                      <h4 class="text-center">BMW F30,F31</h6>
-                    </div>
-                  </div>
-
-                  <div class="card col-3 m-4 px-1" style="width: 7rem;">
-                    <img class="card-img-top" src="../images/offer2.jpeg" alt="Card image cap" height="200px">
-                    <div class="card-title">
-                      <h4 class="text-center">Land Rover</h6>
-                    </div>
-                  </div>
-
-                  <div class="card col-3 m-4 px-1" style="width: 7rem;">
-                    <img class="card-img-top" src="../images/offer4.jpeg" alt="Card image cap" height="200px">
-                    <div class="card-title">
-                      <h4 class="text-center">Ford</h6>
-                    </div>
-                  </div>
-             </div>
-
-             <div class="offer-content row d-flex justify-content-center">
-                  <div class="card col-3 m-4 px-1" style="width: 7rem;">
-                    <img class="card-img-top" src="../images/offer1.jpeg" alt="Card image cap" height="200px">
-                    <div class="card-title ">
-                      <h4 class="text-center">BMW F30,F31</h6>
-                    </div>
-                  </div>
-
-                  <div class="card col-3 m-4 px-1" style="width: 7rem;">
-                    <img class="card-img-top" src="../images/offer2.jpeg" alt="Card image cap" height="200px">
-                    <div class="card-title ">
-                      <h4 class="text-center">Land Rover</h6>
-                    </div>
-                  </div>
-
-                  <div class="card col-3 m-4 px-1" style="width: 7rem;">
-                    <img class="card-img-top" src="../images/offer4.jpeg" alt="Card image cap" height="200px">
-                    <div class="card-title ">
-                      <h4 class="text-center">Ford</h6>
-                    </div>
-                  </div>
-             </div>
-
-          </section>
+          <table>
+          </table>
 
         </div>    
         
