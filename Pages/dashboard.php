@@ -1,17 +1,5 @@
 <?php
 
-// include_once "../helpers/db.php";
-
-// vehicle_categry("db", $con);
-
-// $result = $sql("select count(1) FROM table");
-// $row = mysql_fetch_array($result);
-
-// $total = $row[0];
-// echo "Total rows: " . $total;
-
-// mysql_close($con);
-
 session_start();
 
 if (isset($_SESSION['user_name'])) {
@@ -82,9 +70,27 @@ if (isset($_SESSION['user_name'])) {
                 </div>
             </div>
 
-<!---------------------- Fleet Container ------------------------>
-          <table>
-          </table>
+<!---------------------- Reservation Details ------------------------>
+            <div class="container mx-auto h-50">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                        <th>Date</th>
+                        <th>Time duration</th>
+                        <th>Customer</th>
+                        <th>Customer Tele</th>
+                        <th>Payment method</th>
+                        <th>Vehicle_ID</th>
+                        <th>Vehicle Title</th>
+                        <th>Driver</th>
+                        <th>PickUp Location</th>
+                        <th>Drop off Location</th>
+                        <th>Time</th>
+                        <th>Arrival</th>
+                        </tr>
+                    </thead>
+                </table> 
+            </div>
 
         </div>    
         
