@@ -12,12 +12,12 @@
                 </li>
                 <li>
                     <a class="sidebar-a" href="../Category/index.php">
-                        <i class="fa fa-taxi fa-fw px-4 nav-icon" aria-hidden="true"></i><span>Categories</span>
+                        <i class="fa fa-list fa-fw px-4 nav-icon" aria-hidden="true"></i><span>Categories</span>
                     </a>
                 </li>
                 <li>
-                    <a class="sidebar-a" href="../vehicle/vehicle_list.php"><i class="fa fa-user fa-fw px-4 nav-icon" aria-hidden="true">
-                        </i><span>Vehicles List</span>
+                    <a class="sidebar-a" href="../vehicle/vehicle_list.php"><i class="fa fa-car fa-fw px-4 nav-icon" aria-hidden="true">
+                        </i><span>Vehicles </span>
                     </a>
                 </li>
                 <li>
@@ -37,7 +37,7 @@
                     </ul>
                 </li>
                 <li>
-                    <a class="sidebar-a" href="#"><i class="fa fa-list fa-fw px-4 nav-icon" aria-hidden="true">
+                    <a class="sidebar-a" href="#"><i class="fa fa-share fa-fw px-4 nav-icon" aria-hidden="true">
                         </i><span>Reservations</span>
                     </a>
                 </li>

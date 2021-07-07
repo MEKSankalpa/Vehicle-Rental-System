@@ -1,6 +1,8 @@
+/*************** dashboard  ***************/
 body {
     font-family: 'Poppins', sans-serif;
     background: #EEEEEE; 
+    
 }
 
 /******************** Navbar ********************/
@@ -212,3 +214,60 @@ ul ul .sidebar-a {
       width: 100%;
       min-height: 100vh;
   }
+
+  
+
+/*************** dashboard content ***************/
+/**** stat raw ***/
+#stat{
+    box-shadow: 0 1px 2px rgb(0 0 0 / 10%);
+    border-radius: 6px;
+    height:130;
+    color: #fff !important;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#stat:hover{
+    cursor: pointer;
+}
+
+.stat-count {
+    font-size: 20px;
+}
+
+.stat-name {
+    font-size: 13px;
+}
+
+.stat-icon {
+    color: #fff;
+    text-shadow: 1px 1px 1px #ccc;
+}
+
+/**** fleet container ***/
+
+.more-btn {
+    margin-left: 1300px !important;
+}
+
+.more-btn:hover {
+    border: #168b3f !important;
+    background-color: #168b3f !important;
+    color: #fff;
+}
+
+.container {
+    margin-left: 310px !important;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.header {
+    font-size: 24px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+
+.header:hover {
+    color: #168b3f!important;
+}

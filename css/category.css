@@ -34,7 +34,7 @@ table tr td:last-child {
     padding-bottom: 10px;
 }
 
-.btn:hover {
+.create-btn:hover {
     border: #6c757d;
     background-color: #6c757d;
     color: #fff;

@@ -72,7 +72,7 @@ session_start();
        <section class="cover fixed" id="cover_img">
            <div class="cover-content">
                
-               <h1 class=""> <strong>SAFE ADVENTURE</strong> </h1>
+               <h1> <strong>SAFE ADVENTURE</strong> </h1>
                <h2>Rent a car with SafeRunner and enjoy your destination </h2>
                 
            </div>
@@ -403,5 +403,3 @@ session_start();
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   </body>
 </html>
-
-<!-- content updated -->
