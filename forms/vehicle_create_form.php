@@ -175,7 +175,7 @@
                         <label class="form-check-label" for="leatherseats">Leather Seats</label>
                     </div>
                 </div>
-                <button id="vehicle_submit" class="btn btn-primary vehicle-create-button">CREAT VEHICLE</button>
+                <button id="vehicle_submit" class="btn btn-outline-warning submit-btn">ADD NEW VEHICLE</button>
                 <div class="text-center mt-4">
                    
                    

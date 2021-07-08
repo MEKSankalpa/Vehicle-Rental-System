@@ -13,6 +13,7 @@ if (isset($_SESSION['user_name'])) {
 
          <!-- Content -->
          <div class="main-content">
+         <a href="./vehicle_list.php" class="back-btn btn btn-success" id="c-back"><i class="fa fa-backward"></i> Back</a> 
          <?php include '../forms/vehicle_edit_form.php'; ?>
          </div>
 

@@ -38,7 +38,7 @@
 
 
            
-            <button  class="btn btn-outline-warning create-button " id="category_submit">Submit</button>
+            <button  class="btn btn-outline-warning submit-btn">SUBMIT</button>
         </form>
 
   </div>

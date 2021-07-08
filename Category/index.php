@@ -12,6 +12,8 @@ if (isset($_SESSION['user_name'])) {
 
         <!--Page Content-->
         <div class="main-content">
+        <a href="../Pages/dashboard.php" class="back-btn btn btn-success" id="c-back"><i class="fa fa-backward"></i> Back</a>
+
             <div class="card p-0 mx-auto">
                 <div class="card-header">
                 <h5 id="header-name">Vehicle Categories</h5>

@@ -2,10 +2,10 @@
 
 include_once "../helpers/db.php";
 
-if(isset($_GET['v_id'])){ 
+if (isset($_GET['v_id'])) {
 
     $vehicle_id = $_GET['v_id'];
-    $sql = "SELECT * FROM vehicles WHERE id='$vehicle_id'";   
+    $sql = "SELECT * FROM vehicles WHERE id='$vehicle_id'";
     $result = mysqli_query($conn, $sql);
 
     $row = mysqli_fetch_assoc($result);
@@ -177,8 +177,7 @@ if(isset($_GET['v_id'])){
         </div>
 
        <div class="mx-auto mb-4">
-            <a href="../vehicle/vehicle_list.php" class="btn btn-outline-primary mr-4">Back</a>
-            <a href="" class="btn btn-outline-success">Edit</a>
+            <a href="../vehicle/vehicle_list.php" class="btn btn-outline-warning submit-btn">SAVE DETAILS</a>
        </div>
 
     </div>
