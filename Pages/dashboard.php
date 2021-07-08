@@ -71,26 +71,35 @@ if (isset($_SESSION['user_name'])) {
             </div>
 
 <!---------------------- Reservation Details ------------------------>
-            <div class="container mx-auto h-50">
-                <table class="table table-hover">
-                    <thead>
-                        <tr>
-                        <th>Date</th>
-                        <th>Time duration</th>
-                        <th>Customer</th>
-                        <th>Customer Tele</th>
-                        <th>Payment method</th>
-                        <th>Vehicle_ID</th>
-                        <th>Vehicle Title</th>
-                        <th>Driver</th>
-                        <th>PickUp Location</th>
-                        <th>Drop off Location</th>
-                        <th>Time</th>
-                        <th>Arrival</th>
-                        </tr>
-                    </thead>
-                </table> 
-            </div>
+            <div class="card p-0 reservation-list w-75">
+				<div class="card-header ">
+					<h5 class="text-white ">Reservations</h5>
+				
+				</div>
+				<div class="card-body text-center pb-5">
+
+							<table class="table w-100 table-bordered table-striped">
+							<thead>
+								<tr>
+								<th>Reservation Id</th>
+                                <th>Reserve Date</th>
+								<th>Customer Name</th>
+								<th>Customer Mobile</th>
+								<th>Contact Via</th>
+								<th>Vehicle Id</th>
+								<th>Reserve From</th>
+								<th>Reserve To</th>
+								<th>Rental Cost</th>
+								<th>Status</th>
+								</tr>
+							</thead>
+							<tbody>
+								<?php include '../tables/reservation_table.php'; ?>
+							</tbody>
+
+							</table>  
+				</div>
+            </div> 
 
         </div>    
         

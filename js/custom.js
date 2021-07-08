@@ -33,7 +33,7 @@ $(document).ready(function () {
               var driver        = form4.elements['driver'] .value;
               var pick_up_location    = form4.elements['pick_up_location'] .value;
 
-              window.open("../layouts/vehicle_list.php?delete_vehicle=success","_self")
+              window.open("../layouts/resevation.php?vehicle_name="+vehicle_name+"&pick_up_date="+pick_up_date+"&pick_up_time="+pick_up_time+"&drop_off_date="+drop_off_date+"&drop_off_time="+ drop_off_time+"&passangers="+passangers+"&driver="+driver+"&pick_up_location="+pick_up_location+"","_self");
           }
     
     };
@@ -60,6 +60,30 @@ if(document.getElementById("vehicle_create_form")){
       console.log(valid);// returns true or false
           if(valid){
               form3.submit();
+          }
+    
+    };
+
+}
+
+if(document.getElementById("reserve_contact")){
+
+
+    //Vehicle create form validation
+    var form5 = document.getElementById("reserve_contact");
+    var reserve_create_button = document.getElementById("reserve_confirm"); 
+    // create the pristine instance
+    var pristine5 = new Pristine(form5);
+    
+    reserve_create_button.onclick =  function (e) {
+     
+      e.preventDefault();
+      
+      // check if the form is valid
+      var valid = pristine5.validate(); 
+      console.log(valid);// returns true or false
+          if(valid){
+              form5.submit();
           }
     
     };

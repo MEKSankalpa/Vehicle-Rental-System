@@ -39,9 +39,9 @@ session_start();
                 <li><a href="#offers" data-scroll>Offers</a></li>
                 <li><a href="#services" data-scroll>Services</a></li>
 
-                <?php   if(isset($_SESSION['user_name'])){  ?>
+                <?php   if(!isset($_SESSION['user_name'])){  ?>
 
-                      <li><a href="#" data-toggle="modal" data-target="#res">Reservation</a></li>
+                      <li><a href="#" data-toggle="modal" data-target="#login_modal">Reservation</a></li>
 
                  <?php }  ?>   
 
@@ -81,7 +81,11 @@ session_start();
                
                <h1> <strong>SAFE ADVENTURE</strong> </h1>
                <h2>Rent a car with SafeRunner and enjoy your destination </h2>
-                
+
+               <?php   if(isset($_SESSION['user_name'])){  ?>
+                 <a href="#" class="btn btn-outline-primary reservation_button" data-toggle="modal" data-target="#res">Reservation</a>
+               <?php }  ?>   
+
            </div>
        </section>
 
