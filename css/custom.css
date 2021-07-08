@@ -269,6 +269,7 @@ ul ul .sidebar-a {
     color: #168b3f!important;
 }
 
+<<<<<<< HEAD
 .back-btn {
     margin-top: 50px;
     color: #fff !important;
@@ -285,4 +286,8 @@ ul ul .sidebar-a {
 
 #v-back {
     margin-left: 315px;
+}
+
+.reservation-list{
+    margin-top: 60px !important;
 }

@@ -1,6 +1,17 @@
 <?php
 
 session_start();
+include_once "../helpers/db.php";
+
+if (isset($_SESSION['user_name'])) {
+
+  if(isset($_SESSION['user_id'])){
+     $id = $_SESSION['user_id'];
+     $sql = "SELECT * FROM users WHERE id='$id'";
+     $user_data = mysqli_query($conn, $sql);
+     $res = mysqli_fetch_assoc($user_data);
+  }
+
 ?>
 
 
@@ -14,7 +25,7 @@ session_start();
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">  </head>
-    <link rel="stylesheet" href="../css/welcome.css">
+    <link rel="stylesheet" href="../css/resevation.css">
 
     <!-- font-awesome -->
     <script src="https://use.fontawesome.com/50ae888db0.js"></script>
@@ -34,17 +45,10 @@ session_start();
             
             <nav class="nav-menu d-none d-lg-block ">
               <ul>
-                <li class="active"><a href="index.html">Home</a></li>
+                <li class="active"><a href="../layouts/welcome.php">Home</a></li>
                 <li><a href="#about"  data-scroll>About</a></li>
                 <li><a href="#offers" data-scroll>Offers</a></li>
                 <li><a href="#services" data-scroll>Services</a></li>
-
-                <?php   if(!isset($_SESSION['user_name'])){  ?>
-
-                      <li><a href="#" data-toggle="modal" data-target="#login_modal">Reservation</a></li>
-
-                 <?php }  ?>   
-
                 <li><a href="#portfolio" data-scroll>Testimonials</a></li>
                 <li><a href="#contact" data-scroll>Contact</a></li>
         
@@ -81,13 +85,166 @@ session_start();
                
                <h1> <strong>SAFE ADVENTURE</strong> </h1>
                <h2>Rent a car with SafeRunner and enjoy your destination </h2>
-
-               <?php   if(isset($_SESSION['user_name'])){  ?>
-                 <a href="#" class="btn btn-outline-primary reservation_button" data-toggle="modal" data-target="#res">Reservation</a>
-               <?php }  ?>   
-
+                
            </div>
        </section>
+
+<!-- Resevation Forms -->
+
+<section id="reservation-section" style="background-color:#FAFAFA">
+
+<div class="container p-5 " >
+          <div class="row">
+            <div class="col-sm-6 mx-auto p-3">
+                <h5 class="">Please Fill the Form With Your Details</h5>    
+                <hr class="mb-4">
+                <form action="../backend/reservation.php" class="needs-validation" method="post" novalidate id="reserve_contact">
+                  <div class="form-row">
+
+                      <div class="col-md-2 mb-3">
+                        <label for="validationDefaultUsername"><strong>Title</strong></label>
+                        <div class="input-group">
+                          <select class="form-control" id="sel1" aria-describedby="inputGroupPrepend" name="reserver_title" required>
+                            <option value="Mr">Mr.</option>
+                            <option value="Mrs">Mrs.</option>
+                            <option value="Ms">Ms.</option>
+                            <option vlaue="Dr">Dr.</option>
+                            <option value="Prof">Prof.</option>
+                            <option value="Rev">Rev.</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="form-group col-md mb-3">
+                        <label for="validationDefault01"><strong>First name</strong></label>
+                        <input type="text" class="form-control" id="validationDefault01" value="<?php echo $res['first_name'] ?>" required data-pristine-required-message="This field is required" name="first_name">
+                      </div>
+                      <div class="form-group col-md mb-3">
+                        <label for="validationDefault02"><strong>Last name</strong></label>
+                        <input type="text" class="form-control" id="validationDefault02" value="<?php echo $res['last_name'] ?>" required data-pristine-required-message="This field is required" name="last_name">
+                      </div>
+                  </div>
+                  <div class="form-row">
+
+                    <div class="form-group col-md-6 mb-3">
+                      <label for="validationDefault04"><strong>Phone number</strong></label>
+                      <input type="tel" class="form-control" id="validationDefault04" value="<?php echo $res['contact_number'] ?>" required data-pristine-required-message="This field is required" data-pristine-type="number" name="tele">
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <label for="contact_me"><strong>Contact Me</strong></label>      
+                        <select id="contact_me" name="contact_me" class="form-control">
+                            <option value="Phone">Phone</option>
+                            <option value="Email">Email</option>
+                           
+                        </select>                    
+                    </div>
+                  </div>
+
+                  <div class=" form-row">
+                    <div class="form-group col-md mb-3">
+                      <label for="validationDefault03"><strong>Email</strong></label>
+                      <input type="email" class="form-control" id="validationDefault03" value="<?php echo $res['email'] ?>" required data-pristine-required-message="This field is required" name="email">
+                    </div>
+                  </div>
+
+                  <div class="form-row">
+                    <div class="col-md mb-3">
+                    <div class="form-group">
+                      <label for="exampleFormControlTextarea1"><strong>Comments</strong></label>
+                      <textarea class="form-control" id="exampleFormControlTextarea1" required data-pristine-required-message="This field is required" rows="3" name="comment"></textarea>
+                    </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="1" id="invalidCheck2" required data-pristine-required-message="Please agree with our terms and conditions" name="agree">
+                      <label class="form-check-label" for="invalidCheck2">
+                        Agree to terms and conditions
+                      </label>
+                    </div>
+                  </div>
+
+                  <input type="hidden" name="vehicle_name" value="<?php echo $_GET['vehicle_name'] ?>">
+                  <input type="hidden" name="pick_up_date" value="<?php echo $_GET['pick_up_date'] ?>">
+                  <input type="hidden" name="pick_up_time" value="<?php echo $_GET['pick_up_time'] ?>">
+                  <input type="hidden" name="drop_off_date" value="<?php echo $_GET['drop_off_date'] ?>">
+                  <input type="hidden" name="drop_off_time" value="<?php echo $_GET['drop_off_time'] ?>">
+                  <input type="hidden" name="passangers" value="<?php echo $_GET['passangers'] ?>">
+                  <input type="hidden" name="driver" value="<?php echo $_GET['driver'] ?>">
+                  <input type="hidden" name="pick_up_location" value="<?php echo $_GET['pick_up_location'] ?>">
+                  <input type="hidden" name="reserve_date" value="<?php echo  date("Y-m-d") ?>">
+                  <input type="hidden" name="rental_cost" value="<?php 
+
+                        $vehicle_id = $_GET['vehicle_name'];  
+                        $query = "SELECT * FROM vehicles WHERE id='$vehicle_id'"; 
+                        $result = mysqli_query($conn, $query);
+                        $row = mysqli_fetch_assoc($result);  
+                  
+                        $date1 = new DateTime($_GET['pick_up_date']);
+                        $date2 = new DateTime($_GET['drop_off_date']);
+
+                        $diff = date_diff($date1,$date2);
+                        echo ($row['price_per_day']*$diff->format('%d'));
+                  
+                  ?>">
+                 
+                  <button class="btn btn-success" id="reserve_confirm">SUBMIT</button>
+                </form>
+
+              </div>
+
+            <div class="col-sm-6 mx-auto p-3 ml-3">
+            <h5 class="">Reservation Details</h5> 
+            <hr class="mb-4">
+                <table class="table table-bordered" style="border-width:2px">
+                  <tbody id="reservation-details">
+                    <tr>
+                      <td>SELECTED VEHICLE</td>
+                      <td><?php echo $row['vehicle_title'];  ?></td>
+                    </tr>
+                    <tr>
+                      <td>RESERVE FROM</td>
+                      <td><?php echo $_GET['pick_up_date']; ?></td>
+                    </tr>
+                    <tr>
+                      <td>RESERVE TO</td>
+                      <td><?php echo $_GET['drop_off_date'] ?></td>
+                    </tr>
+                    <tr>
+                      <td>RESERVED FOR</td>
+                      <td><?php   echo $diff->format('%d days');  ?></td>
+                    </tr>
+                    <tr>
+                      <td>RESERVED ON</td>
+                      <td><?php echo  date("Y-m-d"); ?></td>
+                    </tr>
+                    <tr>
+                      <td>NO OF PASSENGERS</td>
+                      <td><?php echo  $_GET['passangers']; ?></td>
+                    </tr>
+                    <tr>
+                      <td>VEHICLE RENTAL</td>
+                      <td>Rs: <?php  
+                         echo ($row['price_per_day']*$diff->format('%d'));
+                      ?></td>
+                    </tr>
+                   
+                    <tr>
+                      <td>PICK UP LOCATION</td>
+                      <td><?php echo  $_GET['pick_up_location']; ?></td>
+                    </tr>
+                   
+                    
+                    
+                  </tbody>
+              </table>
+
+            </div>
+          </div>
+        </div>
+   
+        </section>
 
       <main class="main-content" id="about">
          
@@ -393,8 +550,6 @@ session_start();
             </div>
 
           </footer>
-
-          
          
       </main>
 
@@ -403,8 +558,6 @@ session_start();
          include '../forms/login.form.php'; 
 
          include '../forms/signup.form.php'; 
-
-         include '../forms/reservation-welcome.php';
       
       ?>
      
@@ -419,3 +572,10 @@ session_start();
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   </body>
 </html>
+
+<?php
+ } else {
+  include_once "../Pages/unauthorized.php";
+}
+
+?>
