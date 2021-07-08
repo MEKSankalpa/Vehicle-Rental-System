@@ -38,6 +38,13 @@ session_start();
                 <li><a href="#about"  data-scroll>About</a></li>
                 <li><a href="#offers" data-scroll>Offers</a></li>
                 <li><a href="#services" data-scroll>Services</a></li>
+
+                <?php   if(!isset($_SESSION['user_name'])){  ?>
+
+                      <li><a href="#" data-toggle="modal" data-target="#login_modal">Reservation</a></li>
+
+                 <?php }  ?>   
+
                 <li><a href="#portfolio" data-scroll>Testimonials</a></li>
                 <li><a href="#contact" data-scroll>Contact</a></li>
         
@@ -74,7 +81,11 @@ session_start();
                
                <h1> <strong>SAFE ADVENTURE</strong> </h1>
                <h2>Rent a car with SafeRunner and enjoy your destination </h2>
-                
+
+               <?php   if(isset($_SESSION['user_name'])){  ?>
+                 <a href="#" class="btn btn-outline-primary reservation_button" data-toggle="modal" data-target="#res">Reservation</a>
+               <?php }  ?>   
+
            </div>
        </section>
 
@@ -382,6 +393,8 @@ session_start();
             </div>
 
           </footer>
+
+          
          
       </main>
 
@@ -390,6 +403,8 @@ session_start();
          include '../forms/login.form.php'; 
 
          include '../forms/signup.form.php'; 
+
+         include '../forms/reservation-welcome.php';
       
       ?>
      
@@ -397,6 +412,7 @@ session_start();
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="../js/pristine.js"></script>
 <script src="../js/welcome.js"></script>
+<script src="../js/custom.js"></script>
 <script src="../js/validation.js"></script>
 <script src="../js/modal.js"></script>
 <script src="../js/scroll.js"></script>

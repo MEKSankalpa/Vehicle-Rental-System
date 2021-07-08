@@ -100,7 +100,7 @@ background: rgba(25, 28, 31, 0.8);
   
   .cover h2 {
     color: #eee;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     font-size: 13px;
     font-weight: 500;
     letter-spacing: 1px;
@@ -450,3 +450,49 @@ background: rgba(25, 28, 31, 0.8);
   display: table;
 }
 
+/* welcome reservation form */
+
+.res-image{
+  background: url("../images/login1.jpeg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 700px !important;
+  padding: 0;
+  
+}
+
+.cover-res{
+  position: absolute;
+  width: 100%;
+  height: 700px !important;
+  background: rgba(14, 16, 17, 0.7) !important;
+}
+
+.reservation-text{
+  color: #fff;
+  font-size: 25px;
+}
+
+.res-text{
+  font-size: 16px !important;
+}
+
+.reservation_button{
+  
+  padding: 5px;
+  font-size: 20px;
+  width: 250px;
+  height: 50px;
+  border-color:#ffc85a !important ;
+  color: #ffc85a;
+  text-transform: uppercase;
+  font-weight: bold;
+  
+}
+
+.reservation_button:hover{
+  color: #fff;
+  background-color: #ffc85a;
+
+}

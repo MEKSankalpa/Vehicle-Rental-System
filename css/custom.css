@@ -271,3 +271,7 @@ ul ul .sidebar-a {
 .header:hover {
     color: #168b3f!important;
 }
+
+.reservation-list{
+    margin-top: 60px !important;
+}
