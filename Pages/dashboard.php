@@ -2,8 +2,14 @@
 
 session_start();
 
+include '../helpers/db.php';
+
 if (isset($_SESSION['user_name'])) {
-?>
+    $sql = "SELECT id FROM vehicles";
+    if ($result = $conn->query($sql)) {
+        if (mysqli_num_rows($result) > 0) {
+            $row = mysqli_num_rows($result);
+            ?>
 
     <!-- Navbar -->
         <?php include '../layouts/header.php';?>
@@ -20,7 +26,7 @@ if (isset($_SESSION['user_name'])) {
                     <a class="card bg-primary w-100" id="stat">
                         <div class="row">
                             <div class="col-6 stat-value text-left">
-                                <div class="col-12 stat-count">100</div>
+                                <div class="col-12 stat-count"><?php echo $row?></div>
                                 <div class="col-12 stat-name">Total</div>
                             </div>
                             <div class="col-6 stat-icon text-right">
@@ -108,7 +114,7 @@ if (isset($_SESSION['user_name'])) {
 
     
 
-<?php } else {
+<?php }}} else {
 
     include_once "./unauthorized.php";
 
