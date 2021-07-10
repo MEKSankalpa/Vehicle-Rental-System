@@ -83,7 +83,7 @@ session_start();
                <h2>Rent a car with SafeRunner and enjoy your destination </h2>
 
                <?php   if(isset($_SESSION['user_name'])){  ?>
-                 <a href="#" class="btn btn-outline-primary reservation_button" data-toggle="modal" data-target="#res">Reservation</a>
+                 <a href="#" class="btn btn-success reservation_button px-5 py-2" data-toggle="modal" data-target="#res">Reservation</a>
                <?php }  ?>   
 
            </div>

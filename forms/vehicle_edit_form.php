@@ -18,7 +18,7 @@ if($count1 > 0){
 
 <div class="card  p-0" >
   <div class="card-header ">
-   <h5 id="header-name">Vehicle Create Form</h5>
+   <h5 id="header-name">Vehicle Edit Form</h5>
   </div>
   <div class="card-body pb-5">
     
@@ -207,7 +207,7 @@ if($count1 > 0){
 
                 
                 <div class="text-center mt-4">
-                <button id="vehicle_submit" class="btn btn-primary vehicle-create-button">UPDATE PRODUCCT</button>
+                <button id="vehicle_submit" class="btn btn-outline-warning submit-btn">UPDATE VEHICLE DETAILS</button>
                    
                </div> 
                 <!-- Update Alert -->

@@ -1,8 +1,7 @@
 /*************** dashboard  ***************/
 body {
     font-family: 'Poppins', sans-serif;
-    background: #EEEEEE; 
-    
+    background: #EEEEEE;   
 }
 
 /******************** Navbar ********************/
@@ -183,19 +182,12 @@ ul ul .sidebar-a {
     z-index: 1;
     position: relative;
     bottom: 0px;
-    /* left: 0vh;
-    right: 0vh; */
 }
 
 .page-footer-expanded { height: 100%; }
 
 .create-button:hover{
-  background-color:#f3a200 !important;
-}
-
-.vehicle-create-button{
-    background-color: #f3a200;
-    margin: 1px solid #f3a200;
+  background-color:#6c757d !important;
 }
 
 .has-success .form-control {
@@ -213,6 +205,11 @@ ul ul .sidebar-a {
   .main-content{
       width: 100%;
       min-height: 100vh;
+      margin: 0 auto;
+      padding-top: 0px;
+      margin-top: 40px;
+      left: 130px;
+      padding: 16px;
   }
 
   
@@ -270,6 +267,24 @@ ul ul .sidebar-a {
 
 .header:hover {
     color: #168b3f!important;
+}
+
+.back-btn {
+    margin-top: 50px;
+    color: #fff !important;
+}
+
+.back-btn:hover {
+    cursor: pointer;
+    background-color: #6c757d !important;
+}
+
+#c-back {
+    margin-left: 400px;
+}
+
+#v-back {
+    margin-left: 315px;
 }
 
 .reservation-list{

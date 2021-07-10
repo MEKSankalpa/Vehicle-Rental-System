@@ -29,7 +29,7 @@ $leather_seats =isset($_POST['leatherseats']) ? 1 : 0 ;
 include_once "../helpers/db.php";
 
 if(empty($vehicle_title) || empty($vehicle_category) || empty($price_per_day) ||empty($brand_name) ||empty($model_year) || empty($fluel_type) || empty($seat_capacity) ||empty($description) || empty($_FILES["img1"]["name"]) ){
-    echo "System Error!"; 
+    echo "System Error!";
     exit();
 }else{
 

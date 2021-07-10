@@ -15,7 +15,7 @@ $count = mysqli_num_rows($result);
 <!-- Modal -->
 <div class="modal fade " id="res" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog  modal-dialog-centered modal-lg">
-    <div class="modal-content p-0">
+    <div class="modal-content p-3">
       
         <div class="row p-0">
             <div class="col-sm-6 res-image">

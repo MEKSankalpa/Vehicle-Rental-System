@@ -1,4 +1,3 @@
-
 <?php
 session_start();
 
@@ -15,7 +14,9 @@ if (isset($_SESSION['user_name'])) {
         <?php include '../layouts/sidebar.php'; ?>
 
          <!-- Content -->
-         <div class="main-content">
+		 <div class="main-content">
+        <a href="../Pages/dashboard.php" class="back-btn btn btn-success" id="v-back"><i class="fa fa-backward"></i> Back</a> 
+
 			<div class="card p-0 vehicle-list w-75">
 				<div class="card-header ">
 					<h5 class="text-white ">Vehicles List</h5>

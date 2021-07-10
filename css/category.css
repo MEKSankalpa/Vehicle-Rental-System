@@ -4,10 +4,9 @@
     width: 950px;
     margin: 0 auto;
     padding-top: 0px;
-    margin-top: 150px;
+    margin-top: 30px;
     left: 130px;
     padding: 16px;
-    margin-top: 130px;
 }
 
 .card-body {
@@ -22,7 +21,6 @@
 
 table tr td:last-child {
     width: 180px;
-    /* height: 20px; */
 }
 
 .create-btn {
@@ -61,4 +59,9 @@ table tr td:last-child {
     color: #fff;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     
+}
+
+.submit_btn:hover {
+    color: #fff !important;
+    background-color: #ffc85a !important ;
 }
