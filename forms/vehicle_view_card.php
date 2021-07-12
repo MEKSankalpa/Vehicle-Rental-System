@@ -29,28 +29,38 @@ if (isset($_GET['v_id'])) {
             <div class="col-sm-6  pl-3">
                  
                 <div class="row ml-3 mb-3">
-                    <div class="col-sm-3"> <strong>Price Per Day </strong> </div>
-                    <div class="col-sm-3">:<?php echo $row['price_per_day'] ?></div>
+                    <div class="col-sm-4"> <strong>Price Per Day </strong> </div>
+                    <div class="col-sm-3 p-0">:<?php echo $row['price_per_day'] ?></div>
                 </div>
 
                 <div class="row ml-3 mb-3">
-                    <div class="col-sm-3"> <strong>Brand Name</strong> </div>
-                    <div class="col-sm-3">:<?php echo $row['brand_name'] ?></div>
+                    <div class="col-sm-4"> <strong>Brand Name</strong> </div>
+                    <div class="col-sm-3 p-0">:<?php echo $row['brand_name'] ?></div>
                 </div>
 
                 <div class="row ml-3 mb-3">
-                    <div class="col-sm-3"> <strong>Modle Year</strong> </div>
-                    <div class="col-sm-3">:<?php echo $row['model_year'] ?></div>
+                    <div class="col-sm-4"> <strong>Modle Year</strong> </div>
+                    <div class="col-sm-3 p-0">:<?php echo $row['model_year'] ?></div>
                 </div>
 
                 <div class="row ml-3 mb-3">
-                    <div class="col-sm-3"> <strong>Fluel Type</strong> </div>
-                    <div class="col-sm-3">:<?php echo $row['fluel_type'] ?></div>
+                    <div class="col-sm-4"> <strong>Fluel Type</strong> </div>
+                    <div class="col-sm-3 p-0">:<?php echo $row['fluel_type'] ?></div>
                 </div>
 
                 <div class="row ml-3 mb-3">
-                    <div class="col-sm-3"> <strong>Seat Capasity</strong> </div>
-                    <div class="col-sm-3">:<?php echo $row['seat_capacity'] ?></div>
+                    <div class="col-sm-4"> <strong>Seat Capasity</strong> </div>
+                    <div class="col-sm-3 p-0">:<?php echo $row['seat_capacity'] ?></div>
+                </div>
+
+                <div class="row ml-3 mb-3">
+                    <div class="col-sm-4"> <strong>Engine Capacity</strong> </div>
+                    <div class="col-sm-3 p-0">:<?php echo $row['engine_capacity'] ?></div>
+                </div>
+
+                <div class="row ml-3 mb-3">
+                    <div class="col-sm-4"> <strong>Transmission</strong> </div>
+                    <div class="col-sm-3 p-0">:<?php echo $row['transmission'] ?></div>
                 </div>
                 
                 <div class=" ml-4 mt-4" >

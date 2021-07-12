@@ -1,7 +1,9 @@
+
 <?php
 
 session_start();
 include_once "../helpers/db.php";
+require('../payment/config.php');
 
 if (isset($_SESSION['user_name'])) {
 
@@ -24,7 +26,9 @@ if (isset($_SESSION['user_name'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">  </head>
+   
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">   -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous"></head>
     <link rel="stylesheet" href="../css/resevation.css">
 
     <!-- font-awesome -->
@@ -45,7 +49,7 @@ if (isset($_SESSION['user_name'])) {
             
             <nav class="nav-menu d-none d-lg-block ">
               <ul>
-                <li class="active"><a href="../layouts/welcome.php">Home</a></li>
+                <li class="active"><a href="welcome.php">Home</a></li>
                 <li><a href="#about"  data-scroll>About</a></li>
                 <li><a href="#offers" data-scroll>Offers</a></li>
                 <li><a href="#services" data-scroll>Services</a></li>
@@ -59,13 +63,32 @@ if (isset($_SESSION['user_name'])) {
             
             <nav class="nav-menu ml-auto d-none d-lg-block">
               
-              <?php   if(isset($_SESSION['user_name'])){  ?>
+              <?php   if(isset($_SESSION['user_name'])){                                    
+                         if($_SESSION['user_role'] == ""){ ?>
                     
-                <ul>
-                    <li><a href="../Pages/dashboard.php">Dashboard</a></li>
-               </ul>  
+                                <ul class="nav ">
+                                      <li class="nav-item">
+                                          <a class="nav-link active" aria-current="page" href="#"><?php echo $_SESSION['user_name'] ?></a>
+                                      </li>
+
+                                      <li class="nav-item">
+                                          <a class="nav-link active" aria-current="page" href="../backend/signout.php">Signout</a>
+                                      </li>
+                                     
+                                  </ul>
+
+
+                           <?php }else{ ?>
+
+                                <ul>
+                                   <li><a href="../Pages/dashboard.php">Dashboard</a></li>
+                                </ul> 
+
+                         <?php  } ?>     
+
+                      
               
-              <?php }else{  ?>
+              <?php  }else{  ?>
                
                 <ul>
                   <li class=""><a href="#" data-toggle="modal" data-target="#login_modal" id="login_navi">Login</a></li>
@@ -151,19 +174,12 @@ if (isset($_SESSION['user_name'])) {
                     <div class="col-md mb-3">
                     <div class="form-group">
                       <label for="exampleFormControlTextarea1"><strong>Comments</strong></label>
-                      <textarea class="form-control" id="exampleFormControlTextarea1" required data-pristine-required-message="This field is required" rows="3" name="comment"></textarea>
+                      <textarea class="form-control" id="exampleFormControlTextarea1"  rows="3" name="comment"></textarea>
                     </div>
                     </div>
                   </div>
 
-                  <div class="form-group">
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="1" id="invalidCheck2" required data-pristine-required-message="Please agree with our terms and conditions" name="agree">
-                      <label class="form-check-label" for="invalidCheck2">
-                        Agree to terms and conditions
-                      </label>
-                    </div>
-                  </div>
+                 
 
                   <input type="hidden" name="vehicle_name" value="<?php echo $_GET['vehicle_name'] ?>">
                   <input type="hidden" name="pick_up_date" value="<?php echo $_GET['pick_up_date'] ?>">
@@ -189,7 +205,18 @@ if (isset($_SESSION['user_name'])) {
                   
                   ?>">
                  
-                  <button class="btn btn-success" id="reserve_confirm">SUBMIT</button>
+                 <script
+                          src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                          data-key="<?php echo $publishableKey?>"
+                          data-amount="<?php echo ($row['price_per_day']*$diff->format('%d')*100); ?>"
+                          data-name="<?php  echo $row['vehicle_title'];  ?>"
+                          data-description="<?php  echo $row['vehicle_title'];  ?>"
+                          data-image="../images/vehicleimages/<?php echo $row['image_name'] ?>"
+                          data-currency="LKR"
+                          data-email="<?php  echo $res['email'] ?>"
+                         
+                >
+                </script>
                 </form>
 
               </div>
@@ -239,7 +266,7 @@ if (isset($_SESSION['user_name'])) {
                     
                   </tbody>
               </table>
-
+              <a href="#" class="btn btn-primary  px-5 py-2 " data-toggle="modal" data-target="#vehicle-details">View Vehicle Details</a>
             </div>
           </div>
         </div>
@@ -558,6 +585,9 @@ if (isset($_SESSION['user_name'])) {
          include '../forms/login.form.php'; 
 
          include '../forms/signup.form.php'; 
+
+         include '../vehicle/vehicle_details_user.php'; 
+
       
       ?>
      

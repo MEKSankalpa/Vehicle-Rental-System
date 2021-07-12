@@ -44,7 +44,7 @@ window.onload = function () {
         document.getElementById("signup_navi").click();
     }
 
-    if(window.location.href.indexOf('?login=faild') > 0){
+    if(window.location.href.indexOf('?login=failed') > 0){
       document.getElementById("login_navi").click();
   }
 
