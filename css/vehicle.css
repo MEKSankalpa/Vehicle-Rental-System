@@ -14,28 +14,22 @@
   background-color:#dc3545;
 }
 
-
 /***** vehicle list card ****/
 .card-header{
     color: #fff;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
 }
 
 .vehicle-list{
 height:600px;
 margin-bottom:0px;
-
-
 }
 
 .vehicle-list-table {
-   margin-left: auto;
+  margin-left: auto;
   margin-right: auto;
   margin-top:5px;
- 
   border-collapse: collapse;
-  
 }
 
 .vehicle-list-table thead tr th, .vehicle-list-table tbody tr td {
