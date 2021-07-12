@@ -46,7 +46,13 @@ session_start();
                             $hashed_password = password_hash($confirm_password, PASSWORD_DEFAULT);
                             mysqli_stmt_bind_param($stmt,"sssisss",$first_name,$last_name,$user_name,$contact_number,$email,$address,$hashed_password);
                             mysqli_stmt_execute($stmt);
-                           
+
+                            $sql2 = "SELECT * FROM users WHERE email = '$email' ";
+                            $results2 = mysqli_query($conn, $sql2);
+                            $row = mysqli_fetch_assoc($results2);
+
+                            $_SESSION["user_id"] =  $row['id'];
+                            $_SESSION["user_role"] =  $row['role'];
                             $_SESSION['user_name'] = $user_name;   
                         
                             header("Location: ../layouts/welcome.php?signup=success");
