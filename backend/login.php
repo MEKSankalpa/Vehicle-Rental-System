@@ -22,9 +22,17 @@ if (empty($email) || empty($password)) {
             $user = $row['user_name'];
             $_SESSION["user_name"] = $user;
             $_SESSION["user_id"] =  $row['id'];
+            $_SESSION["user_role"] =  $row['role'];
 
-            header("Location: ../Pages/dashboard.php?login=success");
-            exit();
+            if($row['role'] == "admin"){
+                header("Location: ../Pages/dashboard.php?login=success");
+                exit();
+            }else{
+                header("Location: ../layouts/welcome.php?login=success");
+                exit();
+            }
+
+            
 
         } else {
 

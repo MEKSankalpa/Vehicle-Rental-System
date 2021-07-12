@@ -49,7 +49,7 @@ session_start();
                            
                             $_SESSION['user_name'] = $user_name;   
                         
-                            header("Location: ../Pages/dashboard.php?signup=done");
+                            header("Location: ../layouts/welcome.php?signup=success");
                             exit();
                         }
 

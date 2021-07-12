@@ -96,6 +96,28 @@ if($count1 > 0){
 
                 <div class="form-row">
 
+                <div class="form-group col-md-6">
+                    <label for="engine_capacity">Engine Capacity<span style="color:red">*</span></label>
+                    <input type="text" class="form-control" name="engine_capacity" id="engine_capacity" placeholder="Enter Engine Capacity" required data-pristine-required-message="This field is required"   
+                      value="<?php echo $vehicles['engine_capacity'] ?>"
+
+                    >
+
+                </div>
+
+                <div class="form-group col-md-6">
+                    <label for="transmission">Transmission <span style="color:red">*</span></label>
+                    <select class="form-control" name="transmission" required data-pristine-required-message="This field is required">
+                        <option class="selectpicker-list" value="<?php echo $vehicles['transmission'] ?>"> <?php echo $vehicles['transmission']  ?></option>    
+                        <option class="selectpicker-list" value="Manual"> Manual </option>
+                        <option class="selectpicker-list" value="Auto">Auto</option>
+                    </select>
+                </div>
+
+                </div>
+
+                <div class="form-row">
+
                     <div class="form-group col-md-6">
                         <label for="Password">Fuel Type<span style="color:red">*</span></label>
                         <select class="form-control" name="fueltype" required data-pristine-required-message="This field is required">

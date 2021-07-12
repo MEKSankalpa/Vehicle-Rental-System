@@ -71,7 +71,7 @@ if(document.getElementById("reserve_contact")){
 
     //Vehicle create form validation
     var form5 = document.getElementById("reserve_contact");
-    var reserve_create_button = document.getElementById("reserve_confirm"); 
+    var reserve_create_button = document.getElementsByClassName("stripe-button"); 
     // create the pristine instance
     var pristine5 = new Pristine(form5);
     
@@ -83,6 +83,7 @@ if(document.getElementById("reserve_contact")){
       var valid = pristine5.validate(); 
       console.log(valid);// returns true or false
           if(valid){
+              
               form5.submit();
           }
     
@@ -90,6 +91,19 @@ if(document.getElementById("reserve_contact")){
 
 }
 
+
+
+//Reservation completion  alert
+if(document.getElementById("res-alert")){
+
+    window.setTimeout(function() {
+        $("#res-alert").fadeTo(500, 0).slideUp(500, function(){
+            $(this).remove(); 
+        });
+    }, 2000);
+
+
+}
 
   
 });

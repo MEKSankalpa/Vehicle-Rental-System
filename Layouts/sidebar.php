@@ -38,7 +38,7 @@
                 </li>
                 <li>
                     <a class="sidebar-a" href="#"><i class="fa fa-share fa-fw px-4 nav-icon" aria-hidden="true">
-                        </i><span>Reservations</span>
+                        </i><span>Reserve</span>
                     </a>
                 </li>
                 <li>

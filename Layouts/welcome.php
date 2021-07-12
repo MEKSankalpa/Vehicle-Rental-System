@@ -34,7 +34,7 @@ session_start();
             
             <nav class="nav-menu d-none d-lg-block ">
               <ul>
-                <li class="active"><a href="index.html">Home</a></li>
+                <li class="active"><a href="#">Home</a></li>
                 <li><a href="#about"  data-scroll>About</a></li>
                 <li><a href="#offers" data-scroll>Offers</a></li>
                 <li><a href="#services" data-scroll>Services</a></li>
@@ -55,13 +55,32 @@ session_start();
             
             <nav class="nav-menu ml-auto d-none d-lg-block">
               
-              <?php   if(isset($_SESSION['user_name'])){  ?>
+              <?php   if(isset($_SESSION['user_name'])){                                    
+                         if($_SESSION['user_role'] == ""){ ?>
                     
-                <ul>
-                    <li><a href="../Pages/dashboard.php">Dashboard</a></li>
-               </ul>  
+                                <ul class="nav ">
+                                      <li class="nav-item">
+                                          <a class="nav-link active" aria-current="page" href="#"><?php echo $_SESSION['user_name'] ?></a>
+                                      </li>
+
+                                      <li class="nav-item">
+                                          <a class="nav-link active" aria-current="page" href="../backend/signout.php">Signout</a>
+                                      </li>
+                                     
+                                  </ul>
+
+
+                           <?php }else{ ?>
+
+                                <ul>
+                                   <li><a href="../Pages/dashboard.php">Dashboard</a></li>
+                                </ul> 
+
+                         <?php  } ?>     
+
+                      
               
-              <?php }else{  ?>
+              <?php  }else{  ?>
                
                 <ul>
                   <li class=""><a href="#" data-toggle="modal" data-target="#login_modal" id="login_navi">Login</a></li>
@@ -82,9 +101,17 @@ session_start();
                <h1> <strong>SAFE ADVENTURE</strong> </h1>
                <h2>Rent a car with SafeRunner and enjoy your destination </h2>
 
-               <?php   if(isset($_SESSION['user_name'])){  ?>
+               <?php   if(isset($_SESSION['user_name'])  && $_SESSION['user_role'] == ""){  ?>
                  <a href="#" class="btn btn-success reservation_button px-5 py-2" data-toggle="modal" data-target="#res">Reservation</a>
                <?php }  ?>   
+
+               <?php if(isset($_GET['reservation'])){ ?>
+                  <div class="alert alert-success mt-3" role="alert" id="res-alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <strong>Success!</strong> Your reservation completed!
+                  </div>
+
+               <?php } ?>
 
            </div>
        </section>
