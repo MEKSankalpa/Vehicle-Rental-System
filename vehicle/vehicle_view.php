@@ -4,7 +4,7 @@ session_start();
 
 include_once '../helpers/db.php';
 
-if (isset($_SESSION['user_name'])) {
+if (isset($_SESSION['user_name']) && $_SESSION['user_role'] == "admin") {
     ?>
 
 
