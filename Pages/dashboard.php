@@ -4,7 +4,7 @@ session_start();
 
 include '../helpers/db.php';
 
-if (isset($_SESSION['user_name'])) {
+if (isset($_SESSION['user_name']) && $_SESSION['user_role'] == "admin") {
     $sql = "SELECT id FROM vehicles";
     if ($result = $conn->query($sql)) {
         if (mysqli_num_rows($result) > 0) {

@@ -453,3 +453,8 @@ background: rgba(25, 28, 31, 0.8);
 #reservation-details td{
   font-weight: bold;
 }
+
+/**************************** vehiclesFleet ************************************/
+.category{
+  color: #f3a200;
+}

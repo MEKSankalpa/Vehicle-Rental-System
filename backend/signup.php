@@ -50,11 +50,11 @@ session_start();
                             $sql2 = "SELECT * FROM users WHERE email = '$email' ";
                             $results2 = mysqli_query($conn, $sql2);
                             $row = mysqli_fetch_assoc($results2);
-                          
-                            $_SESSION['user_name'] = $user_name;
+
                             $_SESSION["user_id"] =  $row['id'];
                             $_SESSION["user_role"] =  $row['role'];
-                        
+                            $_SESSION['user_name'] = $user_name;   
+
                             header("Location: ../layouts/welcome.php?signup=success");
                             exit();
                         }

@@ -51,7 +51,7 @@ if (isset($_SESSION['user_name'])) {
               <ul>
                 <li class="active"><a href="welcome.php">Home</a></li>
                 <li><a href="#about"  data-scroll>About</a></li>
-                <li><a href="#offers" data-scroll>Offers</a></li>
+                <li><a href="#offers" data-scroll>Fleets</a></li>
                 <li><a href="#services" data-scroll>Services</a></li>
                 <li><a href="#portfolio" data-scroll>Testimonials</a></li>
                 <li><a href="#contact" data-scroll>Contact</a></li>
@@ -106,7 +106,7 @@ if (isset($_SESSION['user_name'])) {
        <section class="cover fixed" id="cover_img">
            <div class="cover-content">
                
-               <h1> <strong>SAFE ADVENTURE</strong> </h1>
+               <h1> <strong>DRIVE TO YOUR DREAM</strong> </h1>
                <h2>Rent a car with SafeRunner and enjoy your destination </h2>
                 
            </div>
