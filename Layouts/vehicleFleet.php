@@ -29,7 +29,7 @@ if (isset($_SESSION['user_name'])) {
    
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">   -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous"></head>
-    <link rel="stylesheet" href="../css/resevation.css">
+    <link rel="stylesheet" href="../css/reservation.css">
 
     <!-- font-awesome -->
     <script src="https://use.fontawesome.com/50ae888db0.js"></script>
