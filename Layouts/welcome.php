@@ -1,6 +1,7 @@
 <?php
 
 session_start();
+include_once "../helpers/db.php";
 ?>
 
 
@@ -36,7 +37,7 @@ session_start();
               <ul>
                 <li class="active"><a href="#">Home</a></li>
                 <li><a href="#about"  data-scroll>About</a></li>
-                <li><a href="#offers" data-scroll>Offers</a></li>
+                <li><a href="#offers" data-scroll>fleet</a></li>
                 <li><a href="#services" data-scroll>Services</a></li>
 
                 <?php   if(!isset($_SESSION['user_name'])){  ?>
@@ -119,56 +120,66 @@ session_start();
       <main class="main-content" id="about">
          
           <div class="about container p-5" >
-            <h1 class="text-center">ABOUT US</h1>
+            <h1 class="text-center ">ABOUT US</h1>
             <p class=" text-justify pt-4 ">We endeavor to provide the finest standards of customer care and highly personalized service to all of our customers looking for Sri Lanka vehicle rental opportunities, with over 30 years of expertise in the sector. Our service is backed by a networked front office, fully-fledged mechanical servicing, and valet service, and our fleet is one of the largest, most contemporary, most diverse in Sri Lanka.</p>
           </div>
 
-          <section class="offers" id="offers">
+          <section class="offers " id="offers">
 
-             <h1>OFFERS</h1>
-             <p>Some of the offers that are being introduced these days</p>
+             <h1>VEHICLE FLEET</h1>
+             <p>Some of the categories that are being introduced</p>
             
-             <div class="offer-content row d-flex justify-content-center">
-             
-                  <div class="card col-3 m-4 px-0" style="width: 18rem;">
-                    <img class="card-img-top" src="../images/offer1.jpeg" alt="Card image cap" height="250px">
-                    <div class="card-body">
-                      <h4 class="text-left">FAMILY CARS</h4>
-                      <h6 class="text-left">From <span class="price">$120</span>  per weekend</h6>
-                      <p class="card-text text-justify mt-3">Premium family vehicles like SUVs seating four to seven people and minivans seating seven. No matter if your family is renting a car for a day trip or for a week-long road trip, you have more space to stretch out.</p>
-
-                       <hr>
-                      <a href="" class="btn offer-btn btn-outline-success">View Offer </a> 
-                    </div>
-                  </div>
-
-                  <div class="card col-3 m-4 px-0" style="width: 18rem;">
-                    <img class="card-img-top" src="../images/offer2.jpeg" alt="Card image cap" height="250px">
-                    <div class="card-body">
-                      <h4 class="text-left">LUXURY & PRESTIGE CARS</h4>
-                      <h6 class="text-left">From <span class="price">$150</span>  per weekend</h6>
-                      <p class="card-text text-justify mt-3">Rental cars include the Mercedes-Benz S Class, BMW 6 Series, and Jaguar F-Type just to name a few. Choose a high-performance luxury car to make the journey as enjoyable as the destination.</p>
-                      <hr>
-                      <a href="" class="btn offer-btn btn-outline-success">View Offer </a> 
-
-                    </div>
-                  </div>
-
-                  <div class="card col-3 m-4 px-0" style="width: 18rem;">
+            
+                 <?php 
                    
-                    <img class="card-img-top" src="../images/offer4.jpeg" alt="Card image cap" height="250px">
-                    <div class="card-body">
-                      <h4 class="text-left">TOP SELLERS</h4>
-                      <h6 class="text-left">From <span class="price">$100</span>  per weekend</h6>
-                      <p class="card-text text-justify mt-3">Many of the best-selling models saw sales increases compared with this time last year. We will continue to update this ranking quarterly as the top demands are changing throughout the year.</p>
-                      <hr>
-                      <a href="" class="btn offer-btn btn-outline-success">View Offer </a> 
-                    </div>
-                  </div>
+                    $category_sql     = "SELECT * FROM vehicle_category";
+                    $category_result  = mysqli_query($conn, $category_sql);
+                    $categories_count = mysqli_num_rows($category_result);
+
+                    if($categories_count > 0 && $categories_count <= 3){ ?>
+                       <div class=" offer-content row d-flex justify-content-center">
+
+                         <?php  while ($categories_row = mysqli_fetch_assoc($category_result)) {  ?>
+                          
+                          <div class="testimonial-item card col-3 m-4 px-0" style="width: 18rem;">
+                            <img class="card-img-top" src="../images/category_images/<?php echo $categories_row['category_image'] ?>" alt="Card image cap" height="250px">
+                            <div class="card-body">
+                              <h4 class="text-left"><?php echo $categories_row['category_name'] ?></h4>
+                              <hr>
+                              <a href="../Layouts/vehiclesFleet.php?category_id=<?php echo $categories_row['category_id'] ?>" class="btn offer-btn btn-outline-success">View Fleet </a> 
+                            </div>
+                          </div>
+                          
+
+                         <?php } ?>
+
+
+                   <?php } else if($categories_count > 3){ ?>
+
+                      <div class=" container-fluid   justify-content-center owl-carousel px-5" id="vehicle-fleet">
+
+                       <?php  while ($categories_row = mysqli_fetch_assoc($category_result)) {  ?>
+                          
+                        <div class="testimonial-item card  m-4 px-0" >
+                            <img class="card-img-top" src="../images/category_images/<?php echo $categories_row['category_image'] ?>" alt="Card image cap" height="250px">
+                            <div class="card-body">
+                              <h4 class="text-left"><?php echo $categories_row['category_name'] ?></h4>
+                              <hr>
+                              <a href="../Layouts/vehiclesFleet.php?category_id=<?php echo $categories_row['category_id'] ?>" class="btn offer-btn btn-outline-success">View Fleet </a> 
+                            </div>
+                          </div>
+                          
+
+                         <?php } ?>
+
+                  <?php }   ?>
+             
+                 
+
                   
 
              </div>
- 
+            
           </section>
 
           <section class="service" id="services">
@@ -176,9 +187,9 @@ session_start();
              <h1>SERVICES</h1>
              <p>Our services can be customized to fit your specific transportation needs.</p>
 
-             <div class="offer-content row d-flex justify-content-center">
+             <div class="offer-content row d-flex justify-content-center ">
                   
-                <div class="card col-md-2 m-3 pb-2 service-card" style="width: 18rem;">
+                <div class=" card col-md-2 m-3 pb-2 service-card" style="width: 18rem;">
                   <div class="card-body">
                     <div class="icon mx-auto mb-3 d-flex align-items-center justify-content-center">
                        <i class="fa fa-globe" aria-hidden="true"></i>
@@ -189,7 +200,7 @@ session_start();
                   </div>
                 </div>
 
-                <div class="card col-md-2 m-3 pb-2 service-card" style="width: 18rem;">
+                <div class=" card col-md-2 m-3 pb-2 service-card" style="width: 18rem;">
                   <div class="card-body">
                    
                     <div class="icon mx-auto mb-3 d-flex align-items-center justify-content-center">
@@ -201,7 +212,7 @@ session_start();
                   </div>
                 </div>
 
-                <div class="card col-md-2 m-3 pb-2 service-card" style="width: 18rem;">
+                <div class=" card col-md-2 m-3 pb-2 service-card" style="width: 18rem;">
                   <div class="card-body">
                     <div class="icon mx-auto mb-3 d-flex align-items-center justify-content-center">
                       <i class="fa fa-flag" aria-hidden="true"></i>
@@ -213,7 +224,7 @@ session_start();
                   </div>
                 </div>
 
-                <div class="card col-md-2 m-3 pb-2 service-card" style="width: 18rem;">
+                <div class="testimonial-item card col-md-2 m-3 pb-2 service-card" style="width: 18rem;">
                   <div class="card-body">
                     <div class="icon mx-auto mb-3 d-flex align-items-center justify-content-center">
                       <i class="fa fa-user" aria-hidden="true"></i>
@@ -235,7 +246,7 @@ session_start();
 
                       <div class="testimonial-item text-center ">
                           
-                        <img src="../images/testimonials-1.jpg" class="testimonial-img " alt="">
+                        <img src="../images/testimonials/testimonials-1.jpg" class="testimonial-img " alt="">
                         <h3>Saul Goodman</h3>
                         <h4>Entrepreneur</h4>
                         <p>
@@ -247,7 +258,7 @@ session_start();
 
                       <div class="testimonial-item text-center ">
                           
-                        <img src="../images/testimonials-2.jpg" class="testimonial-img " alt="">
+                        <img src="../images/testimonials/testimonials-2.jpg" class="testimonial-img " alt="">
                         <h3>Susan zhen</h3>
                         <h4>Public Services Manager</h4>
                         <p>
@@ -259,7 +270,7 @@ session_start();
 
                       <div class="testimonial-item text-center ">
                           
-                        <img src="../images/testimonials-3.jpg" class="testimonial-img " alt="">
+                        <img src="../images/testimonials/testimonials-3.jpg" class="testimonial-img " alt="">
                         <h3>Kathi Peterson</h3>
                         <h4>Quality Engineer</h4>
                         <p>
@@ -271,7 +282,7 @@ session_start();
 
                       <div class="testimonial-item text-center ">
                           
-                        <img src="../images/testimonials-4.jpg" class="testimonial-img " alt="">
+                        <img src="../images/testimonials/testimonials-4.jpg" class="testimonial-img " alt="">
                         <h3>James Potter</h3>
                         <h4>Developer</h4>
                         <p>
@@ -283,7 +294,7 @@ session_start();
 
                       <div class="testimonial-item text-center ">
                           
-                        <img src="../images/testimonials-5.jpg" class="testimonial-img " alt="">
+                        <img src="../images/testimonials/testimonials-5.jpg" class="testimonial-img " alt="">
                         <h3>Jakson Hamilton</h3>
                         <h4>Businessman</h4>
                         <p>
