@@ -114,6 +114,7 @@ background: rgba(25, 28, 31, 0.8);
     
 }
 
+
 @media (min-width: 1024px) {
     #cover_img {
       background-attachment: fixed;

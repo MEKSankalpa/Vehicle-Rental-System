@@ -282,44 +282,37 @@ if (isset($_SESSION['user_name'])) {
 
           <section class="offers" id="offers">
 
-             <h1>OFFERS</h1>
-             <p>Some of the offers that are being introduced these days</p>
+             <h1>VEHICLE FLEET</h1>
+             <p>Some of the categories that are being introduced</p>
             
              <div class="offer-content row d-flex justify-content-center">
              
                   <div class="card col-3 m-4 px-0" style="width: 18rem;">
                     <img class="card-img-top" src="../images/offer1.jpeg" alt="Card image cap" height="250px">
                     <div class="card-body">
-                      <h4 class="text-left">FAMILY CARS</h4>
-                      <h6 class="text-left">From <span class="price">$120</span>  per weekend</h6>
-                      <p class="card-text text-justify mt-3">Premium family vehicles like SUVs seating four to seven people and minivans seating seven. No matter if your family is renting a car for a day trip or for a week-long road trip, you have more space to stretch out.</p>
-
+                      <h4 class="text-left">CARS</h4>
                        <hr>
-                      <a href="" class="btn offer-btn btn-outline-success">View Offer </a> 
+                      <a href="../Layouts/vehiclesFleet.php?category=Car" class="btn offer-btn btn-outline-success">View Fleet </a> 
                     </div>
                   </div>
 
                   <div class="card col-3 m-4 px-0" style="width: 18rem;">
-                    <img class="card-img-top" src="../images/offer2.jpeg" alt="Card image cap" height="250px">
+                    <img class="card-img-top" src="../images/offer2.jpg" alt="Card image cap" height="250px">
                     <div class="card-body">
-                      <h4 class="text-left">LUXURY & PRESTIGE CARS</h4>
-                      <h6 class="text-left">From <span class="price">$150</span>  per weekend</h6>
-                      <p class="card-text text-justify mt-3">Rental cars include the Mercedes-Benz S Class, BMW 6 Series, and Jaguar F-Type just to name a few. Choose a high-performance luxury car to make the journey as enjoyable as the destination.</p>
+                      <h4 class="text-left">VANS</h4>
                       <hr>
-                      <a href="" class="btn offer-btn btn-outline-success">View Offer </a> 
+                      <a href="" class="btn offer-btn btn-outline-success">View Fleet </a> 
 
                     </div>
                   </div>
 
                   <div class="card col-3 m-4 px-0" style="width: 18rem;">
                    
-                    <img class="card-img-top" src="../images/offer4.jpeg" alt="Card image cap" height="250px">
+                    <img class="card-img-top" src="../images/offer3.jpg" alt="Card image cap" height="250px">
                     <div class="card-body">
-                      <h4 class="text-left">TOP SELLERS</h4>
-                      <h6 class="text-left">From <span class="price">$100</span>  per weekend</h6>
-                      <p class="card-text text-justify mt-3">Many of the best-selling models saw sales increases compared with this time last year. We will continue to update this ranking quarterly as the top demands are changing throughout the year.</p>
+                      <h4 class="text-left">BUSES</h4>
                       <hr>
-                      <a href="" class="btn offer-btn btn-outline-success">View Offer </a> 
+                      <a href="" class="btn offer-btn btn-outline-success">View Fleet </a> 
                     </div>
                   </div>
                   

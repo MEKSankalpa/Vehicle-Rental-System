@@ -116,7 +116,7 @@
                     <input type="file" @change ="fileChange" name="img1" class="mb-4"  required>
          
                     <div class="" id="image-picker" class="" >
-                        <img :src="image" style="margin-bottom: 20px;  object-fit: cover; " height="350" width="350" alt="">
+                        <img :src="image" style="margin-bottom: 20px;  object-fit: cover; " height="350" width="" alt="">
                         
                     </div>
                    
