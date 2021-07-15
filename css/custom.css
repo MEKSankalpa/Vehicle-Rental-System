@@ -83,18 +83,21 @@ body {
     overflow-x: hidden;
     padding-top: 0px;
     position: fixed;
+    
 }
 
 .sidebar-a, .sidebar-a:hover, .sidebar-a:focus {
     color: #6c757d;
     text-decoration: none;
     transition: all 0.3s;
+
 }
 
 #sidebar ul li .sidebar-a {
     padding: 15px;
     font-size: 1.1em;
     display: block;
+    
 }
 
 #sidebar ul li .sidebar-a:hover {
@@ -210,6 +213,7 @@ ul ul .sidebar-a {
       margin-top: 40px;
       left: 130px;
       padding: 16px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
 
   
@@ -241,7 +245,7 @@ ul ul .sidebar-a {
     text-shadow: 1px 1px 1px #ccc;
 }
 
-/**** fleet container ***/
+/**** reservation table ***/
 
 .more-btn {
     margin-left: 1300px !important;
@@ -261,7 +265,7 @@ ul ul .sidebar-a {
 
 .header {
     font-size: 24px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif !important;
     font-weight: bold;
 }
 

@@ -280,51 +280,62 @@ if (isset($_SESSION['user_name'])) {
 
          <section class="fleet" id="fleet">
 
-<<<<<<< HEAD
-            <h1>VEHICLE FLEET</h1>
-            <p><i>Some of the categories that are being introduced</i></p>
-           
-            <div class="offer-content row d-flex justify-content-center">
-            
-                 <div class="card col-3 m-4 px-0" style="width: 18rem;">
-                   <img class="card-img-top" src="../images/fleet1.jpeg" alt="Card image cap" height="250px">
-                   <div class="card-body">
-                     <h4 class="text-center"><strong>CARS</strong> </h4>
-                      <hr>
-                     <a href="../Layouts/vehicleFleet.php" class="btn fleet-btn btn-outline-success">View Fleet </a> 
-                   </div>
-                 </div>
+        <h1>VEHICLE FLEET</h1>
+        <p><span>Some of the categories that are being introduced</span> </p>
 
-                 <div class="card col-3 m-4 px-0" style="width: 18rem;">
-                   <img class="card-img-top" src="../images/fleet2.jpeg" alt="Card image cap" height="250px">
-                   <div class="card-body">
-                     <h4 class="text-center"><strong>VANS</strong> </h4>
-                     <hr>
-                     <a href="" class="btn fleet-btn btn-outline-success">View Fleet </a> 
+            <?php 
+              
+              $category_sql     = "SELECT * FROM vehicle_category";
+              $category_result  = mysqli_query($conn, $category_sql);
+              $categories_count = mysqli_num_rows($category_result);
+
+              if($categories_count > 0 && $categories_count <= 3){ ?>
+                  <div class=" fleet-content row d-flex justify-content-center">
 
 
-                   </div>
-                 </div>
+                    <?php  while ($categories_row = mysqli_fetch_assoc($category_result)) {  ?>
+                    
+                    <div class="testimonial-item card col-3 m-4 px-0" style="width: 18rem;">
+                      <img class="card-img-top" src="../images/category_images/<?php echo $categories_row['category_image'] ?>" alt="Card image cap" height="250px">
+                      <div class="card-body">
+                        <h4 class="text-center"><?php echo $categories_row['category_name'] ?></h4>
+                        <hr>
+                        <a href="../Layouts/vehicleFleet.php?category_id=<?php echo $categories_row['category_id'] ?>" class="btn fleet-btn btn-outline-success">View Fleet </a> 
+                      </div>
+                    </div>
+                    
 
-                 <div class="card col-3 m-4 px-0" style="width: 18rem;">
-                  
-                   <img class="card-img-top" src="../images/fleet3.jpeg" alt="Card image cap" height="250px">
-                   <div class="card-body">
-                     <h4 class="text-center"><strong>BUSSES</strong> </h4>
-                     <hr>
-                     <a href="" class="btn fleet-btn btn-outline-success">View Fleet </a> 
-                   </div>
-                 </div>
-                 
+                    <?php } ?>
 
-            </div>
 
-         </section>
+              <?php } else if($categories_count > 3){ ?>
+
+                <div class=" container-fluid   justify-content-center owl-carousel px-5" id="vehicle-fleet">
+
+                  <?php  while ($categories_row = mysqli_fetch_assoc($category_result)) {  ?>
+                    
+                  <div class="testimonial-item card  m-4 px-0" >
+                      <img class="card-img-top" src="../images/category_images/<?php echo $categories_row['category_image'] ?>" alt="Card image cap" height="250px">
+                      <div class="card-body">
+                        <h4 class="text-left"><?php echo $categories_row['category_name'] ?></h4>
+                        <hr>
+                        <a href="../Layouts/vehicleFleet.php?category_id=<?php echo $categories_row['category_id'] ?>" class="btn fleet-btn btn-outline-success">View Fleet </a> 
+                      </div>
+                    </div>
+                    
+
+                    <?php } ?>
+
+            <?php }   ?>
+
+        </div>
+
+        </section>
 
          <section class="service" id="services">
 
             <h1>SERVICES</h1>
-            <p><i>Our services can be customized to fit your specific transportation needs.</i></p>
+            <p><span>Our services can be customized to fit your specific transportation needs.</span></p>
 
             <div class="offer-content row d-flex justify-content-center">
                  
@@ -379,80 +390,80 @@ if (isset($_SESSION['user_name'])) {
          </section>
 
          <section class="testimonials" id="portfolio">
-               <div class="container testimonials-contain">
+                <div class="container testimonials-contain">
 
-                 <div class="owl-carousel testimonials-carousel ">
+                  <div class="owl-carousel testimonials-carousel ">
 
-                     <div class="testimonial-item text-center ">
-                         
-                       <img src="../images/testimonials-1.jpg" class="testimonial-img " alt="">
-                       <h3>Saul Goodman</h3>
-                       <h4>Entrepreneur</h4>
-                       <p>
-                         <i class=""></i>
-                         We chose saferunner as a rental software solutions company because of its flexibility, depth of features and most importantly customer-centric support model.
-                         <i class=""></i>
-                       </p>
-                     </div>
+                      <div class="testimonial-item text-center ">
+                          
+                        <img src="../images/testimonials/testimonials-1.jpg" class="testimonial-img " alt="">
+                        <h3>Saul Goodman</h3>
+                        <h4>Entrepreneur</h4>
+                        <p>
+                          <i class=""></i>
+                          We chose saferunner as a rental software solutions company because of its flexibility, depth of features and most importantly customer-centric support model.
+                          <i class=""></i>
+                        </p>
+                      </div>
 
-                     <div class="testimonial-item text-center ">
-                         
-                       <img src="../images/testimonials-2.jpg" class="testimonial-img " alt="">
-                       <h3>Susan zhen</h3>
-                       <h4>Public Services Manager</h4>
-                       <p>
-                         <i class=""></i>
-                         This website tells you immediately which vehicles are available and which aren’t. It saves you time and helps you stay organized.
-                         <i class=""></i>
-                       </p>
-                     </div>
+                      <div class="testimonial-item text-center ">
+                          
+                        <img src="../images/testimonials/testimonials-2.jpg" class="testimonial-img " alt="">
+                        <h3>Susan zhen</h3>
+                        <h4>Public Services Manager</h4>
+                        <p>
+                          <i class=""></i>
+                          This website tells you immediately which vehicles are available and which aren’t. It saves you time and helps you stay organized.
+                          <i class=""></i>
+                        </p>
+                      </div>
 
-                     <div class="testimonial-item text-center ">
-                         
-                       <img src="../images/testimonials-3.jpg" class="testimonial-img " alt="">
-                       <h3>Kathi Peterson</h3>
-                       <h4>Quality Engineer</h4>
-                       <p>
-                         <i class=""></i>
-                         By far the most complete renting software, with many features (fleet management, contract automatization, damages overview, payment integration, etc) and great customer support.
-                         <i class=""></i>
-                       </p>
-                     </div>
+                      <div class="testimonial-item text-center ">
+                          
+                        <img src="../images/testimonials/testimonials-3.jpg" class="testimonial-img " alt="">
+                        <h3>Kathi Peterson</h3>
+                        <h4>Quality Engineer</h4>
+                        <p>
+                          <i class=""></i>
+                          By far the most complete renting software, with many features (fleet management, contract automatization, damages overview, payment integration, etc) and great customer support.
+                          <i class=""></i>
+                        </p>
+                      </div>
 
-                     <div class="testimonial-item text-center ">
-                         
-                       <img src="../images/testimonials-4.jpg" class="testimonial-img " alt="">
-                       <h3>James Potter</h3>
-                       <h4>Developer</h4>
-                       <p>
-                         <i class=""></i>
-                         Saferunner Rental Software is ideal for any type of vehicle rental.
-                         <i class=""></i>
-                       </p>
-                     </div>
+                      <div class="testimonial-item text-center ">
+                          
+                        <img src="../images/testimonials/testimonials-4.jpg" class="testimonial-img " alt="">
+                        <h3>James Potter</h3>
+                        <h4>Developer</h4>
+                        <p>
+                          <i class=""></i>
+                          Saferunner Rental Software is ideal for any type of vehicle rental.
+                          <i class=""></i>
+                        </p>
+                      </div>
 
-                     <div class="testimonial-item text-center ">
-                         
-                       <img src="../images/testimonials-5.jpg" class="testimonial-img " alt="">
-                       <h3>Jakson Hamilton</h3>
-                       <h4>Businessman</h4>
-                       <p>
-                         <i class=""></i>
-                         The software is user friendly, fast, and easy to use.
-                         <i class=""></i>
-                       </p>
-                     </div>
+                      <div class="testimonial-item text-center ">
+                          
+                        <img src="../images/testimonials/testimonials-5.jpg" class="testimonial-img " alt="">
+                        <h3>Jakson Hamilton</h3>
+                        <h4>Businessman</h4>
+                        <p>
+                          <i class=""></i>
+                          The software is user friendly, fast, and easy to use.
+                          <i class=""></i>
+                        </p>
+                      </div>
 
-                   
-         
-                  </div> 
-               </div>
-         </section>
+                    
+          
+                   </div> 
+                </div>
+          </section>
 
          <section class="contact" id="contact">
  
            <h1>Contact Us</h1>
-           <p><i>We would love to hear from you. Get in touch with us.</i></p>  
+           <p><span>We would love to hear from you. Get in touch with us.</span></p>  
 
            <div class="row justify-content-center">
                <div class="col-md-5 mx-2  contact-social ">

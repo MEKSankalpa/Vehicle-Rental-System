@@ -56,7 +56,7 @@ include_once "../helpers/db.php";
             
             <nav class="nav-menu ml-auto d-none d-lg-block">
               
-              <?php   if(isset($_SESSION['user_name'])){                                    
+              <?php   if(isset($_SESSION['user_name'])){
                          if($_SESSION['user_role'] == ""){ ?>
                     
                                 <ul class="nav ">
@@ -128,27 +128,8 @@ include_once "../helpers/db.php";
           <section class="fleet" id="fleet">
 
              <h1>VEHICLE FLEET</h1>
-             <p><i>Some of the categories that are being introduced</i></p>
+             <p><span>Some of the categories that are being introduced</span> </p>
             
-<!-- <<<<<<< HEAD
-             <div class="offer-content row d-flex justify-content-center">
-             
-                  <div class="card col-3 m-4 px-0" style="width: 18rem;">
-                    <img class="card-img-top" src="../images/fleet1.jpeg" alt="Card image cap" height="250px">
-                    <div class="card-body">
-                      <h4 class="text-center"><strong>CARS</strong> </h4>
-                       <hr>
-                      <a href="../Layouts/vehicleFleet.php" class="btn fleet-btn btn-outline-success">View Fleet </a> 
-                    </div>
-                  </div>
-
-                  <div class="card col-3 m-4 px-0" style="width: 18rem;">
-                    <img class="card-img-top" src="../images/fleet2.jpeg" alt="Card image cap" height="250px">
-                    <div class="card-body">
-                      <h4 class="text-center"><strong>VANS</strong> </h4>
-                      <hr>
-                      <a href="" class="btn fleet-btn btn-outline-success">View Fleet </a> 
-======= -->
                  <?php 
                    
                     $category_sql     = "SELECT * FROM vehicle_category";
@@ -156,7 +137,7 @@ include_once "../helpers/db.php";
                     $categories_count = mysqli_num_rows($category_result);
 
                     if($categories_count > 0 && $categories_count <= 3){ ?>
-                       <div class=" offer-content row d-flex justify-content-center">
+                       <div class=" fleet-content row d-flex justify-content-center">
 
 
                          <?php  while ($categories_row = mysqli_fetch_assoc($category_result)) {  ?>
@@ -164,9 +145,9 @@ include_once "../helpers/db.php";
                           <div class="testimonial-item card col-3 m-4 px-0" style="width: 18rem;">
                             <img class="card-img-top" src="../images/category_images/<?php echo $categories_row['category_image'] ?>" alt="Card image cap" height="250px">
                             <div class="card-body">
-                              <h4 class="text-left"><?php echo $categories_row['category_name'] ?></h4>
+                              <h4 class="text-center"><?php echo $categories_row['category_name'] ?></h4>
                               <hr>
-                              <a href="../Layouts/vehicleFleet.php?category_id=<?php echo $categories_row['category_id'] ?>" class="btn offer-btn btn-outline-success">View Fleet </a> 
+                              <a href="../Layouts/vehicleFleet.php?category_id=<?php echo $categories_row['category_id'] ?>" class="btn fleet-btn btn-outline-success">View Fleet </a> 
                             </div>
                           </div>
                           
@@ -185,7 +166,7 @@ include_once "../helpers/db.php";
                             <div class="card-body">
                               <h4 class="text-left"><?php echo $categories_row['category_name'] ?></h4>
                               <hr>
-                              <a href="../Layouts/vehicleFleet.php?category_id=<?php echo $categories_row['category_id'] ?>" class="btn offer-btn btn-outline-success">View Fleet </a> 
+                              <a href="../Layouts/vehicleFleet.php?category_id=<?php echo $categories_row['category_id'] ?>" class="btn fleet-btn btn-outline-success">View Fleet </a> 
                             </div>
                           </div>
                           
@@ -193,20 +174,7 @@ include_once "../helpers/db.php";
                          <?php } ?>
 
                   <?php }   ?>
-             
-                 
 
-<!-- <<<<<<< HEAD
-                  <div class="card col-3 m-4 px-0" style="width: 18rem;">
-                   
-                    <img class="card-img-top" src="../images/fleet3.jpeg" alt="Card image cap" height="250px">
-                    <div class="card-body">
-                      <h4 class="text-center"><strong>BUSSES</strong> </h4>
-                      <hr>
-                      <a href="" class="btn fleet-btn btn-outline-success">View Fleet </a> 
-                    </div>
-                  </div>
-======= -->
              </div>
             
           </section>
@@ -214,16 +182,16 @@ include_once "../helpers/db.php";
           <section class="service" id="services">
 
              <h1>SERVICES</h1>
-             <p><i>Our services can be customized to fit your specific transportation needs.</i></p>
+             <p><span>Our services can be customized to fit your specific transportation needs.</span></p>
 
-             <div class="offer-content row d-flex justify-content-center ">
+             <div class="fleet-content row d-flex justify-content-center ">
                   
                 <div class=" card col-md-2 m-3 pb-2 service-card" style="width: 18rem;">
                   <div class="card-body">
                     <div class="icon mx-auto mb-3 d-flex align-items-center justify-content-center">
                        <i class="fa fa-globe" aria-hidden="true"></i>
                     </div>
-                    <h5 class="card-title mb-2 "><strong>World Wide</strong> </h5>
+                    <h5 class="card-title mb-2 "> <strong>World Wide</strong> </h5>
                     <p class="card-text">24 hrs world wide backup services with affiliated Garages and Mobile units.</p>
                     
                   </div>
@@ -342,7 +310,7 @@ include_once "../helpers/db.php";
           <section class="contact" id="contact">
   
             <h1>Contact Us</h1>
-            <p><i>We would love to hear from you. Get in touch with us.</i></p>  
+            <p><span>We would love to hear from you. Get in touch with us.</span></p>  
 
             <div class="row justify-content-center">
                 <div class="col-md-5 mx-2  contact-social ">
