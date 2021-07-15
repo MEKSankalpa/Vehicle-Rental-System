@@ -40,6 +40,39 @@ $(document).ready(function () {
 
 }
 
+if(document.getElementById("select_vehicle_form")){
+
+  
+    //Reservation start
+      var form6 = document.getElementById("select_vehicle_form");
+      var reserve_create_button = document.getElementById("select-vehicle"); 
+      // create the pristine instance
+      var pristine6 = new Pristine(form6);
+      
+      reserve_create_button.onclick =  function (e) {
+        
+        e.preventDefault();
+        
+        // check if the form is valid
+        var valid = pristine6.validate(); 
+        console.log(valid);// returns true or false
+            if(valid){
+                var vehicle_name  = document.getElementById("vehicle_id").value;
+                var pick_up_date  = form6.elements['pick_up_date'] .value;
+                var pick_up_time  = form6.elements['pick_up_time'] .value;
+                var drop_off_date = form6.elements['drop_off_date'] .value;
+                var drop_off_time = form6.elements['drop_off_time'] .value;
+                var passangers    = form6.elements['passangers'] .value;
+                var driver        = form6.elements['driver'] .value;
+                var pick_up_location    = form6.elements['pick_up_location'] .value;
+  
+                window.open("../layouts/resevation.php?vehicle_name="+vehicle_name+"&pick_up_date="+pick_up_date+"&pick_up_time="+pick_up_time+"&drop_off_date="+drop_off_date+"&drop_off_time="+ drop_off_time+"&passangers="+passangers+"&driver="+driver+"&pick_up_location="+pick_up_location+"","_self");
+            }
+      
+      };
+  
+  }
+
 
 
 if(document.getElementById("vehicle_create_form")){
@@ -105,6 +138,42 @@ if(document.getElementById("res-alert")){
 
 }
 
+
+if(document.getElementById("category_create_form")){
+
+
+    var form2 = document.getElementById("category_create_form");
+    var category_create_button = document.getElementById("category_submit"); 
+    // create the pristine instance
+    var pristine2 = new Pristine(form2);
+
+    category_create_button.onclick =  function (e) {
+      e.preventDefault();
+      
+      // check if the form is valid
+      var valid = pristine2.validate(); 
+      console.log(valid);// returns true or false
+          if(valid){
+              form2.submit();
+          }
+
+    };
+
+  }
+
+
+  if($("#vehicle-fleet")){
+    $("#vehicle-fleet").owlCarousel({
+
+      loop:true,
+      autoplay:true,
+      autoPlayTimeout:5000,
+      autoplayHoverPause:true,
+  });
+
+
+  }
+ 
   
 });
 

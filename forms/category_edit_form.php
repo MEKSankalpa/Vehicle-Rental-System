@@ -23,7 +23,7 @@ if($count > 0){
   </div>
   <div class="card-body pb-5">
     
-        <form id="category_create_form" action="../backend/category_edit.php" novalidate  method="POST" >
+        <form id="category_create_form" action="../backend/category_edit.php" novalidate  method="POST" enctype="multipart/form-data">
            
             <div class="form-group row">
                 <label for="category_id" class="col-sm-3 col-form-label" >Category Id</label>
@@ -42,13 +42,21 @@ if($count > 0){
                     <input type="text" class="form-control" id="category_name"  name="category_name" required data-pristine-required-message="This field is required" placeholder="Enter Category Name" value="<?php echo $row['category_name'] ?>">
                 </div>
                
-            </div>
+             </div>
 
-            <?php
-                    }
-                
-            
-            ?>
+             <div class="form-group row app">
+                    <label for="" class="col-sm-3" >Upload Image<span style="color:red">*</span></label>
+                    <div class="col-sm-9 form-group">
+                        <input type="file" @change ="fileChange" name="category_img" class="mb-4"  required>
+                    </div>
+                    <div class="" id="image-picker" class="" >
+                        <img :src="image" style="margin-bottom: 20px;  object-fit: cover; " height="350" width="" alt="">
+                        
+                    </div>
+                   
+             </div>
+
+          
 
             <?php  if(isset($_GET['edit'])) { if($_GET['edit'] == 'unique'){ ?>  
                  
@@ -66,3 +74,28 @@ if($count > 0){
 
   </div>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+
+
+var app = new Vue({
+            el: '.app',
+            data: {
+            image: "../images/category_images/<?php echo $row['category_image'] ?>"
+                },
+
+            methods: {
+                        fileChange(e){
+                        const file = e.target.files[0]
+                        this.image = URL.createObjectURL(file)
+                        }
+                    },
+                })
+
+
+
+                
+</script>  
+
+<?php } ?>

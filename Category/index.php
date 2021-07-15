@@ -35,6 +35,18 @@ if (isset($_SESSION['user_name']) && $_SESSION['user_role'] == "admin") {
 
                 <?php }}?>
 
+                 <!-- Create Alert -->
+                <?php  if(isset($_GET['create'])) { if($_GET['create'] == 'done'){ ?>  
+            
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                Category created!
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+
+                <?php } } ?>
+
                 <!-- Delete alert -->
                 <?php if (isset($_GET['delete'])) {if ($_GET['delete'] == 'success') {?>
 

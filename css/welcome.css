@@ -125,6 +125,7 @@ background: rgba(25, 28, 31, 0.8);
   font-family:'Muli',sans-serif ;
 } 
 
+
 @media (min-width: 1024px) {
     #cover_img {
       background-attachment: fixed;

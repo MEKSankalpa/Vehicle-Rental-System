@@ -14,6 +14,8 @@ if (isset($_SESSION['user_name'])) {
      $res = mysqli_fetch_assoc($user_data);
   }
 
+  $category_id = $_GET['category_id'];
+
 ?>
 
 
@@ -113,50 +115,129 @@ if (isset($_SESSION['user_name'])) {
        </section>
 
 <!-- content -->
-      <div class="container w-75 mx-auto mb-5 mt-5">
-          <h1><strong>CARS</strong></h1>
-        <hr>
+
+
+
+     <?php 
+
+        $query = "SELECT * FROM vehicles WHERE vehicle_category ='$category_id'";
+        $vehicles = mysqli_query($conn, $query);
+        $count = mysqli_num_rows($vehicles);
+
+        if($count > 0){  
+           
+             while ($row = mysqli_fetch_assoc($vehicles)) {
+             
+          ?>
+
+       
+ 
+
+
+      <div class="container w-100 mx-auto mb-5 mt-5">
+         
 
         <div class="card">
-          <div class="fleet-header text-center mt-2"><h3><strong>TOYOTA AQUA HYBRID</strong></h3> </div>
-          <div class="row">
-            <div class="col-3 mt-3 mb-3 offset-1">
-              <h5>Details</h5>
+          <div class="fleet-header card-header text-center "><h3><strong><?php echo $row['vehicle_title'] ?></strong></h3> </div>
+          <div class="row pl-5">
+            <div class="col-4 mt-3 mb-3 ">
+              <h5 class="mb-2">Vehicle Details</h5>
               <ul class="list">
-                <i class="fa fa-caret-right mr-1"></i><span>Title</span><br>
-                <i class="fa fa-caret-right mr-1"></i><span>Brand</span><br>
-                <i class="fa fa-caret-right mr-1"></i><span>Model Year</span><br>
-                <i class="fa fa-caret-right mr-1"></i><span>Seat Capacity</span><br>
-                <i class="fa fa-caret-right mr-1"></i><span>Price Per Day</span><br>
-                <i class="fa fa-caret-right mr-1"></i><span>Fuel Type</span><br>
+                <input type="hidden" name="" id="vehicle_id" value="<?php echo $row['id'] ?>">
+                <i class="fa fa-caret-right mr-2 mt-3"></i><span>Title : <?php echo $row['vehicle_title'] ?></span><br>
+                <i class="fa fa-caret-right mr-2 mt-3"></i><span>Brand : <?php echo $row['brand_name'] ?></span><br>
+                <i class="fa fa-caret-right mr-2 mt-3"></i><span>Model Year : <?php echo $row['model_year'] ?></span><br>
+                <i class="fa fa-caret-right mr-2 mt-3"></i><span>Seat Capacity : <?php echo $row['seat_capacity'] ?></span><br>
+                <i class="fa fa-caret-right mr-2 mt-3"></i><span>Price Per Day : <?php echo $row['price_per_day'] ?></span><br>
+                <i class="fa fa-caret-right mr-2 mt-3"></i><span>Fuel Type : <?php echo $row['fluel_type'] ?></span><br>
+                <i class="fa fa-caret-right mr-2 mt-3"></i><span>Engine Capacity : <?php echo $row['engine_capacity'] ?></span><br>
+                <i class="fa fa-caret-right mr-2 mt-3"></i><span>Transmission : <?php echo $row['transmission'] ?></span><br>
               </ul>
             </div>
-            <div class="col-4 mt-5">
-              <img src="../images/aqua.jpg" alt="f1v1">
+            <div class="col-4 mt-5 p-0">
+              <img src="../images/vehicleimages/<?php echo $row['image_name'] ?>" alt="f1v1" height="250" width="300">
             </div>
-            <div class="col-3 mt-3 mb-3 offset-1">
-              <h5>Features</h5>
+            <div class="col-4 mt-3 mb-3 ">
+              <h5 class="mb-2">Vehicle Features</h5>
               <ul>
-                <i class="fa fa-chevron-circle-right mr-1"></i><span>Air Conditioner</span><br>
-                <i class="fa fa-chevron-circle-right mr-1"></i><span>Power Door Locks</span><br>
-                <i class="fa fa-chevron-circle-right mr-1"></i><span>AntiLock Braking System</span><br>
-                <i class="fa fa-chevron-circle-right mr-1"></i><span>Brake Assist</span><br>
-                <i class="fa fa-chevron-circle-right mr-1"></i><span>Power Steering</span><br>
-                <i class="fa fa-chevron-circle-right mr-1"></i><span>Driver Airbag</span><br>
-                <i class="fa fa-chevron-circle-right mr-1"></i><span>Passenger Airbag</span><br>
-                <i class="fa fa-chevron-circle-right mr-1"></i><span>Power Windows</span><br>
-                <i class="fa fa-chevron-circle-right mr-1"></i><span>CD Player</span><br>
-                <i class="fa fa-chevron-circle-right mr-1"></i><span>Central Locking</span><br>
-                <i class="fa fa-chevron-circle-right mr-1"></i><span>Crash Sensor</span><br>
-                <i class="fa fa-chevron-circle-right mr-1"></i><span>Leather Seats</span><br>
+                 
+                  <?php if($row['airconditioner'] == 1 ){
+                       echo '<i class="fa fa-chevron-circle-right mr-2 mt-3"></i><span>Air Conditioner</span><br>';
+                  } ?>
+
+                  <?php if($row['powerdoorlocks'] == 1 ){
+                      echo '<i class="fa fa-chevron-circle-right mr-2 mt-3"></i><span>Power Door Locks</span><br>';
+                  } ?>
+
+                  <?php if($row['anti_lock_brake'] == 1 ){
+                      echo '<i class="fa fa-chevron-circle-right mr-2 mt-3"></i><span>AntiLock Braking System</span><br>';
+                  } ?>
+
+                  <?php if($row['brakeassist'] == 1 ){
+                      echo '<i class="fa fa-chevron-circle-right mr-2 mt-3"></i><span>Brake Assist</span><br>';
+                  } ?>
+
+                  <?php if($row['powersteering'] == 1 ){
+                      echo '<i class="fa fa-chevron-circle-right mr-2 mt-3"></i><span>Power Steering</span><br>';
+                  } ?>
+
+                  <?php if($row['driverairbag'] == 1 ){
+                      echo '<i class="fa fa-chevron-circle-right mr-2 mt-3"></i><span>Driver Airbag</span><br>';
+                  } ?>
+
+                  <?php if($row['passenger_air_bag'] == 1 ){
+                      echo ' <i class="fa fa-chevron-circle-right mr-2 mt-3"></i><span>Passenger Airbag</span><br>';
+                  } ?>
+
+                  <?php if($row['powerwindow'] == 1 ){
+                      echo '<i class="fa fa-chevron-circle-right mr-2 mt-3"></i><span>Power Windows</span><br>';
+                  } ?>
+
+                  <?php if($row['cdplayer'] == 1 ){
+                      echo '<i class="fa fa-chevron-circle-right mr-2 mt-3"></i><span>CD Player</span><br>';
+                  } ?>
+
+                  <?php if($row['central_locking'] == 1 ){
+                      echo ' <i class="fa fa-chevron-circle-right mr-2 mt-3"></i><span>Central Locking</span><br>';
+                  } ?>
+
+                  <?php if($row['crashcensor'] == 1 ){
+                      echo ' <i class="fa fa-chevron-circle-right mr-2 mt-3"></i><span>Crash Sensor</span><br>';
+                  } ?>
+
+                  <?php if($row['leather_seats'] == 1 ){
+                      echo '<i class="fa fa-chevron-circle-right mr-2 mt-3"></i><span>Leather Seats</span><br>';
+                  } ?>
+
+                
               </ul>
             </div>
           </div>
         </div>
-        <div class="text-center">
-        <a href="" class="btn select-btn btn-outline-warning mt-2"><strong>SELECT VEHICLE</strong> </a>
-        </div>
+     
+         <?php  if($_SESSION['user_role'] == ""){ ?>
+
+          <div class="text-center mt-3">
+            <a href="#" class="btn btn-success reservation_button px-5 py-2" data-toggle="modal" data-target="#res">SELECT VEHICLE</a>
+          </div>
+
+         <?php } ?>
+      
       </div>
+
+
+      <?php } }else{  ?>
+        <div class="container w-100 mx-auto mb-5 mt-5 text-center">
+          <img src="../images/sad.png" alt="sorry image" width="500" height="500">
+        <div class="alert alert-warning alert-dismissible fade show mt-5" role="alert">
+          <strong>Sorry!</strong> There are no vehiles at the moment.
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+      </div> 
+
+     <?php   } ?>  
 <!--content-->
 
           <footer class="footer">
@@ -186,6 +267,12 @@ if (isset($_SESSION['user_name'])) {
           </footer>
          
       </main>
+
+      <?php
+        
+         include '../forms/reservation-fleet.php';
+      
+      ?>
      
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

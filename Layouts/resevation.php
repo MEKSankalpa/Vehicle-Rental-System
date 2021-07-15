@@ -280,6 +280,7 @@ if (isset($_SESSION['user_name'])) {
 
          <section class="fleet" id="fleet">
 
+<<<<<<< HEAD
             <h1>VEHICLE FLEET</h1>
             <p><i>Some of the categories that are being introduced</i></p>
            
@@ -300,6 +301,7 @@ if (isset($_SESSION['user_name'])) {
                      <h4 class="text-center"><strong>VANS</strong> </h4>
                      <hr>
                      <a href="" class="btn fleet-btn btn-outline-success">View Fleet </a> 
+
 
                    </div>
                  </div>

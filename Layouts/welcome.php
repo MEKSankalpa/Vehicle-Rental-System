@@ -1,6 +1,7 @@
 <?php
 
 session_start();
+include_once "../helpers/db.php";
 ?>
 
 
@@ -119,6 +120,7 @@ session_start();
       <main class="main-content" id="about">
          
           <div class="about container p-5" >
+
             <h1 class=" text-center">ABOUT US</h1>
             <p class=" text-justify pt-4 ">We endeavor to provide the finest standards of customer care and highly personalized service to all of our customers looking for Sri Lanka vehicle rental opportunities, with over 30 years of expertise in the sector. Our service is backed by a networked front office, fully-fledged mechanical servicing, and valet service, and our fleet is one of the largest, most contemporary, most diverse in Sri Lanka. We are always striving to improve our service and get customers to their destination as comfortably, efficiently and quickly as possible. Customer satisfaction is our highest priority.</p>
           </div>
@@ -128,6 +130,7 @@ session_start();
              <h1>VEHICLE FLEET</h1>
              <p><i>Some of the categories that are being introduced</i></p>
             
+<!-- <<<<<<< HEAD
              <div class="offer-content row d-flex justify-content-center">
              
                   <div class="card col-3 m-4 px-0" style="width: 18rem;">
@@ -145,10 +148,55 @@ session_start();
                       <h4 class="text-center"><strong>VANS</strong> </h4>
                       <hr>
                       <a href="" class="btn fleet-btn btn-outline-success">View Fleet </a> 
+======= -->
+                 <?php 
+                   
+                    $category_sql     = "SELECT * FROM vehicle_category";
+                    $category_result  = mysqli_query($conn, $category_sql);
+                    $categories_count = mysqli_num_rows($category_result);
 
-                    </div>
-                  </div>
+                    if($categories_count > 0 && $categories_count <= 3){ ?>
+                       <div class=" offer-content row d-flex justify-content-center">
 
+
+                         <?php  while ($categories_row = mysqli_fetch_assoc($category_result)) {  ?>
+                          
+                          <div class="testimonial-item card col-3 m-4 px-0" style="width: 18rem;">
+                            <img class="card-img-top" src="../images/category_images/<?php echo $categories_row['category_image'] ?>" alt="Card image cap" height="250px">
+                            <div class="card-body">
+                              <h4 class="text-left"><?php echo $categories_row['category_name'] ?></h4>
+                              <hr>
+                              <a href="../Layouts/vehicleFleet.php?category_id=<?php echo $categories_row['category_id'] ?>" class="btn offer-btn btn-outline-success">View Fleet </a> 
+                            </div>
+                          </div>
+                          
+
+                         <?php } ?>
+
+
+                   <?php } else if($categories_count > 3){ ?>
+
+                      <div class=" container-fluid   justify-content-center owl-carousel px-5" id="vehicle-fleet">
+
+                       <?php  while ($categories_row = mysqli_fetch_assoc($category_result)) {  ?>
+                          
+                        <div class="testimonial-item card  m-4 px-0" >
+                            <img class="card-img-top" src="../images/category_images/<?php echo $categories_row['category_image'] ?>" alt="Card image cap" height="250px">
+                            <div class="card-body">
+                              <h4 class="text-left"><?php echo $categories_row['category_name'] ?></h4>
+                              <hr>
+                              <a href="../Layouts/vehicleFleet.php?category_id=<?php echo $categories_row['category_id'] ?>" class="btn offer-btn btn-outline-success">View Fleet </a> 
+                            </div>
+                          </div>
+                          
+
+                         <?php } ?>
+
+                  <?php }   ?>
+             
+                 
+
+<!-- <<<<<<< HEAD
                   <div class="card col-3 m-4 px-0" style="width: 18rem;">
                    
                     <img class="card-img-top" src="../images/fleet3.jpeg" alt="Card image cap" height="250px">
@@ -158,10 +206,9 @@ session_start();
                       <a href="" class="btn fleet-btn btn-outline-success">View Fleet </a> 
                     </div>
                   </div>
-                  
-
+======= -->
              </div>
- 
+            
           </section>
 
           <section class="service" id="services">
@@ -169,9 +216,9 @@ session_start();
              <h1>SERVICES</h1>
              <p><i>Our services can be customized to fit your specific transportation needs.</i></p>
 
-             <div class="offer-content row d-flex justify-content-center">
+             <div class="offer-content row d-flex justify-content-center ">
                   
-                <div class="card col-md-2 m-3 pb-2 service-card" style="width: 18rem;">
+                <div class=" card col-md-2 m-3 pb-2 service-card" style="width: 18rem;">
                   <div class="card-body">
                     <div class="icon mx-auto mb-3 d-flex align-items-center justify-content-center">
                        <i class="fa fa-globe" aria-hidden="true"></i>
@@ -182,7 +229,7 @@ session_start();
                   </div>
                 </div>
 
-                <div class="card col-md-2 m-3 pb-2 service-card" style="width: 18rem;">
+                <div class=" card col-md-2 m-3 pb-2 service-card" style="width: 18rem;">
                   <div class="card-body">
                    
                     <div class="icon mx-auto mb-3 d-flex align-items-center justify-content-center">
@@ -194,7 +241,7 @@ session_start();
                   </div>
                 </div>
 
-                <div class="card col-md-2 m-3 pb-2 service-card" style="width: 18rem;">
+                <div class=" card col-md-2 m-3 pb-2 service-card" style="width: 18rem;">
                   <div class="card-body">
                     <div class="icon mx-auto mb-3 d-flex align-items-center justify-content-center">
                       <i class="fa fa-flag" aria-hidden="true"></i>
@@ -206,7 +253,7 @@ session_start();
                   </div>
                 </div>
 
-                <div class="card col-md-2 m-3 pb-2 service-card" style="width: 18rem;">
+                <div class="testimonial-item card col-md-2 m-3 pb-2 service-card" style="width: 18rem;">
                   <div class="card-body">
                     <div class="icon mx-auto mb-3 d-flex align-items-center justify-content-center">
                       <i class="fa fa-user" aria-hidden="true"></i>
@@ -228,7 +275,7 @@ session_start();
 
                       <div class="testimonial-item text-center ">
                           
-                        <img src="../images/testimonials-1.jpg" class="testimonial-img " alt="">
+                        <img src="../images/testimonials/testimonials-1.jpg" class="testimonial-img " alt="">
                         <h3>Saul Goodman</h3>
                         <h4>Entrepreneur</h4>
                         <p>
@@ -240,7 +287,7 @@ session_start();
 
                       <div class="testimonial-item text-center ">
                           
-                        <img src="../images/testimonials-2.jpg" class="testimonial-img " alt="">
+                        <img src="../images/testimonials/testimonials-2.jpg" class="testimonial-img " alt="">
                         <h3>Susan zhen</h3>
                         <h4>Public Services Manager</h4>
                         <p>
@@ -252,7 +299,7 @@ session_start();
 
                       <div class="testimonial-item text-center ">
                           
-                        <img src="../images/testimonials-3.jpg" class="testimonial-img " alt="">
+                        <img src="../images/testimonials/testimonials-3.jpg" class="testimonial-img " alt="">
                         <h3>Kathi Peterson</h3>
                         <h4>Quality Engineer</h4>
                         <p>
@@ -264,7 +311,7 @@ session_start();
 
                       <div class="testimonial-item text-center ">
                           
-                        <img src="../images/testimonials-4.jpg" class="testimonial-img " alt="">
+                        <img src="../images/testimonials/testimonials-4.jpg" class="testimonial-img " alt="">
                         <h3>James Potter</h3>
                         <h4>Developer</h4>
                         <p>
@@ -276,7 +323,7 @@ session_start();
 
                       <div class="testimonial-item text-center ">
                           
-                        <img src="../images/testimonials-5.jpg" class="testimonial-img " alt="">
+                        <img src="../images/testimonials/testimonials-5.jpg" class="testimonial-img " alt="">
                         <h3>Jakson Hamilton</h3>
                         <h4>Businessman</h4>
                         <p>
