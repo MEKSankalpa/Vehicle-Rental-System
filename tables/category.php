@@ -17,7 +17,7 @@ if ($result = mysqli_query($conn, $sql)) {
             echo "<tbody>";
         while ($row = mysqli_fetch_array($result)) {
                 echo "<tr>";
-                    echo "<td>" . 'C/' .$row['category_id'] . "</td>";
+                    echo "<td>" . 'C/' .str_pad($row['category_id'],'3',0, STR_PAD_LEFT ) . "</td>";
                     echo "<td>" . $row['category_name'] . "</td>";
                     echo "<td>";
                        

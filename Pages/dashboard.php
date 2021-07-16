@@ -96,11 +96,9 @@ if (isset($_SESSION['user_name']) && $_SESSION['user_role'] == "admin") {
                                 <th>Reserve Date</th>
 								<th>Customer Name</th>
 								<th>Customer Mobile</th>
-								<th>Contact Via</th>
 								<th>Vehicle Id</th>
 								<th>Reserve From</th>
 								<th>Reserve To</th>
-								<th>Rental Cost</th>
 								<th>Status</th>
 								</tr>
 							</thead>

@@ -8,9 +8,9 @@ if ($result->num_rows > 0) {
 	while($row = $result->fetch_assoc()) {?>
 		<tr>
 
-			<td>V/<?php echo $row["id"]?></td>
+			<td>V/<?php echo str_pad($row["id"],'3',0, STR_PAD_LEFT )?></td>
             <td><?php echo $row["vehicle_title"]?></td>
-			<td><?php echo $row["vehicle_category"]?></td>
+			<td>C/<?php echo str_pad($row["vehicle_category"] ,'3',0, STR_PAD_LEFT )?></td>
 			<td><?php echo $row["brand_name"]?></td>
 			<td><?php echo $row["model_year"]?></td>
 			<td><?php echo $row["seat_capacity"]?></td>
