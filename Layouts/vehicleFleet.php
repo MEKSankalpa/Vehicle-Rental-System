@@ -31,7 +31,7 @@ if (isset($_SESSION['user_name'])) {
    
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">   -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous"></head>
-    <link rel="stylesheet" href="../css/resevation.css">
+    <link rel="stylesheet" href="../css/welcome.css">
 
     <!-- font-awesome -->
     <script src="https://use.fontawesome.com/50ae888db0.js"></script>
@@ -105,8 +105,8 @@ if (isset($_SESSION['user_name'])) {
 
        </header> 
 
-       <section class="cover fixed" id="cover_img">
-           <div class="cover-content">
+       <section class="fleet-cover fixed" id="fleet-cover_img">
+           <div class="fleet-cover-content">
                
                <h1> <strong>ALL ABOUT THE DRIVE</strong> </h1>
                <!-- <h2>Rent a car with SafeRunner and enjoy your destination </h2> -->
@@ -138,13 +138,13 @@ if (isset($_SESSION['user_name'])) {
          
 
         <div class="card">
-          <div class="fleet-header card-header text-center "><h3><strong><?php echo $row['vehicle_title'] ?></strong></h3> </div>
+          <div class="card-header text-center text-uppercase"><h3><strong> <?php echo $row['vehicle_title'] ?></strong></h3> </div>
           <div class="row pl-5">
             <div class="col-4 mt-3 mb-3 ">
               <h5 class="mb-2">Vehicle Details</h5>
               <ul class="list">
                 <input type="hidden" name="" id="vehicle_id" value="<?php echo $row['id'] ?>">
-                <i class="fa fa-caret-right mr-2 mt-3"></i><span>Title : <?php echo $row['vehicle_title'] ?></span><br>
+                <!-- <i class="fa fa-caret-right mr-2 mt-3"></i><span>Title : <?php echo $row['vehicle_title'] ?></span><br> -->
                 <i class="fa fa-caret-right mr-2 mt-3"></i><span>Brand : <?php echo $row['brand_name'] ?></span><br>
                 <i class="fa fa-caret-right mr-2 mt-3"></i><span>Model Year : <?php echo $row['model_year'] ?></span><br>
                 <i class="fa fa-caret-right mr-2 mt-3"></i><span>Seat Capacity : <?php echo $row['seat_capacity'] ?></span><br>

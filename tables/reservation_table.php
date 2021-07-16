@@ -14,17 +14,15 @@ if ($result->num_rows > 0) {
             <td><?php echo $row["reserve_date"]?></td>
             <td><?php echo ($row['reserver_title'].". ".$row["reserver_name"]) ?></td>
 			<td><?php echo $row["reserver_mobile"]?></td>
-			<td><?php echo $row["contact_type"]?></td>
 			<td>V/<?php echo str_pad($row["selected_vehicle"],'3',0, STR_PAD_LEFT )?></td>
 			<td><?php echo $row["reserve_from"]?></td>	  
 			<td><?php echo $row["reserve_to"]?></td>
-            <td>Rs: <?php echo $row["rental_cost"]?></td>
 			<td>
                <?php 
                
                     if(!isset($row["status"])){
 
-                        echo   '<a href="" class="btn btn-outline-primary">Approve Reservation</a>'; 
+                        echo   '<a href="" class="btn btn-outline-primary">Approve</a>'; 
                     
                         
                     }else{

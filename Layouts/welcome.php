@@ -37,7 +37,7 @@ include_once "../helpers/db.php";
               <ul>
                 <li class="active"><a href="#">Home</a></li>
                 <li><a href="#about"  data-scroll>About</a></li>
-                <li><a href="#offers" data-scroll>fleet</a></li>
+                <li><a href="#fleet" data-scroll>Fleet</a></li>
                 <li><a href="#services" data-scroll>Services</a></li>
 
                 <?php   if(!isset($_SESSION['user_name'])){  ?>
@@ -56,7 +56,7 @@ include_once "../helpers/db.php";
             
             <nav class="nav-menu ml-auto d-none d-lg-block">
               
-              <?php   if(isset($_SESSION['user_name'])){                                    
+              <?php   if(isset($_SESSION['user_name'])){
                          if($_SESSION['user_role'] == ""){ ?>
                     
                                 <ul class="nav ">
@@ -100,7 +100,7 @@ include_once "../helpers/db.php";
            <div class="cover-content">
                
                <h1> <strong>SAFE ADVENTURE</strong> </h1>
-               <h2>Rent a car with SafeRunner and enjoy your destination </h2>
+               <h2>Rent a car with SafeRunner and enjoy your destination</h2>
 
                <?php   if(isset($_SESSION['user_name'])  && $_SESSION['user_role'] == ""){  ?>
                  <a href="#" class="btn btn-success reservation_button px-5 py-2" data-toggle="modal" data-target="#res">Reservation</a>
@@ -120,15 +120,15 @@ include_once "../helpers/db.php";
       <main class="main-content" id="about">
          
           <div class="about container p-5" >
-            <h1 class="text-center ">ABOUT US</h1>
-            <p class=" text-justify pt-4 ">We endeavor to provide the finest standards of customer care and highly personalized service to all of our customers looking for Sri Lanka vehicle rental opportunities, with over 30 years of expertise in the sector. Our service is backed by a networked front office, fully-fledged mechanical servicing, and valet service, and our fleet is one of the largest, most contemporary, most diverse in Sri Lanka.</p>
+
+            <h1 class=" text-center">ABOUT US</h1>
+            <p class=" text-justify pt-4 ">We endeavor to provide the finest standards of customer care and highly personalized service to all of our customers looking for Sri Lanka vehicle rental opportunities, with over 30 years of expertise in the sector. Our service is backed by a networked front office, fully-fledged mechanical servicing, and valet service, and our fleet is one of the largest, most contemporary, most diverse in Sri Lanka. We are always striving to improve our service and get customers to their destination as comfortably, efficiently and quickly as possible. Customer satisfaction is our highest priority.</p>
           </div>
 
-          <section class="offers " id="offers">
+          <section class="fleet" id="fleet">
 
              <h1>VEHICLE FLEET</h1>
-             <p>Some of the categories that are being introduced</p>
-            
+             <p><span>Some of the categories that are being introduced</span> </p>
             
                  <?php 
                    
@@ -137,16 +137,17 @@ include_once "../helpers/db.php";
                     $categories_count = mysqli_num_rows($category_result);
 
                     if($categories_count > 0 && $categories_count <= 3){ ?>
-                       <div class=" offer-content row d-flex justify-content-center">
+                       <div class=" fleet-content row d-flex justify-content-center">
+
 
                          <?php  while ($categories_row = mysqli_fetch_assoc($category_result)) {  ?>
                           
                           <div class="testimonial-item card col-3 m-4 px-0" style="width: 18rem;">
                             <img class="card-img-top" src="../images/category_images/<?php echo $categories_row['category_image'] ?>" alt="Card image cap" height="250px">
                             <div class="card-body">
-                              <h4 class="text-left"><?php echo $categories_row['category_name'] ?></h4>
+                              <h4 class="text-center"><?php echo $categories_row['category_name'] ?></h4>
                               <hr>
-                              <a href="../Layouts/vehiclesFleet.php?category_id=<?php echo $categories_row['category_id'] ?>" class="btn offer-btn btn-outline-success">View Fleet </a> 
+                              <a href="../Layouts/vehicleFleet.php?category_id=<?php echo $categories_row['category_id'] ?>" class="btn fleet-btn btn-outline-success">View Fleet </a> 
                             </div>
                           </div>
                           
@@ -165,7 +166,7 @@ include_once "../helpers/db.php";
                             <div class="card-body">
                               <h4 class="text-left"><?php echo $categories_row['category_name'] ?></h4>
                               <hr>
-                              <a href="../Layouts/vehiclesFleet.php?category_id=<?php echo $categories_row['category_id'] ?>" class="btn offer-btn btn-outline-success">View Fleet </a> 
+                              <a href="../Layouts/vehicleFleet.php?category_id=<?php echo $categories_row['category_id'] ?>" class="btn fleet-btn btn-outline-success">View Fleet </a> 
                             </div>
                           </div>
                           
@@ -173,10 +174,6 @@ include_once "../helpers/db.php";
                          <?php } ?>
 
                   <?php }   ?>
-             
-                 
-
-                  
 
              </div>
             
@@ -185,16 +182,16 @@ include_once "../helpers/db.php";
           <section class="service" id="services">
 
              <h1>SERVICES</h1>
-             <p>Our services can be customized to fit your specific transportation needs.</p>
+             <p><span>Our services can be customized to fit your specific transportation needs.</span></p>
 
-             <div class="offer-content row d-flex justify-content-center ">
+             <div class="fleet-content row d-flex justify-content-center ">
                   
                 <div class=" card col-md-2 m-3 pb-2 service-card" style="width: 18rem;">
                   <div class="card-body">
                     <div class="icon mx-auto mb-3 d-flex align-items-center justify-content-center">
                        <i class="fa fa-globe" aria-hidden="true"></i>
                     </div>
-                    <h5 class="card-title mb-2 ">World Wide</h5>
+                    <h5 class="card-title mb-2 "> <strong>World Wide</strong> </h5>
                     <p class="card-text">24 hrs world wide backup services with affiliated Garages and Mobile units.</p>
                     
                   </div>
@@ -206,7 +203,7 @@ include_once "../helpers/db.php";
                     <div class="icon mx-auto mb-3 d-flex align-items-center justify-content-center">
                       <i class="fa fa-car" aria-hidden="true"></i>
                     </div>
-                    <h5 class="card-title mb-2 ">Over 1000 Vehicles</h5>
+                    <h5 class="card-title mb-2 "><strong> Over 1000 Vehicles </strong></h5>
                     <p class="card-text">Over 100 4WD Jeeps, 150 Vans, 500 Cars, Double Cabs, Luxury Coaches, Lorries etc.</p>
                     
                   </div>
@@ -218,7 +215,7 @@ include_once "../helpers/db.php";
                       <i class="fa fa-flag" aria-hidden="true"></i>
 
                     </div>
-                    <h5 class="card-title mb-2 ">Insurance</h5>
+                    <h5 class="card-title mb-2 "><strong>Insurance</strong></h5>
                     <p class="card-text">Comprehensive Insurance available for all our vehicles including Passengers</p>
                     
                   </div>
@@ -229,7 +226,7 @@ include_once "../helpers/db.php";
                     <div class="icon mx-auto mb-3 d-flex align-items-center justify-content-center">
                       <i class="fa fa-user" aria-hidden="true"></i>
                     </div>
-                    <h5 class="card-title mb-2 ">Our Strength</h5>
+                    <h5 class="card-title mb-2 "><strong>Our Strength</strong> </h5>
                     <p class="card-text">100 In-house Operational Staff, 70 Automobile Technicians and 300 permanent Drivers from every branch of the Island.</p>
                     
                   </div>
@@ -313,7 +310,7 @@ include_once "../helpers/db.php";
           <section class="contact" id="contact">
   
             <h1>Contact Us</h1>
-            <p>We would love to hear from you. Get in touch with us.</p>  
+            <p><span>We would love to hear from you. Get in touch with us.</span></p>  
 
             <div class="row justify-content-center">
                 <div class="col-md-5 mx-2  contact-social ">
@@ -324,7 +321,7 @@ include_once "../helpers/db.php";
                           <i class="fa fa-share-alt" aria-hidden="true"></i>
                         </div>
 
-                        <h4 class="my-3">Social Profiles</h4>
+                        <h4 class="my-3"><strong>Social Profiles</strong> </h4>
 
                         <div class="d-flex justify-content-center align-items-center pb-5">
                             <div class="share-icons mx-2 d-flex justify-content-center align-items-center">
@@ -359,7 +356,7 @@ include_once "../helpers/db.php";
                           <i class="fa fa-envelope" aria-hidden="true"></i>
                         </div>
 
-                        <h4 class="my-3">Email Us</h4>
+                        <h4 class="my-3"><strong>Email Us</strong> </h4>
                         <email>safeRunner@gmail.com</email>
   
                       </div>
@@ -369,7 +366,7 @@ include_once "../helpers/db.php";
                           <i class="fa fa-phone" aria-hidden="true"></i>
                         </div>
 
-                        <h4 class="my-3">Call Us</h4>
+                        <h4 class="my-3"><strong>Call Us</strong> </h4>
                         <h6>047785694</h6> 
   
                       </div>

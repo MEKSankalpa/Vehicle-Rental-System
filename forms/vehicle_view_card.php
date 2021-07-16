@@ -186,9 +186,7 @@ if (isset($_GET['v_id'])) {
             </div>
         </div>
 
-       <div class="mx-auto mb-4">
-            <a href="../vehicle/vehicle_list.php" class="btn btn-outline-warning submit-btn">SAVE DETAILS</a>
-       </div>
+      
 
     </div>
 </div>    

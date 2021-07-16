@@ -1,3 +1,5 @@
+/* welcome, reservation, vehiclefleet stylesheets */
+
 *{
     padding: 0;
     margin: 0;
@@ -95,7 +97,7 @@ background: rgba(25, 28, 31, 0.8);
     margin: 0 0 10px 0;
     font-size: 64px;
     font-family: "Satisfy", serif;
-    color: #ffc85a;
+    color: #e9af3c;
   }
   
   .cover h2 {
@@ -110,8 +112,25 @@ background: rgba(25, 28, 31, 0.8);
 .main-content{
     width: 100%;
     height: 2000px;
-    position: relative;
-    
+    position: relative;  
+}
+ 
+.main-content h1 {
+  font-family: "Satisfy", serif !important;
+}
+
+.main-content h4, h5{
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.main-content p {
+  font-family:'Muli',sans-serif ;
+} 
+
+.main-content p span{
+  letter-spacing: 2px;
 }
 
 
@@ -120,23 +139,17 @@ background: rgba(25, 28, 31, 0.8);
       background-attachment: fixed;
     }
   }
-  
-
+ 
   /******************************************************** fleets ******************************************/
 
-  .offers{
-      padding-top: 6%;
-      padding-bottom: 6%;
+  .fleet{
+      padding-top: 4%;
+      padding-bottom: 4%;
       text-align: center;
       background: #f8f8f8;
   }
 
-  .price{
-    color: #00C853;
-    font-weight: bold;
-
-  }
-.offer-btn{
+.fleet-btn{
     border-radius: 50px;
     padding-right: 120px;
     padding-top: 15px;
@@ -148,8 +161,8 @@ background: rgba(25, 28, 31, 0.8);
 /****************************************************** services******************************************** */
 
 .service{
-    padding-top: 6%;
-    padding-bottom: 6%;
+    padding-top: 4%;
+    padding-bottom: 4%;
     text-align: center;
     background: #ffffff;
 }
@@ -356,7 +369,7 @@ background: rgba(25, 28, 31, 0.8);
   
   .footer p {
     font-size: 15;
-    font-style: italic;
+    letter-spacing: 2px;
     padding: 0;
     margin: 0 0 40px 0;
   }
@@ -497,3 +510,62 @@ background: rgba(25, 28, 31, 0.8);
   background-color: #ffc85a;
 
 }
+
+/********************************* reservation layout styles *******************************************/
+
+#reservation-details td{
+  font-weight: bold;
+  font-size: medium;
+  text-transform: uppercase;
+}
+
+/********************************* vehicleFleet layout styles *******************************************/
+.fleet-cover{
+  width: 100%;
+  height: 400px;
+  background: url("../images/Rental-cars.jpg") top right;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  top: 0;
+  left: 0;
+}  
+#fleet-cover_img::before{
+  content: "";
+  background: rgba(0, 0, 0, 0.45);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.fleet-cover .fleet-cover-content {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 15px;
+}
+
+.fleet-cover h1 {
+  margin: 0 0 10px 0;
+  font-size: 64px;
+  font-family: "Satisfy", serif;
+  color: #e9af3c;
+}
+
+.fleet-cover h2 {
+  color: #eee;
+  margin-bottom: 20px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+

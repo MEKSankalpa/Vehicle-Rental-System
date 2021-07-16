@@ -29,7 +29,7 @@ if (isset($_SESSION['user_name'])) {
    
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">   -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous"></head>
-    <link rel="stylesheet" href="../css/resevation.css">
+    <link rel="stylesheet" href="../css/welcome.css">
 
     <!-- font-awesome -->
     <script src="https://use.fontawesome.com/50ae888db0.js"></script>
@@ -51,7 +51,7 @@ if (isset($_SESSION['user_name'])) {
               <ul>
                 <li class="active"><a href="welcome.php">Home</a></li>
                 <li><a href="#about"  data-scroll>About</a></li>
-                <li><a href="#offers" data-scroll>Fleets</a></li>
+                <li><a href="#fleet" data-scroll>Fleet</a></li>
                 <li><a href="#services" data-scroll>Services</a></li>
                 <li><a href="#portfolio" data-scroll>Testimonials</a></li>
                 <li><a href="#contact" data-scroll>Contact</a></li>
@@ -119,7 +119,7 @@ if (isset($_SESSION['user_name'])) {
 <div class="container p-5 " >
           <div class="row">
             <div class="col-sm-6 mx-auto p-3">
-                <h5 class="">Please Fill the Form With Your Details</h5>    
+                <h5 class=""><strong>Please Fill the Form With Your Details</strong> </h5>    
                 <hr class="mb-4">
                 <form action="../backend/reservation.php" class="needs-validation" method="post" novalidate id="reserve_contact">
                   <div class="form-row">
@@ -179,8 +179,6 @@ if (isset($_SESSION['user_name'])) {
                     </div>
                   </div>
 
-                 
-
                   <input type="hidden" name="vehicle_name" value="<?php echo $_GET['vehicle_name'] ?>">
                   <input type="hidden" name="pick_up_date" value="<?php echo $_GET['pick_up_date'] ?>">
                   <input type="hidden" name="pick_up_time" value="<?php echo $_GET['pick_up_time'] ?>">
@@ -222,7 +220,7 @@ if (isset($_SESSION['user_name'])) {
               </div>
 
             <div class="col-sm-6 mx-auto p-3 ml-3">
-            <h5 class="">Reservation Details</h5> 
+            <h5 class=""><strong>Reservation Details</strong></h5> 
             <hr class="mb-4">
                 <table class="table table-bordered" style="border-width:2px">
                   <tbody id="reservation-details">
@@ -266,126 +264,139 @@ if (isset($_SESSION['user_name'])) {
                     
                   </tbody>
               </table>
-              <a href="#" class="btn btn-primary  px-5 py-2 " data-toggle="modal" data-target="#vehicle-details">View Vehicle Details</a>
+              <a href="./vehicleFleet.php" class="btn btn-primary  px-5 py-2 " data-toggle="modal" data-target="#vehicle-details">View Vehicle Details</a>
             </div>
           </div>
         </div>
    
         </section>
 
-      <main class="main-content" id="about">
+        <main class="main-content" id="about">
          
-          <div class="about container p-5" >
-            <h1 class="text-center">ABOUT US</h1>
-            <p class=" text-justify pt-4 ">We endeavor to provide the finest standards of customer care and highly personalized service to all of our customers looking for Sri Lanka vehicle rental opportunities, with over 30 years of expertise in the sector. Our service is backed by a networked front office, fully-fledged mechanical servicing, and valet service, and our fleet is one of the largest, most contemporary, most diverse in Sri Lanka.</p>
-          </div>
+         <div class="about container p-5" >
+           <h1 class=" text-center">ABOUT US</h1>
+           <p class=" text-justify pt-4 ">We endeavor to provide the finest standards of customer care and highly personalized service to all of our customers looking for Sri Lanka vehicle rental opportunities, with over 30 years of expertise in the sector. Our service is backed by a networked front office, fully-fledged mechanical servicing, and valet service, and our fleet is one of the largest, most contemporary, most diverse in Sri Lanka. We are always striving to improve our service and get customers to their destination as comfortably, efficiently and quickly as possible. Customer satisfaction is our highest priority.</p>
+         </div>
 
-          <section class="offers" id="offers">
+         <section class="fleet" id="fleet">
 
-             <h1>VEHICLE FLEET</h1>
-             <p>Some of the categories that are being introduced</p>
+        <h1>VEHICLE FLEET</h1>
+        <p><span>Some of the categories that are being introduced</span> </p>
+
+            <?php 
+              
+              $category_sql     = "SELECT * FROM vehicle_category";
+              $category_result  = mysqli_query($conn, $category_sql);
+              $categories_count = mysqli_num_rows($category_result);
+
+              if($categories_count > 0 && $categories_count <= 3){ ?>
+                  <div class=" fleet-content row d-flex justify-content-center">
+
+
+                    <?php  while ($categories_row = mysqli_fetch_assoc($category_result)) {  ?>
+                    
+                    <div class="testimonial-item card col-3 m-4 px-0" style="width: 18rem;">
+                      <img class="card-img-top" src="../images/category_images/<?php echo $categories_row['category_image'] ?>" alt="Card image cap" height="250px">
+                      <div class="card-body">
+                        <h4 class="text-center"><?php echo $categories_row['category_name'] ?></h4>
+                        <hr>
+                        <a href="../Layouts/vehicleFleet.php?category_id=<?php echo $categories_row['category_id'] ?>" class="btn fleet-btn btn-outline-success">View Fleet </a> 
+                      </div>
+                    </div>
+                    
+
+                    <?php } ?>
+
+
+              <?php } else if($categories_count > 3){ ?>
+
+                <div class=" container-fluid   justify-content-center owl-carousel px-5" id="vehicle-fleet">
+
+                  <?php  while ($categories_row = mysqli_fetch_assoc($category_result)) {  ?>
+                    
+                  <div class="testimonial-item card  m-4 px-0" >
+                      <img class="card-img-top" src="../images/category_images/<?php echo $categories_row['category_image'] ?>" alt="Card image cap" height="250px">
+                      <div class="card-body">
+                        <h4 class="text-left"><?php echo $categories_row['category_name'] ?></h4>
+                        <hr>
+                        <a href="../Layouts/vehicleFleet.php?category_id=<?php echo $categories_row['category_id'] ?>" class="btn fleet-btn btn-outline-success">View Fleet </a> 
+                      </div>
+                    </div>
+                    
+
+                    <?php } ?>
+
+            <?php }   ?>
+
+        </div>
+
+        </section>
+
+         <section class="service" id="services">
+
+            <h1>SERVICES</h1>
+            <p><span>Our services can be customized to fit your specific transportation needs.</span></p>
+
+            <div class="offer-content row d-flex justify-content-center">
+                 
+               <div class="card col-md-2 m-3 pb-2 service-card" style="width: 18rem;">
+                 <div class="card-body">
+                   <div class="icon mx-auto mb-3 d-flex align-items-center justify-content-center">
+                      <i class="fa fa-globe" aria-hidden="true"></i>
+                   </div>
+                   <h5 class="card-title mb-2 "><strong>World Wide</strong> </h5>
+                   <p class="card-text">24 hrs world wide backup services with affiliated Garages and Mobile units.</p>
+                   
+                 </div>
+               </div>
+
+               <div class="card col-md-2 m-3 pb-2 service-card" style="width: 18rem;">
+                 <div class="card-body">
+                  
+                   <div class="icon mx-auto mb-3 d-flex align-items-center justify-content-center">
+                     <i class="fa fa-car" aria-hidden="true"></i>
+                   </div>
+                   <h5 class="card-title mb-2 "><strong> Over 1000 Vehicles </strong></h5>
+                   <p class="card-text">Over 100 4WD Jeeps, 150 Vans, 500 Cars, Double Cabs, Luxury Coaches, Lorries etc.</p>
+                   
+                 </div>
+               </div>
+
+               <div class="card col-md-2 m-3 pb-2 service-card" style="width: 18rem;">
+                 <div class="card-body">
+                   <div class="icon mx-auto mb-3 d-flex align-items-center justify-content-center">
+                     <i class="fa fa-flag" aria-hidden="true"></i>
+
+                   </div>
+                   <h5 class="card-title mb-2 "><strong>Insurance</strong></h5>
+                   <p class="card-text">Comprehensive Insurance available for all our vehicles including Passengers</p>
+                   
+                 </div>
+               </div>
+
+               <div class="card col-md-2 m-3 pb-2 service-card" style="width: 18rem;">
+                 <div class="card-body">
+                   <div class="icon mx-auto mb-3 d-flex align-items-center justify-content-center">
+                     <i class="fa fa-user" aria-hidden="true"></i>
+                   </div>
+                   <h5 class="card-title mb-2 "><strong>Our Strength</strong> </h5>
+                   <p class="card-text">100 In-house Operational Staff, 70 Automobile Technicians and 300 permanent Drivers from every branch of the Island.</p>
+                   
+                 </div>
+               </div>
             
-             <div class="offer-content row d-flex justify-content-center">
-             
-                  <div class="card col-3 m-4 px-0" style="width: 18rem;">
-                    <img class="card-img-top" src="../images/offer1.jpeg" alt="Card image cap" height="250px">
-                    <div class="card-body">
-                      <h4 class="text-left">CARS</h4>
-                       <hr>
-                      <a href="../Layouts/vehiclesFleet.php?category=Car" class="btn offer-btn btn-outline-success">View Fleet </a> 
-                    </div>
-                  </div>
+            </div>
 
-                  <div class="card col-3 m-4 px-0" style="width: 18rem;">
-                    <img class="card-img-top" src="../images/offer2.jpg" alt="Card image cap" height="250px">
-                    <div class="card-body">
-                      <h4 class="text-left">VANS</h4>
-                      <hr>
-                      <a href="" class="btn offer-btn btn-outline-success">View Fleet </a> 
+         </section>
 
-                    </div>
-                  </div>
-
-                  <div class="card col-3 m-4 px-0" style="width: 18rem;">
-                   
-                    <img class="card-img-top" src="../images/offer3.jpg" alt="Card image cap" height="250px">
-                    <div class="card-body">
-                      <h4 class="text-left">BUSES</h4>
-                      <hr>
-                      <a href="" class="btn offer-btn btn-outline-success">View Fleet </a> 
-                    </div>
-                  </div>
-                  
-
-             </div>
- 
-          </section>
-
-          <section class="service" id="services">
-
-             <h1>SERVICES</h1>
-             <p>Our services can be customized to fit your specific transportation needs.</p>
-
-             <div class="offer-content row d-flex justify-content-center">
-                  
-                <div class="card col-md-2 m-3 pb-2 service-card" style="width: 18rem;">
-                  <div class="card-body">
-                    <div class="icon mx-auto mb-3 d-flex align-items-center justify-content-center">
-                       <i class="fa fa-globe" aria-hidden="true"></i>
-                    </div>
-                    <h5 class="card-title mb-2 ">World Wide</h5>
-                    <p class="card-text">24 hrs world wide backup services with affiliated Garages and Mobile units.</p>
-                    
-                  </div>
-                </div>
-
-                <div class="card col-md-2 m-3 pb-2 service-card" style="width: 18rem;">
-                  <div class="card-body">
-                   
-                    <div class="icon mx-auto mb-3 d-flex align-items-center justify-content-center">
-                      <i class="fa fa-car" aria-hidden="true"></i>
-                    </div>
-                    <h5 class="card-title mb-2 ">Over 1000 Vehicles</h5>
-                    <p class="card-text">Over 100 4WD Jeeps, 150 Vans, 500 Cars, Double Cabs, Luxury Coaches, Lorries etc.</p>
-                    
-                  </div>
-                </div>
-
-                <div class="card col-md-2 m-3 pb-2 service-card" style="width: 18rem;">
-                  <div class="card-body">
-                    <div class="icon mx-auto mb-3 d-flex align-items-center justify-content-center">
-                      <i class="fa fa-flag" aria-hidden="true"></i>
-
-                    </div>
-                    <h5 class="card-title mb-2 ">Insurance</h5>
-                    <p class="card-text">Comprehensive Insurance available for all our vehicles including Passengers</p>
-                    
-                  </div>
-                </div>
-
-                <div class="card col-md-2 m-3 pb-2 service-card" style="width: 18rem;">
-                  <div class="card-body">
-                    <div class="icon mx-auto mb-3 d-flex align-items-center justify-content-center">
-                      <i class="fa fa-user" aria-hidden="true"></i>
-                    </div>
-                    <h5 class="card-title mb-2 ">Our Strength</h5>
-                    <p class="card-text">100 In-house Operational Staff, 70 Automobile Technicians and 300 permanent Drivers from every branch of the Island.</p>
-                    
-                  </div>
-                </div>
-             
-             </div>
-
-          </section>
-
-          <section class="testimonials" id="portfolio">
+         <section class="testimonials" id="portfolio">
                 <div class="container testimonials-contain">
 
                   <div class="owl-carousel testimonials-carousel ">
 
                       <div class="testimonial-item text-center ">
                           
-                        <img src="../images/testimonials-1.jpg" class="testimonial-img " alt="">
+                        <img src="../images/testimonials/testimonials-1.jpg" class="testimonial-img " alt="">
                         <h3>Saul Goodman</h3>
                         <h4>Entrepreneur</h4>
                         <p>
@@ -397,7 +408,7 @@ if (isset($_SESSION['user_name'])) {
 
                       <div class="testimonial-item text-center ">
                           
-                        <img src="../images/testimonials-2.jpg" class="testimonial-img " alt="">
+                        <img src="../images/testimonials/testimonials-2.jpg" class="testimonial-img " alt="">
                         <h3>Susan zhen</h3>
                         <h4>Public Services Manager</h4>
                         <p>
@@ -409,7 +420,7 @@ if (isset($_SESSION['user_name'])) {
 
                       <div class="testimonial-item text-center ">
                           
-                        <img src="../images/testimonials-3.jpg" class="testimonial-img " alt="">
+                        <img src="../images/testimonials/testimonials-3.jpg" class="testimonial-img " alt="">
                         <h3>Kathi Peterson</h3>
                         <h4>Quality Engineer</h4>
                         <p>
@@ -421,7 +432,7 @@ if (isset($_SESSION['user_name'])) {
 
                       <div class="testimonial-item text-center ">
                           
-                        <img src="../images/testimonials-4.jpg" class="testimonial-img " alt="">
+                        <img src="../images/testimonials/testimonials-4.jpg" class="testimonial-img " alt="">
                         <h3>James Potter</h3>
                         <h4>Developer</h4>
                         <p>
@@ -433,7 +444,7 @@ if (isset($_SESSION['user_name'])) {
 
                       <div class="testimonial-item text-center ">
                           
-                        <img src="../images/testimonials-5.jpg" class="testimonial-img " alt="">
+                        <img src="../images/testimonials/testimonials-5.jpg" class="testimonial-img " alt="">
                         <h3>Jakson Hamilton</h3>
                         <h4>Businessman</h4>
                         <p>
@@ -449,101 +460,102 @@ if (isset($_SESSION['user_name'])) {
                 </div>
           </section>
 
-          <section class="contact" id="contact">
-  
-            <h1>Contact Us</h1>
-            <p>We would love to hear from you. Get in touch with us.</p>  
+         <section class="contact" id="contact">
+ 
+           <h1>Contact Us</h1>
+           <p><span>We would love to hear from you. Get in touch with us.</span></p>  
 
-            <div class="row justify-content-center">
-                <div class="col-md-5 mx-2  contact-social ">
+           <div class="row justify-content-center">
+               <div class="col-md-5 mx-2  contact-social ">
 
-                    <div class=" social-icon pt-4">
-                        
-                        <div class="share mx-auto d-flex justify-content-center align-items-center">
-                          <i class="fa fa-share-alt" aria-hidden="true"></i>
-                        </div>
-
-                        <h4 class="my-3">Social Profiles</h4>
-
-                        <div class="d-flex justify-content-center align-items-center pb-5">
-                            <div class="share-icons mx-2 d-flex justify-content-center align-items-center">
-                              <i class="fa fa-facebook-official" aria-hidden="true"></i>
-                          
-                            </div>
-                            <div class="share-icons mx-2 d-flex justify-content-center align-items-center">
-                              <i class="fa fa-twitter" aria-hidden="true"></i>
-                          
-                            </div>
-                            <div class="share-icons mx-2 d-flex justify-content-center align-items-center">
-                              <i class="fa fa-instagram" aria-hidden="true"></i>
-                          
-                            </div>
-                            <div class="share-icons mx-2 d-flex justify-content-center align-items-center">
-                              <i class="fa fa-skype" aria-hidden="true"></i>
-                          
-                            </div>
-                            <div class="share-icons mx-2 d-flex justify-content-center align-items-center">
-                              <i class="fa fa-linkedin" aria-hidden="true"></i>
-                          
-                            </div>
-                        </div>
-                        
-                    </div> 
-
-                    <div class=" row pt-4  justify-content-center">
+                   <div class=" social-icon pt-4">
                        
-                      <div class="col-md-5 mx-2 pt-4 email-box">
-  
-                        <div class="share mx-auto d-flex justify-content-center align-items-center">
-                          <i class="fa fa-envelope" aria-hidden="true"></i>
-                        </div>
+                       <div class="share mx-auto d-flex justify-content-center align-items-center">
+                         <i class="fa fa-share-alt" aria-hidden="true"></i>
+                       </div>
 
-                        <h4 class="my-3">Email Us</h4>
-                        <email>safeRunner@gmail.com</email>
-  
-                      </div>
-                       <div class="col-md-5 mx-2 pt-4  call-box">
-  
-                        <div class="share mx-auto d-flex justify-content-center align-items-center">
-                          <i class="fa fa-phone" aria-hidden="true"></i>
-                        </div>
+                       <h4 class="my-3"><strong>Social Profiles</strong> </h4>
 
-                        <h4 class="my-3">Call Us</h4>
-                        <h6>047785694</h6> 
-  
-                      </div>
-  
-                   </div>
-  
+                       <div class="d-flex justify-content-center align-items-center pb-5">
+                           <div class="share-icons mx-2 d-flex justify-content-center align-items-center">
+                             <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                         
+                           </div>
+                           <div class="share-icons mx-2 d-flex justify-content-center align-items-center">
+                             <i class="fa fa-twitter" aria-hidden="true"></i>
+                         
+                           </div>
+                           <div class="share-icons mx-2 d-flex justify-content-center align-items-center">
+                             <i class="fa fa-instagram" aria-hidden="true"></i>
+                         
+                           </div>
+                           <div class="share-icons mx-2 d-flex justify-content-center align-items-center">
+                             <i class="fa fa-skype" aria-hidden="true"></i>
+                         
+                           </div>
+                           <div class="share-icons mx-2 d-flex justify-content-center align-items-center">
+                             <i class="fa fa-linkedin" aria-hidden="true"></i>
+                         
+                           </div>
+                       </div>
+                       
+                   </div> 
 
-                   
-                     
-                </div>
-                <div class="col-md-5 mx-2 p-4 contact-form">
+                   <div class=" row pt-4  justify-content-center">
+                      
+                     <div class="col-md-5 mx-2 pt-4 email-box">
+ 
+                       <div class="share mx-auto d-flex justify-content-center align-items-center">
+                         <i class="fa fa-envelope" aria-hidden="true"></i>
+                       </div>
+
+                       <h4 class="my-3"><strong>Email Us</strong> </h4>
+                       <email>safeRunner@gmail.com</email>
+ 
+                     </div>
+                      <div class="col-md-5 mx-2 pt-4  call-box">
+ 
+                       <div class="share mx-auto d-flex justify-content-center align-items-center">
+                         <i class="fa fa-phone" aria-hidden="true"></i>
+                       </div>
+
+                       <h4 class="my-3"><strong>Call Us</strong> </h4>
+                       <h6>047785694</h6> 
+ 
+                     </div>
+ 
+                  </div>
+ 
+
                   
-                  <div class="form-row  form-group">
-                    <div class="col">
-                      <input type="text" class="form-control" placeholder="Your Name">
-                    </div>
-                    <div class="col">
-                      <input type="text" class="form-control" placeholder="Your Email">
-                    </div>
-                  </div>
+                    
+               </div>
+               <div class="col-md-5 mx-2 p-4 contact-form">
+                 
+                 <div class="form-row  form-group">
+                   <div class="col">
+                     <input type="text" class="form-control" placeholder="Your Name">
+                   </div>
+                   <div class="col">
+                     <input type="text" class="form-control" placeholder="Your Email">
+                   </div>
+                 </div>
 
-                  <div class="form-group ">
-                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Subject">
-                  </div>
+                 <div class="form-group ">
+                   <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Subject">
+                 </div>
 
-                  <div class="form-group">
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="9"  placeholder="Your Message"></textarea>
-                  </div>
+                 <div class="form-group">
+                   <textarea class="form-control" id="exampleFormControlTextarea1" rows="9"  placeholder="Your Message"></textarea>
+                 </div>
 
-                  <button class="btn btn-outline-success">Send Message</button>
+                 <button class="btn btn-outline-success">Send Message</button>
 
-                </div>
-            </div>
+               </div>
+           </div>
 
-          </section>
+         </section>
+
 
           <footer class="footer">
 

@@ -5,11 +5,16 @@ session_start();
 include '../helpers/db.php';
 
 if (isset($_SESSION['user_name']) && $_SESSION['user_role'] == "admin") {
-    $sql = "SELECT id FROM vehicles";
-    if ($result = $conn->query($sql)) {
-        if (mysqli_num_rows($result) > 0) {
-            $row = mysqli_num_rows($result);
-            ?>
+    $sql1 = "SELECT id FROM vehicles";
+    if ($result1 = $conn->query($sql1)) {
+        if (mysqli_num_rows($result1) > 0) {
+            $row1 = mysqli_num_rows($result1);
+
+    $sql2 = "SELECT id FROM reservations";
+    if ($result2 = $conn->query($sql2)) {
+        if (mysqli_num_rows($result2) > 0) {
+            $row2 = mysqli_num_rows($result2);
+        ?>
 
     <!-- Navbar -->
         <?php include '../layouts/header.php';?>
@@ -26,7 +31,7 @@ if (isset($_SESSION['user_name']) && $_SESSION['user_role'] == "admin") {
                     <a class="card bg-primary w-100" id="stat">
                         <div class="row">
                             <div class="col-6 stat-value text-left">
-                                <div class="col-12 stat-count"><?php echo $row?></div>
+                                <div class="col-12 stat-count"><?php echo $row1?></div>
                                 <div class="col-12 stat-name">Total</div>
                             </div>
                             <div class="col-6 stat-icon text-right">
@@ -39,7 +44,7 @@ if (isset($_SESSION['user_name']) && $_SESSION['user_role'] == "admin") {
                     <a class="card bg-danger w-100" id="stat">
                     <div class="row">
                             <div class="col-6 stat-value text-left">
-                                <div class="col-12 stat-count">100</div>
+                                <div class="col-12 stat-count"><?php echo $row2?></div>
                                 <div class="col-12 stat-name">Reserved</div>
                             </div>
                             <div class="col-6 stat-icon text-right">
@@ -52,7 +57,7 @@ if (isset($_SESSION['user_name']) && $_SESSION['user_role'] == "admin") {
                     <a class="card bg-warning w-100" id="stat">
                     <div class="row pl-0">
                             <div class="col-6 stat-value text-left">
-                                <div class="col-12 stat-count">100</div>
+                                <div class="col-12 stat-count"><?php echo $row1-$row2?></div>
                                 <div class="col-12 stat-name">Available</div>
                             </div>
                             <div class="col-6 stat-icon text-right">
@@ -91,11 +96,9 @@ if (isset($_SESSION['user_name']) && $_SESSION['user_role'] == "admin") {
                                 <th>Reserve Date</th>
 								<th>Customer Name</th>
 								<th>Customer Mobile</th>
-								<th>Contact Via</th>
 								<th>Vehicle Id</th>
 								<th>Reserve From</th>
 								<th>Reserve To</th>
-								<th>Rental Cost</th>
 								<th>Status</th>
 								</tr>
 							</thead>
@@ -114,10 +117,9 @@ if (isset($_SESSION['user_name']) && $_SESSION['user_role'] == "admin") {
 
     
 
-<?php }}} else {
+<?php }}}}} else {
 
     include_once "./unauthorized.php";
-
 }
 
 ?>
