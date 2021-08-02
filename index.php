@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-include_once "../helpers/db.php";
+include_once "helpers/db.php";
 ?>
 
 
@@ -15,7 +15,7 @@ include_once "../helpers/db.php";
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">  </head>
-    <link rel="stylesheet" href="../css/welcome.css">
+    <link rel="stylesheet" href="css/welcome.css">
 
     <!-- font-awesome -->
     <script src="https://use.fontawesome.com/50ae888db0.js"></script>
@@ -65,7 +65,7 @@ include_once "../helpers/db.php";
                                       </li>
 
                                       <li class="nav-item">
-                                          <a class="nav-link active" aria-current="page" href="../backend/signout.php">Signout</a>
+                                          <a class="nav-link active" aria-current="page" href="backend/signout.php">Signout</a>
                                       </li>
                                      
                                   </ul>
@@ -74,7 +74,7 @@ include_once "../helpers/db.php";
                            <?php }else{ ?>
 
                                 <ul>
-                                   <li><a href="../Pages/dashboard.php">Dashboard</a></li>
+                                   <li><a href="Pages/dashboard.php">Dashboard</a></li>
                                 </ul> 
 
                          <?php  } ?>     
@@ -143,11 +143,11 @@ include_once "../helpers/db.php";
                          <?php  while ($categories_row = mysqli_fetch_assoc($category_result)) {  ?>
                           
                           <div class="testimonial-item card col-3 m-4 px-0" style="width: 18rem;">
-                            <img class="card-img-top" src="../images/category_images/<?php echo $categories_row['category_image'] ?>" alt="Card image cap" height="250px">
+                            <img class="card-img-top" src="images/category_images/<?php echo $categories_row['category_image'] ?>" alt="Card image cap" height="250px">
                             <div class="card-body">
                               <h4 class="text-center"><?php echo $categories_row['category_name'] ?></h4>
                               <hr>
-                              <a href="../Layouts/vehicleFleet.php?category_id=<?php echo $categories_row['category_id'] ?>" class="btn fleet-btn btn-outline-success">View Fleet </a> 
+                              <a href="Layouts/vehicleFleet.php?category_id=<?php echo $categories_row['category_id'] ?>" class="btn fleet-btn btn-outline-success">View Fleet </a> 
                             </div>
                           </div>
                           
@@ -162,11 +162,11 @@ include_once "../helpers/db.php";
                        <?php  while ($categories_row = mysqli_fetch_assoc($category_result)) {  ?>
                           
                         <div class="testimonial-item card  m-4 px-0" >
-                            <img class="card-img-top" src="../images/category_images/<?php echo $categories_row['category_image'] ?>" alt="Card image cap" height="250px">
+                            <img class="card-img-top" src="images/category_images/<?php echo $categories_row['category_image'] ?>" alt="Card image cap" height="250px">
                             <div class="card-body">
                               <h4 class="text-left"><?php echo $categories_row['category_name'] ?></h4>
                               <hr>
-                              <a href="../Layouts/vehicleFleet.php?category_id=<?php echo $categories_row['category_id'] ?>" class="btn fleet-btn btn-outline-success">View Fleet </a> 
+                              <a href="Layouts/vehicleFleet.php?category_id=<?php echo $categories_row['category_id'] ?>" class="btn fleet-btn btn-outline-success">View Fleet </a> 
                             </div>
                           </div>
                           
@@ -243,7 +243,7 @@ include_once "../helpers/db.php";
 
                       <div class="testimonial-item text-center ">
                           
-                        <img src="../images/testimonials/testimonials-1.jpg" class="testimonial-img " alt="">
+                        <img src="images/testimonials/testimonials-1.jpg" class="testimonial-img " alt="">
                         <h3>Saul Goodman</h3>
                         <h4>Entrepreneur</h4>
                         <p>
@@ -255,7 +255,7 @@ include_once "../helpers/db.php";
 
                       <div class="testimonial-item text-center ">
                           
-                        <img src="../images/testimonials/testimonials-2.jpg" class="testimonial-img " alt="">
+                        <img src="images/testimonials/testimonials-2.jpg" class="testimonial-img " alt="">
                         <h3>Susan zhen</h3>
                         <h4>Public Services Manager</h4>
                         <p>
@@ -267,7 +267,7 @@ include_once "../helpers/db.php";
 
                       <div class="testimonial-item text-center ">
                           
-                        <img src="../images/testimonials/testimonials-3.jpg" class="testimonial-img " alt="">
+                        <img src="images/testimonials/testimonials-3.jpg" class="testimonial-img " alt="">
                         <h3>Kathi Peterson</h3>
                         <h4>Quality Engineer</h4>
                         <p>
@@ -279,7 +279,7 @@ include_once "../helpers/db.php";
 
                       <div class="testimonial-item text-center ">
                           
-                        <img src="../images/testimonials/testimonials-4.jpg" class="testimonial-img " alt="">
+                        <img src="images/testimonials/testimonials-4.jpg" class="testimonial-img " alt="">
                         <h3>James Potter</h3>
                         <h4>Developer</h4>
                         <p>
@@ -291,7 +291,7 @@ include_once "../helpers/db.php";
 
                       <div class="testimonial-item text-center ">
                           
-                        <img src="../images/testimonials/testimonials-5.jpg" class="testimonial-img " alt="">
+                        <img src="images/testimonials/testimonials-5.jpg" class="testimonial-img " alt="">
                         <h3>Jakson Hamilton</h3>
                         <h4>Businessman</h4>
                         <p>
@@ -435,22 +435,22 @@ include_once "../helpers/db.php";
 
       <?php
          
-         include '../forms/login.form.php'; 
+         include 'forms/login.form.php'; 
 
-         include '../forms/signup.form.php'; 
+         include 'forms/signup.form.php'; 
 
-         include '../forms/reservation-welcome.php';
+         include 'forms/reservation-welcome.php';
       
       ?>
      
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="../js/pristine.js"></script>
-<script src="../js/welcome.js"></script>
-<script src="../js/custom.js"></script>
-<script src="../js/validation.js"></script>
-<script src="../js/modal.js"></script>
-<script src="../js/scroll.js"></script>
+<script src="js/pristine.js"></script>
+<script src="js/welcome.js"></script>
+<script src="js/custom.js"></script>
+<script src="js/validation.js"></script>
+<script src="js/modal.js"></script>
+<script src="js/scroll.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   </body>
 </html>

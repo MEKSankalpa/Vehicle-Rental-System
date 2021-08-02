@@ -33,7 +33,7 @@ $(document).ready(function () {
               var driver        = form4.elements['driver'] .value;
               var pick_up_location    = form4.elements['pick_up_location'] .value;
 
-              window.open("../layouts/resevation.php?vehicle_name="+vehicle_name+"&pick_up_date="+pick_up_date+"&pick_up_time="+pick_up_time+"&drop_off_date="+drop_off_date+"&drop_off_time="+ drop_off_time+"&passangers="+passangers+"&driver="+driver+"&pick_up_location="+pick_up_location+"","_self");
+              window.open("layouts/resevation.php?vehicle_name="+vehicle_name+"&pick_up_date="+pick_up_date+"&pick_up_time="+pick_up_time+"&drop_off_date="+drop_off_date+"&drop_off_time="+ drop_off_time+"&passangers="+passangers+"&driver="+driver+"&pick_up_location="+pick_up_location+"","_self");
           }
     
     };

@@ -22,7 +22,7 @@ if ($result->num_rows > 0) {
                
                     if(!isset($row["status"])){
 
-                        echo   '<a href="" class="btn btn-outline-primary">Approve</a>'; 
+                        echo   '<a href="../Pages/reservation_view.php?reservation_id='.$row['id'].'" class="btn btn-outline-primary">Approve</a>'; 
                     
                         
                     }else{

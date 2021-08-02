@@ -51,7 +51,7 @@ session_start();
 
             <ul class="navbar-nav ">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="../layouts/welcome.php">Home</a>
+                    <a class="nav-link active" aria-current="page" href="../index.php">Home</a>
                 </li>
 
                 <li class="nav-item ">

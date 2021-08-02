@@ -49,7 +49,7 @@ if (isset($_SESSION['user_name'])) {
             
             <nav class="nav-menu d-none d-lg-block ">
               <ul>
-                <li class="active"><a href="welcome.php">Home</a></li>
+                <li class="active"><a href="../index.php">Home</a></li>
                 <li><a href="#about"  data-scroll>About</a></li>
                 <li><a href="#fleet" data-scroll>Fleet</a></li>
                 <li><a href="#services" data-scroll>Services</a></li>
@@ -103,7 +103,7 @@ if (isset($_SESSION['user_name'])) {
 
        </header> 
 
-       <section class="cover fixed" id="cover_img">
+       <section class="reservation-cover fixed" id="reservation-cover_img">
            <div class="cover-content">
                
                <h1> <strong>DRIVE TO YOUR DREAM</strong> </h1>

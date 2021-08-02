@@ -51,7 +51,7 @@ if (isset($_SESSION['user_name'])) {
             
             <nav class="nav-menu d-none d-lg-block ">
               <ul>
-                <li class="active"><a href="welcome.php">Home</a></li>
+                <li class="active"><a href="../index.php">Home</a></li>
                 <li><a href="#about"  data-scroll>About</a></li>
                 <li><a href="#offers" data-scroll>Fleets</a></li>
                 <li><a href="#services" data-scroll>Services</a></li>
