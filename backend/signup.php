@@ -36,7 +36,7 @@ session_start();
                         $results = mysqli_query($conn, $qurey);
                         $count = mysqli_num_rows($results);
                         if($count > 0){
-                             header("Location: ../layouts/welcome.php?signup=unique");
+                             header("Location: ../index.php?signup=unique");
                              exit();
                         }else{
                            
@@ -55,7 +55,7 @@ session_start();
                             $_SESSION["user_role"] =  $row['role'];
                             $_SESSION['user_name'] = $user_name;   
 
-                            header("Location: ../layouts/welcome.php?signup=success");
+                            header("Location: ../index.php?signup=success");
                             exit();
                         }
 

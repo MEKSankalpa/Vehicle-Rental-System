@@ -49,7 +49,7 @@ if(empty($reserver_title) || empty($first_name) || empty($last_name) ||empty($te
 
             $sql = "INSERT INTO reservations(reserver_title,reserver_name,reserver_mobile,reserver_email,contact_type,comment,selected_vehicle,reserve_from,reserve_to,pick_up_time,drop_off_time,passangers,driver,pick_up_location,reserve_date,rental_cost) VALUES ('$reserver_title', '$reserver_name', '$tele','$email','$contact_me','$comment','$vehicle_name','$pick_up_date','$drop_off_date','$pick_up_time','$drop_off_time','$passangers','$driver','$pick_up_location','$reserve_date','$rental_cost') ";
             mysqli_query($conn, $sql) or die(mysqli_error($conn));                 
-            header("Location: ../layouts/welcome.php?reservation=done");
+            header("Location: ../index.php?reservation=done");
             exit();
             
         }

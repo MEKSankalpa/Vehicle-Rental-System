@@ -28,7 +28,7 @@ if (empty($email) || empty($password)) {
                 header("Location: ../Pages/dashboard.php?login=success");
                 exit();
             }else{
-                header("Location: ../layouts/welcome.php?login=success");
+                header("Location: ../index.php?login=success");
                 exit();
             }
 
@@ -36,13 +36,13 @@ if (empty($email) || empty($password)) {
 
         } else {
 
-            header("Location: ../layouts/welcome.php?login=failed");
+            header("Location: ../index.php?login=failed");
             exit();
         }
 
     } else {
 
-        header("Location: ../layouts/welcome.php?login=failed");
+        header("Location: ../index.php?login=failed");
         exit();
     }
 }

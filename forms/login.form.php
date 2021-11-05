@@ -10,7 +10,7 @@
                  <h3 class="text-center">LOGIN</h3>
             </div>
 
-            <form id="login_form" action="../backend/login.php" novalidate method="post">
+            <form id="login_form" action="backend/login.php" novalidate method="post">
               <div class="form-group">
                 <label for="email">Email address</label>
                 <input type="email" class="form-control" name="email" id="email" placeholder="Enter Your Email" required data-pristine-required-message="This field is required">

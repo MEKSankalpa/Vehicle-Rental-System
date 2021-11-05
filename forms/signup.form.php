@@ -10,7 +10,7 @@
                  <h3 class="text-center">SIGNUP</h3>
             </div>
 
-            <form id="signup_form" action="../backend/signup.php" novalidate method="POST">
+            <form id="signup_form" action="backend/signup.php" novalidate method="POST">
 
               <div class="form-row">
 

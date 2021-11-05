@@ -2,7 +2,7 @@
 
 include_once "../helpers/db.php";
 
-if (isset($_GET['vehicle_name']) && $_SESSION['user_role'] == "admin") {
+if (isset($_GET['vehicle_name']) && $_SESSION['user_role'] == "") {
 
     $vehicle_id = $_GET['vehicle_name'];
     $sql = "SELECT * FROM vehicles WHERE id='$vehicle_id'";
